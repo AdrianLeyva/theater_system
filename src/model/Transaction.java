@@ -10,19 +10,22 @@ public class Transaction {
     private Show show;
     private double totalCost;
     private String transactionType;
-    private User employee;
+    private String paymentType;
+    private Employee employee;
 
     public Transaction() {
     }
 
-    public Transaction(String id, Date date, ArrayList<Ticket> tickets, Show show,
-                       double totalCost, String transactionType, User employee) {
+    public Transaction(String id, Date date, ArrayList<Ticket> tickets,
+                       Show show, double totalCost, String transactionType,
+                       String paymentType, Employee employee) {
         this.id = id;
         this.date = date;
         this.tickets = tickets;
         this.show = show;
         this.totalCost = totalCost;
         this.transactionType = transactionType;
+        this.paymentType = paymentType;
         this.employee = employee;
     }
 
@@ -74,11 +77,19 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public User getEmployee() {
+    public String getPaymentType() {
+        return paymentType;
+    }
+
+    public void setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(User employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 }

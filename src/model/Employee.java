@@ -1,15 +1,15 @@
 package model;
 
-public class User {
+public class Employee {
     private String userId;
     private boolean isAdmin;
     private String email;
     private String password;
 
-    public User() {
+    public Employee() {
     }
 
-    public User(String userId, boolean isAdmin, String email, String password) {
+    public Employee(String userId, boolean isAdmin, String email, String password) {
         this.userId = userId;
         this.isAdmin = isAdmin;
         this.email = email;
