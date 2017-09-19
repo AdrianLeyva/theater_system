@@ -1,11 +1,12 @@
 package controller.ticket_office.contracts;
 
 import model.Employee;
+import utils.MessageBack;
 
 public interface SessionManager {
 
-    void loginEmployeeSesion(Employee employee); //Taquilla q
-    void logoutEmployeeSesion(Employee employee); //Taquilla q
+    MessageBack loginEmployeeSesion(Employee employee); //Taquilla q
+    MessageBack logoutEmployeeSesion(Employee employee); //Taquilla q
 
     interface Viewer{
         void doLogin();

@@ -7,6 +7,11 @@ import model.Ticket;
 import java.util.ArrayList;
 
 public class TransactionManager extends BackgroundTasks implements SalesProcess.Transaction {
+    private SeatsManager seatsManager;
+
+    public TransactionManager() {
+        this.seatsManager = new SeatsManager();
+    }
 
     @Override
     public void registerTransaction(SalesProcess.Transaction transaction) {
