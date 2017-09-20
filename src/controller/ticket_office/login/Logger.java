@@ -1,10 +1,11 @@
-package controller.ticket_office;
+package controller.ticket_office.login;
 
-import controller.ticket_office.contracts.SessionManager;
 import model.Employee;
 import utils.MessageBack;
 
 public class Logger implements SessionManager{
+    public static final String LOGIN = "LOGIN";
+    public static final String LOGOUT = "LOGOUT";
 
     @Override
     public MessageBack loginEmployeeSesion(Employee employee) {

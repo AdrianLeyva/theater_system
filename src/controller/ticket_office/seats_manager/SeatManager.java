@@ -1,8 +1,6 @@
-package controller.ticket_office;
+package controller.ticket_office.seats_manager;
 
-import controller.ticket_office.contracts.SalesProcess;
-
-public class SeatsManager implements SalesProcess.SeatSelector{
+public class SeatManager implements SeatSelector {
 
     @Override
     public void getAvailableSeats(String showId) {

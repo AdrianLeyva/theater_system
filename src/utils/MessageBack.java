@@ -1,9 +1,8 @@
 package utils;
 
-/*
+/**
     This class contents a generic message to response another module for any purpose.
-
-    author: Adrián Leyva Sánchez
+    @author  Adrián Leyva Sánchez
  */
 
 public class MessageBack {

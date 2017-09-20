@@ -1,8 +1,7 @@
-package controller.ticket_office;
+package controller.ticket_office.background_tasks;
 
-import controller.ticket_office.contracts.SalesProcess;
+public class BackgroundTasks implements BackgroundProcesses {
 
-public class BackgroundTasks implements SalesProcess.BackgroundTasks{
     @Override
     public void cancelCaducatedReservations(String showId) {
 
