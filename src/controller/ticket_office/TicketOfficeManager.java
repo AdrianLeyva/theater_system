@@ -2,22 +2,24 @@ package controller.ticket_office;
 
 import controller.BaseController;
 import controller.ticket_office.login.Logger;
+import controller.ticket_office.reservation.Reservation;
 import controller.ticket_office.transaction.Transaction;
-import model.Employee;
-import model.Ticket;
+import model.*;
 import utils.FolioGenerator;
 import utils.MessageBack;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
- * This class handle all ticket office modules.
+ * This class handles all ticket office modules.
  * @author Adrián Leyva Sánchez
  */
 public class TicketOfficeManager extends BaseController {
     private Logger sessionManager;
     private Transaction transaction;
+    private Reservation reservation;
 
     public TicketOfficeManager() {
         setupDependencies();
@@ -53,9 +55,10 @@ public class TicketOfficeManager extends BaseController {
     public MessageBack doTransaction(model.Transaction currentTransaction, String customerName){
         ArrayList<Ticket> boughtTickets = currentTransaction.getTickets();
 
-        //Set customer's name in every bought ticket by him.
+        //Set customer's name and Folio ID in every bought ticket by him.
         for(Ticket i : boughtTickets ){
             i.setCustomerName(customerName);
+            i.setId(FolioGenerator.generateFolio(i));
         }
 
         //Do transaction in database.
@@ -72,12 +75,51 @@ public class TicketOfficeManager extends BaseController {
 
     /**
      * This method handles all reservation process.
-     * @param currentTransaction It contents all data of current transaction.
+     * @param seats List of selected seats by customer.
+     * @param customerName Name of customer who is doing reservation.
+     * @param customerPhone Number phone of customer who is doing reservation.
+     * @param customerEmail Email of customer who is doing reservation.
      * @return MessageBack object that contents the result of executed method.
      */
-    public MessageBack doReservation(model.Transaction currentTransaction){
-        
-        return new MessageBack();
+    public MessageBack doReservation(ArrayList<Seat> seats, String customerName,
+                                     String customerPhone, String customerEmail,
+                                     Show show, Employee employee){
+
+
+        //Building current reservation.
+        model.Reservation currentReservation = new model.Reservation();
+
+        Date reservationDate = new Date();
+        currentReservation.setReservationDate(reservationDate);
+
+        Date dueDate = new Date();
+        dueDate.setHours(dueDate.getHours() - 2);
+        currentReservation.setDueDate(dueDate);
+
+        currentReservation.setShow(show);
+        currentReservation.setSeats(seats);
+
+        if(reservation.isDataOk(seats)){
+            currentReservation.setTotalCost(reservation.calculateSeatsCost(seats));
+        }
+        else{
+            return new MessageBack("Zone unidentified", "Seat hasn't a zone assigned",
+                    MessageBack.ERROR, getClass());
+        }
+
+        currentReservation.setCustomer(new Customer(customerName, customerPhone, customerEmail));
+        currentReservation.setEmployee(employee);
+        currentReservation.setId(FolioGenerator.generateFolio(currentReservation));
+
+        //Calling to reservation method
+        MessageBack messageBackReservation = reservation.reserveSeats(currentReservation);
+        if(messageBackReservation.getTypeOfMessage().equals(MessageBack.SUCCESS)){
+            printFolioReservation(currentReservation);
+            return messageBackReservation;
+        }
+        else{
+            return messageBackReservation;
+        }
     }
 
 
@@ -87,13 +129,14 @@ public class TicketOfficeManager extends BaseController {
 
         sessionManager = new Logger();
         transaction = new Transaction();
+        reservation = new Reservation();
     }
 
     private void printTickets(ArrayList<Ticket> tickets){
-        //Set ticket's identifier.
-        for(Ticket i : tickets){
-            i.setId(FolioGenerator.generateFolio(i));
-        }
         //Call to printer and print tickets... [INSERT CODE]
+    }
+
+    private void printFolioReservation(model.Reservation reservation){
+        //Call to viewer and show reservation ID, reservation date and due date of that reservation.
     }
 }

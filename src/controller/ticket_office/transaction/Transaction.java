@@ -5,6 +5,10 @@ import utils.MessageBack;
 
 import java.util.ArrayList;
 
+/**
+ * This class handles all transaction processes of ticket office module
+ * @author Adrián Leyva Sánchez
+ */
 public class Transaction implements TransactionProcess {
 
     @Override

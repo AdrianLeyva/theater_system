@@ -9,7 +9,6 @@ public class Transaction {
     private ArrayList<Ticket> tickets;
     private Show show;
     private double totalCost;
-    private String transactionType;
     private String paymentType;
     private Employee employee;
 
@@ -17,14 +16,13 @@ public class Transaction {
     }
 
     public Transaction(String id, Date date, ArrayList<Ticket> tickets,
-                       Show show, double totalCost, String transactionType,
-                       String paymentType, Employee employee) {
+                       Show show, double totalCost, String paymentType,
+                       Employee employee) {
         this.id = id;
         this.date = date;
         this.tickets = tickets;
         this.show = show;
         this.totalCost = totalCost;
-        this.transactionType = transactionType;
         this.paymentType = paymentType;
         this.employee = employee;
     }
@@ -67,14 +65,6 @@ public class Transaction {
 
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
-    }
-
-    public String getTransactionType() {
-        return transactionType;
-    }
-
-    public void setTransactionType(String transactionType) {
-        this.transactionType = transactionType;
     }
 
     public String getPaymentType() {

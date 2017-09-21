@@ -3,6 +3,10 @@ package controller.ticket_office.login;
 import model.Employee;
 import utils.MessageBack;
 
+/**
+ * This class handles all login requests of ticket office.
+ * @author Adrián Leyva Sánchez
+ */
 public class Logger implements SessionManager{
     public static final String LOGIN = "LOGIN";
     public static final String LOGOUT = "LOGOUT";
