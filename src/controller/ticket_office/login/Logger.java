@@ -13,6 +13,8 @@ public class Logger implements SessionManager{
         String email = employee.getEmail();
         String password = employee.getPassword();
 
+
+
         if(existEmployee(id)) {
             if(authenticateEmployee(email, password)){
                 /*

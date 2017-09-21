@@ -3,6 +3,6 @@ package controller;
 public abstract class BaseController {
 
 
-    protected abstract void  setupDependences();
+    protected abstract void setupDependencies();
 
 }
