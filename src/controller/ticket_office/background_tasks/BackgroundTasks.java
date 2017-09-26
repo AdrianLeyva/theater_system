@@ -8,7 +8,9 @@ public class BackgroundTasks implements BackgroundProcesses {
 
     @Override
     public void cancelCaducatedReservations(String showId) {
-
+        /*
+            Insert postgresql query here...
+         */
     }
 
     @Override

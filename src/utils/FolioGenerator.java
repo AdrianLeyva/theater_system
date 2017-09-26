@@ -1,7 +1,6 @@
 package utils;
 
-import model.Reservation;
-import model.Ticket;
+import java.util.UUID;
 
 /**
  * This class handles the generation of folio identifiers
@@ -9,13 +8,7 @@ import model.Ticket;
  */
 public class FolioGenerator {
 
-    public static String generateFolio(Ticket ticket){
-
-        return "insert code";
-    }
-
-    public static String generateFolio(Reservation reservation){
-
-        return "insert code";
+    public static String generateFolio(){
+        return UUID.randomUUID().toString();
     }
 }

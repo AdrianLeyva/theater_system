@@ -17,12 +17,17 @@ public class Reservation implements ReservationProcess {
             Insert postgresql query....
          */
 
+
         return new MessageBack();
     }
 
     @Override
-    public void cancelReservation(String folioReservation) {
+    public MessageBack cancelReservation(String folioReservation) {
+        /*
+            Insert postgresql query....
+         */
 
+        return new MessageBack();
     }
 
     @Override
@@ -33,6 +38,16 @@ public class Reservation implements ReservationProcess {
     @Override
     public void registerSaleByReservation(String folioReservation) {
 
+    }
+
+    @Override
+    public boolean isReservationDue(String folioId) {
+        boolean isDue = true;
+        /*
+            Insert postgresql query here...
+         */
+
+        return isDue;
     }
 
     public double calculateSeatsCost(ArrayList<Seat> seats){
