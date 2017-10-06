@@ -103,7 +103,7 @@ public class TicketOfficeManager extends BaseController {
 
         //Check if each seat has a zone assigned.
         if(reservation.isDataOk(seats)){
-            currentReservation.setTotalCost(reservation.calculateSeatsCost(seats));
+            currentReservation.setTotalCost(reservation.calculateSeatsCost(seats, currentReservation.getShow().getCost()));
         }
         else{
             return new MessageBack("Zone unidentified", "Seat hasn't a zone assigned",
@@ -151,7 +151,7 @@ public class TicketOfficeManager extends BaseController {
 
 
     /**
-     * Its cancels all tickets selected by customer, just if that tickets belong him.
+     * It cancels all tickets selected by customer, just if that tickets belong him.
      * @param ticketIds List of tickets selected by customer for cancellation.
      * @param typeOfCancellation There are four types of cancellation.
      * @param customerName Current customer who is doing cancellation.

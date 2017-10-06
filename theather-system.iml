@@ -7,5 +7,50 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0/docs/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1/docs/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0/docs/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

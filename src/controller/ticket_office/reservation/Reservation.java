@@ -1,6 +1,7 @@
 package controller.ticket_office.reservation;
 
 
+import controller.ConstantsApp;
 import model.Seat;
 import utils.MessageBack;
 
@@ -50,25 +51,25 @@ public class Reservation implements ReservationProcess {
         return isDue;
     }
 
-    public double calculateSeatsCost(ArrayList<Seat> seats){
+    public double calculateSeatsCost(ArrayList<Seat> seats, double showCost){
         double totalCost = 0;
 
         for (Seat i : seats){
             switch (i.getZone()){
-                case "DIAMANTE":
-                    totalCost += 2000; //It's going to change.. [ASSIGN NEW VALUE].
+                case ConstantsApp.Seat.DIAMOND:
+                    totalCost += showCost;
                     break;
-                case "ORO":
-                    totalCost += 1000; //It's going to change.. [ASSIGN NEW VALUE].
+                case ConstantsApp.Seat.GOLD:
+                    totalCost += showCost * 0.9; // 90% discount
                     break;
-                case "PLATA":
-                    totalCost += 500; //It's going to change.. [ASSIGN NEW VALUE].
+                case ConstantsApp.Seat.SILVER:
+                    totalCost += showCost * 0.75; // 75% discount
                     break;
-                case "BRONCE":
-                    totalCost += 250; //It's going to change.. [ASSIGN NEW VALUE].
+                case ConstantsApp.Seat.BRONZE:
+                    totalCost += showCost * 0.60; // 60% discount
                     break;
-                case "LATA":
-                    totalCost += 100; //It's going to change.. [ASSIGN NEW VALUE].
+                case ConstantsApp.Seat.LATA:
+                    totalCost += showCost * 0.50; // 50% discount
                     break;
                 default:
                     break;
@@ -83,19 +84,19 @@ public class Reservation implements ReservationProcess {
 
         for (Seat i : seats){
             switch (i.getZone()){
-                case "DIAMANTE":
+                case ConstantsApp.Seat.DIAMOND:
                     isOk = true;
                     break;
-                case "ORO":
+                case ConstantsApp.Seat.GOLD:
                     isOk = true;
                     break;
-                case "PLATA":
+                case ConstantsApp.Seat.SILVER:
                     isOk = true;
                     break;
-                case "BRONCE":
+                case ConstantsApp.Seat.BRONZE:
                     isOk = true;
                     break;
-                case "LATA":
+                case ConstantsApp.Seat.LATA:
                     isOk = true;
                     break;
                 default:
