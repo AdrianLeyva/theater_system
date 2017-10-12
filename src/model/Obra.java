@@ -4,7 +4,7 @@ public class Obra {
     private String id;
     private String name;
     private String description;
-    private String clasification;
+    private String classification;
     private String status;
     private ObraManager manager;
 
@@ -21,7 +21,7 @@ public class Obra {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.clasification = clasification;
+        this.classification = clasification;
         this.status = status;
         this.manager = manager;
     }
@@ -51,11 +51,11 @@ public class Obra {
     }
 
     public String getClasification() {
-        return clasification;
+        return classification;
     }
 
     public void setClasification(String clasification) {
-        this.clasification = clasification;
+        this.classification = clasification;
     }
 
     public String getStatus() {

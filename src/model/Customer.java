@@ -1,40 +1,34 @@
 package model;
 
-public class Customer {
-    private String name;
-    private String numberPhone;
-    private String email;
-
+public class Customer extends Person{
     public Customer() {
     }
 
     public Customer(String name, String numberPhone, String email) {
-        this.name = name;
-        this.numberPhone = numberPhone;
-        this.email = email;
+       super(name, numberPhone, email);
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
     }
 
     public String getNumberPhone() {
-        return numberPhone;
+        return super.getPhone();
     }
 
     public void setNumberPhone(String numberPhone) {
-        this.numberPhone = numberPhone;
+        super.setPhone(numberPhone);
     }
 
     public String getEmail() {
-        return email;
+        return super.getEmail();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        super.setEmail(email);
     }
 }
