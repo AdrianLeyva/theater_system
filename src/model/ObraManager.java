@@ -1,10 +1,7 @@
 package model;
 
-public class ObraManager {
+public class ObraManager extends Person{
     private String id;
-    private String name;
-    private String email;
-    private String phone;
     private String backupPhone;
 
     public ObraManager() {
@@ -13,9 +10,9 @@ public class ObraManager {
     public ObraManager(String id, String name, String email, String phone,
                        String backupPhone) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+        super.setName(name);
+        super.setEmail(email);
+        super.setPhone(phone);
         this.backupPhone = backupPhone;
     }
 
@@ -28,27 +25,27 @@ public class ObraManager {
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
     }
 
     public String getEmail() {
-        return email;
+        return super.getEmail();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        super.setEmail(email);
     }
 
     public String getPhone() {
-        return phone;
+        return super.getPhone();
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        super.setPhone(phone);
     }
 
     public String getBackupPhone() {

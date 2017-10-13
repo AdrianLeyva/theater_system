@@ -13,39 +13,26 @@ public class Logger implements SessionManager{
 
     @Override
     public MessageBack loginEmployeeSesion(Employee employee) {
-        String id = employee.getEmployeeId();
         String email = employee.getEmail();
         String password = employee.getPassword();
 
 
+        if(authenticateEmployee(email, password)){
+            /*
+                Query in postgresql...
+             */
 
-        if(existEmployee(id)) {
-            if(authenticateEmployee(email, password)){
-                /*
-                    Query in postgresql...
-                 */
-
-                return new MessageBack("Authorized",
-                        "The employee's credentials are valid", MessageBack.AUTHORIZED,
-                        getClass());
-            }
-            else {
-                /*
-                    Query in postgresql...
-                 */
-
-                return new MessageBack("Unauthorized",
-                        "The employee's credentials are invalid", MessageBack.UNAUTHORIZED,
-                        getClass());
-            }
+            return new MessageBack("Authorized",
+                    "The employee's credentials are valid", MessageBack.AUTHORIZED,
+                    getClass());
         }
         else {
             /*
-               Query in postgresql...
+                Query in postgresql...
              */
 
-            return new MessageBack("Employee doesn't exist",
-                    "Employee wasn't found into database", MessageBack.NULL,
+            return new MessageBack("Unauthorized",
+                    "The employee's credentials are invalid", MessageBack.UNAUTHORIZED,
                     getClass());
         }
     }
@@ -66,14 +53,10 @@ public class Logger implements SessionManager{
         }
     }
 
-    private boolean existEmployee(String employeeId){
-
-        return true;
-    }
 
     private boolean authenticateEmployee(String email, String password){
 
-        return true;
+        return false;
     }
 
     private boolean isLogged(String employeeId){
@@ -81,6 +64,6 @@ public class Logger implements SessionManager{
            Query in postgresql...
         */
 
-        return true;
+        return false;
     }
 }

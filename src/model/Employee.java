@@ -1,9 +1,8 @@
 package model;
 
-public class Employee {
+public class Employee extends Person{
     private String employeeId;
     private boolean isAdmin;
-    private String email;
     private String password;
 
     public Employee() {
@@ -12,7 +11,7 @@ public class Employee {
     public Employee(String employeeId, boolean isAdmin, String email, String password) {
         this.employeeId = employeeId;
         this.isAdmin = isAdmin;
-        this.email = email;
+        super.setEmail(email);
         this.password = password;
     }
 
@@ -33,11 +32,11 @@ public class Employee {
     }
 
     public String getEmail() {
-        return email;
+        return super.getEmail();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        super.setEmail(email);
     }
 
     public String getPassword() {
