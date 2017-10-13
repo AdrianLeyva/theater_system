@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Transaction;
-import utils.TransactionDao;
+import model.persistence.dao.contracts.TransactionDao;
 
 import java.util.List;
 

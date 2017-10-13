@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Employee;
-import utils.EmployeeDao;
+import model.persistence.dao.contracts.EmployeeDao;
 
 import java.util.List;
 

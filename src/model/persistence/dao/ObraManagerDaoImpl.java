@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.ObraManager;
-import utils.ObraManagerDao;
+import model.persistence.dao.contracts.ObraManagerDao;
 
 import java.util.List;
 

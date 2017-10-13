@@ -5,7 +5,10 @@ import model.Show;
 
 import java.util.ArrayList;
 import java.util.Date;
-
+/**
+ * This class handles all reschedule processes of show manager module.
+ * @author Adrián Leyva Sánchez
+ */
 public class Reschedule extends BaseController implements RescheduleProcess{
     @Override
     protected void setupDependencies() {

@@ -1,4 +1,4 @@
-package utils;
+package model.persistence.dao.contracts;
 
 import model.Transaction;
 

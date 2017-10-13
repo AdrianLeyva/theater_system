@@ -4,7 +4,10 @@ import controller.BaseController;
 import model.Show;
 
 import java.util.ArrayList;
-
+/**
+ * This class handles all registration processes of show manager module.
+ * @author Adrián Leyva Sánchez
+ */
 public class Registration extends BaseController implements RegistrationProcess{
 
     public Registration() {

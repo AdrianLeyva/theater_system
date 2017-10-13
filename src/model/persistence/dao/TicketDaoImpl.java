@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Ticket;
-import utils.TicketDao;
+import model.persistence.dao.contracts.TicketDao;
 
 import java.util.List;
 

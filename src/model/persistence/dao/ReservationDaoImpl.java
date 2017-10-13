@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Reservation;
-import utils.ReservationDao;
+import model.persistence.dao.contracts.ReservationDao;
 
 import java.util.List;
 

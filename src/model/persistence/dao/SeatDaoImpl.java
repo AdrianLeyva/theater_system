@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Seat;
-import utils.SeatDao;
+import model.persistence.dao.contracts.SeatDao;
 
 import java.util.List;
 

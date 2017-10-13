@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Show;
-import utils.ShowDao;
+import model.persistence.dao.contracts.ShowDao;
 
 import java.util.List;
 

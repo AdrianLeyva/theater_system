@@ -1,7 +1,7 @@
-package dao;
+package model.persistence.dao;
 
 import model.Customer;
-import utils.CustomerDao;
+import model.persistence.dao.contracts.CustomerDao;
 
 import java.sql.PreparedStatement;
 import java.util.List;

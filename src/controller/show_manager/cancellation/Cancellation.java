@@ -4,7 +4,10 @@ import controller.BaseController;
 import model.Show;
 
 import java.util.ArrayList;
-
+/**
+ * This class handles all cancellation processes of show manager module.
+ * @author Adrián Leyva Sánchez
+ */
 public class Cancellation extends BaseController implements CancellationProcess{
     @Override
     protected void setupDependencies() {
