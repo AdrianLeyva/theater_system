@@ -8,7 +8,6 @@ import java.util.List;
 public class TransactionDaoImpl extends ConnectionToPost implements TransactionDao {
     @Override
     public void register(Transaction transaction) throws Exception {
-
     }
 
     @Override

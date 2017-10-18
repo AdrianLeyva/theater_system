@@ -20,21 +20,29 @@ public class Registration extends BaseController implements RegistrationProcess{
 
     @Override
     public void registerContactDataOfObraManager(String phone, String alternativePhone, String email) {
-
+        /*
+         * Insert query in postgresql
+        */
     }
 
     @Override
     public void registerObraData(String name, String description, String classification) {
-
+        /*
+         * Insert query in postgresql
+        */
     }
 
     @Override
     public void registerShows(ArrayList<Show> shows) {
-
+        /*
+         * Insert query in postgresql
+        */
     }
 
     @Override
     public void isAvailableShowDate(ArrayList<Show> shows) {
-
+        /*
+         * Insert query in postgresql
+        */
     }
 }
