@@ -7,5 +7,5 @@ import java.util.Date;
 
 public interface RescheduleProcess {
     void rescheduleShow(Show show, Date date);
-    void rescheduleAllShows(ArrayList<Show> updatedShows);
+    void rescheduleAllShows(ArrayList<Show> shows, ArrayList<Date> newDates);
 }

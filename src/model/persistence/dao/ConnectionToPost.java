@@ -39,7 +39,7 @@ public class ConnectionToPost {
 
         try {
             conn.connect();
-            String query = "INSERT into Users (user_id, typeuser_id, email, password) VALUES (?, ?, ?,?)";
+            String query = "INSERT into users (user_id, typeuser_id, email, password) VALUES (?, ?, ?,?)";
             PreparedStatement ps = conn.connection.prepareStatement(query);
 
             ps.setInt(1, 20);

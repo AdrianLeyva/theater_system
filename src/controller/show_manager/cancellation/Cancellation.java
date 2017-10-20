@@ -16,21 +16,32 @@ public class Cancellation extends BaseController implements CancellationProcess{
 
     @Override
     public void cancelObra(String obraId) {
-
+        /*
+            Insert postgresql query
+         */
     }
 
     @Override
     public void cancelShows(ArrayList<Show> shows) {
-
+        for (Show i: shows){
+            String showId = i.getId();
+            /*
+                Insert postgresql query
+             */
+        }
     }
 
     @Override
     public void getSoldTicketsByShowCancellation(ArrayList<Show> shows) {
-
+        /*
+           Insert postgresql query
+        */
     }
 
     @Override
     public void getSoldTicketsByObraCancellation(String obraId) {
-
+        /*
+           Insert postgresql query
+        */
     }
 }
