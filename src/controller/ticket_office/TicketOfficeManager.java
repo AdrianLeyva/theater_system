@@ -1,6 +1,7 @@
 package controller.ticket_office;
 
 import controller.BaseController;
+import controller.price_manager.PriceManager;
 import controller.ticket_office.login.Logger;
 import controller.ticket_office.reservation.Reservation;
 import controller.ticket_office.transaction.Transaction;
@@ -21,6 +22,7 @@ public class TicketOfficeManager extends BaseController {
     private Logger sessionManager;
     private Transaction transaction;
     private Reservation reservation;
+    private PriceManager priceManager;
 
     public TicketOfficeManager() {
         setupDependencies();
@@ -103,7 +105,7 @@ public class TicketOfficeManager extends BaseController {
 
         //Check if each seat has a zone assigned.
         if(reservation.isDataOk(seats)){
-            currentReservation.setTotalCost(reservation.calculateSeatsCost(seats, currentReservation.getShow().getCost()));
+            currentReservation.setTotalCost(priceManager.calculateSeatsCost(seats, currentReservation.getShow().getCost()));
         }
         else{
             return new MessageBack("Zone unidentified", "Seat hasn't a zone assigned",
@@ -213,5 +215,6 @@ public class TicketOfficeManager extends BaseController {
         sessionManager = new Logger();
         transaction = new Transaction();
         reservation = new Reservation();
+        priceManager = new PriceManager();
     }
 }

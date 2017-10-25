@@ -10,6 +10,7 @@ import java.util.Locale;
  */
 public class DateParser {
     public static final String DATE_PATTERN = "yyyy/MM/dd";
+    public static final String DATE_PATTERN_V2 = "EEE, MMM d, ''yy";
     public static final String TIME_PATTERN = "HH:MM:ss";
 
 
