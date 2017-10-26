@@ -1,17 +1,21 @@
 package view.login;
 
 
+import controller.ConstantsApp;
 import controller.ticket_office.login.Logger;
 import controller.ticket_office.login.SessionManager;
 import model.Employee;
 import utils.DialogViewer;
 import utils.MessageBack;
+import view.main_manager.MainManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.util.ResourceBundle;
 
 public class SessionLogger implements SessionManager.Viewer{
 
+    private JFrame frame;
     private JTextField headerTextField;
     private JTextField emailTextField;
     private JPasswordField passwordTextField;
@@ -20,15 +24,13 @@ public class SessionLogger implements SessionManager.Viewer{
 
     private Logger loggerController;
 
-    public static void main(String[] args) {
-        SessionLogger mSession = new SessionLogger();
-        JFrame frame = new JFrame("theater system");
-
-        frame.setContentPane(mSession.jPanel);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    public SessionLogger() {
     }
+
+    public SessionLogger(JFrame frame) {
+        this.frame = frame;
+    }
+
 
     private void createUIComponents() {
         this.loggerController = new Logger();
@@ -53,13 +55,21 @@ public class SessionLogger implements SessionManager.Viewer{
         messageBack = loggerController.loginEmployeeSesion(employee);
 
         if(messageBack.getTypeOfMessage().equals(MessageBack.AUTHORIZED)){
-            /*
-             * Throw new administration window...
-            */
+            MainManager mManager = new MainManager(employee, frame);
+
+            frame.setTitle(ConstantsApp.ViewTitles.MAIN_VIEW);
+            frame.setContentPane(mManager.getjPanel());
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
         }
         else{
             DialogViewer.showMessageDialog(this.jPanel, messageBack.getContent(), messageBack.getSubject(),
                     messageBack.getTypeOfMessage());
         }
+    }
+
+    public JPanel getjPanel() {
+        return jPanel;
     }
 }

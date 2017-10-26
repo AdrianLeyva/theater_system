@@ -56,7 +56,7 @@ public class Logger implements SessionManager{
 
     private boolean authenticateEmployee(String email, String password){
 
-        return false;
+        return true;
     }
 
     private boolean isLogged(String employeeId){

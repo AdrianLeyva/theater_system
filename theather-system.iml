@@ -10,55 +10,36 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-binding-2.13.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-common-1.8.1" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-forms-1.8.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-looks-2.5.3" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-validation-2.5.1" />
         </CLASSES>
         <JAVADOC>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0/docs/api" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-binding-2.13.0/docs/api" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-common-1.8.1/docs/api" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-forms-1.8.0/docs/api" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-looks-2.5.3/docs/api" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-validation-2.5.1/docs/api" />
         </JAVADOC>
         <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-binding-2.13.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-common-1.8.1" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-forms-1.8.0" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-looks-2.5.3" />
+          <root url="file://$MODULE_DIR$/libs/jgoodies-validation-2.5.1" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-forms-1.8.0" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1/docs/api" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" />
-        </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-common-1.8.1" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0/docs/api" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" />
-        </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/jgoodies-binding-2.13.0" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/postgresql-42.1.4.jre7.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-binding-2.13.0" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-common-1.8.1" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-forms-1.8.0" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-looks-2.5.3" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-validation-2.5.1" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-binding-2.13.0" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-common-1.8.1" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-forms-1.8.0" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-looks-2.5.3" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jgoodies-validation-2.5.1" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
