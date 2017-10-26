@@ -1,4 +1,4 @@
-package view;
+package view.login;
 
 
 import controller.ticket_office.login.Logger;

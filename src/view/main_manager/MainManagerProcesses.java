@@ -1,4 +1,4 @@
-package view;
+package view.main_manager;
 
 public interface MainManagerProcesses {
     void doTransaction();

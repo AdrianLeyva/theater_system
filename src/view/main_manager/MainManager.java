@@ -1,11 +1,12 @@
-package view;
+package view.main_manager;
+
 
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class MainManager implements MainManagerProcesses{
-    private JPanel panel;
+    private JPanel jPanel;
     private JLabel employeeName;
     private JButton buyButton;
     private JButton reservationButton;
@@ -21,6 +22,16 @@ public class MainManager implements MainManagerProcesses{
 
         activeButtonListeners();
 
+    }
+
+    public static void main(String[] args) {
+        MainManager mManager = new MainManager();
+        JFrame frame = new JFrame("theater system");
+
+        frame.setContentPane(mManager.jPanel);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     @Override
