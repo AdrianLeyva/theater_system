@@ -2,11 +2,22 @@ package view.main_manager;
 
 
 
+import controller.ConstantsApp;
+import controller.ticket_office.login.Logger;
 import model.Employee;
+import utils.DialogViewer;
+import utils.MessageBack;
+import utils.ViewHandler;
+import view.login.SessionLogger;
+import view.show_manager.RegistrationManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * This class handles the Menu view.
+ * @author Adrián Leyva Sánchez
+ */
 public class MainManager implements MainManagerProcesses{
     private JFrame frame;
     private JPanel jPanel;
@@ -15,12 +26,17 @@ public class MainManager implements MainManagerProcesses{
     private JButton reservationButton;
     private JButton cancelationButton;
     private JButton isOnTimeButton;
+    private JButton reportsButton;
+    private JButton logoutButton;
+    private JButton showManagerButton;
+
+    private Employee currentEmployee;
 
     public MainManager() {
     }
 
     public MainManager(Object object, JFrame frame) {
-        Employee currentEmployee = (Employee) object;
+        currentEmployee = (Employee) object;
         this.employeeName.setText("Employee: " + currentEmployee.getEmail());
         this.frame = frame;
     }
@@ -30,6 +46,9 @@ public class MainManager implements MainManagerProcesses{
         reservationButton = new JButton("Reservation");
         cancelationButton = new JButton("Cancel reservation/tickets");
         isOnTimeButton = new JButton("Check if reservation is on time");
+        reportsButton = new JButton("Reports");
+        showManagerButton = new JButton("Manages shows");
+        logoutButton = new JButton("Logout");
         activeButtonListeners();
 
     }
@@ -88,6 +107,41 @@ public class MainManager implements MainManagerProcesses{
                 /*
                  * Show isOnTime viewer...
                  */
+            }
+        });
+
+        reportsButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /*
+                 * Show reports viewer...
+                 */
+            }
+        });
+
+        showManagerButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RegistrationManager mRegistrationManager = new RegistrationManager(currentEmployee, frame);
+                ViewHandler.sendTo(frame,mRegistrationManager.getjPanel(),
+                        ConstantsApp.ViewTitles.SHOW_REGISTRATION_VIEW);
+            }
+        });
+
+        logoutButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MessageBack messageBack;
+                messageBack = new Logger().logoutEmployeeSesion(currentEmployee);
+
+                if(messageBack.getTypeOfMessage().equals(MessageBack.SUCCESS)){
+                    SessionLogger mSession = new SessionLogger(frame);
+                    ViewHandler.sendTo(frame, mSession.getjPanel(), ConstantsApp.ViewTitles.LOGIN_VIEW);
+                }
+                else{
+                    DialogViewer.showMessageDialog(frame, messageBack.getContent(), messageBack.getSubject(),
+                            messageBack.getTypeOfMessage());
+                }
             }
         });
     }

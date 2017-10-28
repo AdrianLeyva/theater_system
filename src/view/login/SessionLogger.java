@@ -7,16 +7,19 @@ import controller.ticket_office.login.SessionManager;
 import model.Employee;
 import utils.DialogViewer;
 import utils.MessageBack;
+import utils.ViewHandler;
 import view.main_manager.MainManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.util.ResourceBundle;
 
+/**
+ * This class handles the Login view.
+ * @author Adrián Leyva Sánchez
+ */
 public class SessionLogger implements SessionManager.Viewer{
 
     private JFrame frame;
-    private JTextField headerTextField;
     private JTextField emailTextField;
     private JPasswordField passwordTextField;
     private JButton loginButton;
@@ -56,12 +59,7 @@ public class SessionLogger implements SessionManager.Viewer{
 
         if(messageBack.getTypeOfMessage().equals(MessageBack.AUTHORIZED)){
             MainManager mManager = new MainManager(employee, frame);
-
-            frame.setTitle(ConstantsApp.ViewTitles.MAIN_VIEW);
-            frame.setContentPane(mManager.getjPanel());
-            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            frame.pack();
-            frame.setVisible(true);
+            ViewHandler.sendTo(frame, mManager.getjPanel(), ConstantsApp.ViewTitles.MAIN_VIEW);
         }
         else{
             DialogViewer.showMessageDialog(this.jPanel, messageBack.getContent(), messageBack.getSubject(),

@@ -20,6 +20,7 @@ public class ConstantsApp {
         public static final String MAIN_VIEW = "Menu";
         public static final String BUY_VIEW = "Purchase";
         public static final String RESERVATION_VIEW = "Reservation";
+        public static final String SHOW_REGISTRATION_VIEW = "Obra registration";
     }
 
 }

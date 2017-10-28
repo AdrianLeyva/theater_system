@@ -64,6 +64,6 @@ public class Logger implements SessionManager{
            Query in postgresql...
         */
 
-        return false;
+        return true;
     }
 }

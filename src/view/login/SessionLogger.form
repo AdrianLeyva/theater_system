@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.login.SessionLogger">
   <grid id="27dc6" binding="jPanel" layout-manager="FormLayout">
-    <rowspec value="center:d:noGrow"/>
-    <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:d:grow"/>
     <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:d:grow"/>
@@ -22,24 +20,9 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="1774b" class="javax.swing.JTextField" binding="headerTextField">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
-        </constraints>
-        <properties>
-          <background color="-1312769"/>
-          <editable value="false"/>
-          <enabled value="false"/>
-          <foreground color="-13355980"/>
-          <text value="LOGIN"/>
-        </properties>
-      </component>
       <component id="47aec" class="javax.swing.JTextField" binding="emailTextField">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <forms top="60" left="60" bottom="0" right="60" defaultalign-horz="false"/>
@@ -52,7 +35,7 @@
       </component>
       <component id="673f2" class="javax.swing.JPasswordField" binding="passwordTextField">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <forms top="0" left="60" bottom="80" right="60" defaultalign-horz="false"/>
@@ -65,13 +48,13 @@
       </component>
       <vspacer id="655ef">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <forms defaultalign-vert="false"/>
         </constraints>
       </vspacer>
       <component id="364b0" class="javax.swing.JButton" binding="loginButton" custom-create="true">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms top="0" left="160" bottom="0" right="160"/>
         </constraints>
         <properties>
