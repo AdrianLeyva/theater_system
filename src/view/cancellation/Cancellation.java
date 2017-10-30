@@ -10,6 +10,8 @@ public class Cancellation extends JDialog {
     private JButton searchBtn;
     private JTextField searchTxt;
     private JTable functionsTbl;
+    private JFrame frame;
+    private JPanel panel;
 
     public Cancellation() {
 
@@ -45,6 +47,10 @@ public class Cancellation extends JDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
+    public Cancellation(JFrame frame) {
+
+    }
+
     private void onOK() {
         // add your code here
         dispose();
@@ -68,5 +74,9 @@ public class Cancellation extends JDialog {
         functionsTbl = new JTable(data,columnNames);
         functionsTbl.setFillsViewportHeight(true);
         // TODO: place custom component creation code here
+    }
+
+    public JPanel getjPanel() {
+        return JPanel;
     }
 }
