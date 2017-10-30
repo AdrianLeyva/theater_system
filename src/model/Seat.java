@@ -8,7 +8,7 @@ public class Seat {
     private String showId;
 
     public static final String AVAILABLE_STATE = "AVAILABLE_STATE";
-    public static final String OCCUPIED_STATE = "AVAILABLE_STATE";
+    public static final String OCCUPIED_STATE = "OCCUPIED_STATE";
 
     public Seat() {
     }

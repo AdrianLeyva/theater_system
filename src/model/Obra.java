@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Obra {
     private String id;
     private String name;
@@ -7,11 +9,14 @@ public class Obra {
     private String classification;
     private String status;
     private ObraManager manager;
+    private ArrayList<Show> showsList;
 
     public static final String CLASIFICATION_A = "CLASIFICATION_A";
     public static final String CLASIFICATION_B = "CLASIFICATION_B";
     public static final String CLASIFICATION_C = "CLASIFICATION_C";
 
+    public static final String STATUS_AVAILABLE = "AVAILABLE";
+    public static final String STATUS_CANCELLED = "CANCELLED";
 
     public Obra() {
     }
@@ -24,6 +29,17 @@ public class Obra {
         this.classification = clasification;
         this.status = status;
         this.manager = manager;
+    }
+
+    public Obra(String id, String name, String description, String classification,
+                String status, ObraManager manager, ArrayList<Show> showsList) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.classification = classification;
+        this.status = status;
+        this.manager = manager;
+        this.showsList = showsList;
     }
 
     public String getId() {
@@ -72,5 +88,21 @@ public class Obra {
 
     public void setManager(ObraManager manager) {
         this.manager = manager;
+    }
+
+    public String getClassification() {
+        return classification;
+    }
+
+    public void setClassification(String classification) {
+        this.classification = classification;
+    }
+
+    public ArrayList<Show> getShowsList() {
+        return showsList;
+    }
+
+    public void setShowsList(ArrayList<Show> showsList) {
+        this.showsList = showsList;
     }
 }

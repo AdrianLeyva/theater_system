@@ -56,9 +56,10 @@ public class Registration extends BaseController implements RegistrationProcess{
     }
 
     @Override
-    public void isAvailableShowDate(ArrayList<Show> shows) {
+    public boolean isAvailableShowDate(ArrayList<Show> shows) {
         /*
          * Insert query in postgresql
         */
+        return true;
     }
 }
