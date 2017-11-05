@@ -9,4 +9,8 @@ public interface CancellationProcess {
     void  cancelShows(ArrayList<Show> shows);
     void getSoldTicketsByShowCancellation(ArrayList<Show> shows);
     void getSoldTicketsByObraCancellation(String obraId);
+
+    interface Viewer{
+        void doCancel();
+    }
 }
