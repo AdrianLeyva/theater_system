@@ -1,7 +1,7 @@
 package view.show_manager;
 
 import controller.ConstantsApp;
-import controller.show_manager.registration.Registration;
+import controller.show_manager.ShowManager;
 import model.Employee;
 import model.Obra;
 import model.ObraManager;
@@ -35,7 +35,7 @@ public class RegistrationManager implements RegistrationManagerContract {
     private Employee currentEmployee;
     private ArrayList<Show> showsList;
     private Obra obra;
-    private Registration registrationManager;
+    private ShowManager showManager;
 
     public RegistrationManager() {
     }
@@ -44,7 +44,7 @@ public class RegistrationManager implements RegistrationManagerContract {
         currentEmployee = (Employee) object;
         this.frame = frame;
         this.obra = new Obra();
-        this.registrationManager = new Registration();
+        this.showManager = new ShowManager();
     }
 
     private void createUIComponents(){
@@ -84,19 +84,11 @@ public class RegistrationManager implements RegistrationManagerContract {
             }
         });
 
-        goBackButton.addActionListener(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                MainManager mMainManager = new MainManager(currentEmployee, frame);
-                ViewHandler.sendTo(frame, mMainManager.getjPanel(), ConstantsApp.ViewTitles.MAIN_VIEW);
-            }
-        });
-
         doRegisterButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(validateFields()){
-                    if(registrationManager.isAvailableShowDate(showsList)){
+                    if(showManager.registration.isAvailableShowDate(showsList)){
                         ObraManager obraManager = new ObraManager();
                         obraManager.setPhone(managerPhone.getText());
                         obraManager.setBackupPhone(managerAltPhone.getText());
@@ -123,6 +115,14 @@ public class RegistrationManager implements RegistrationManagerContract {
                             "Alert", MessageBack.ERROR);
                 }
 
+            }
+        });
+
+        goBackButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                view.show_manager.ShowManager showManager = new view.show_manager.ShowManager(currentEmployee, frame);
+                ViewHandler.sendTo(frame, showManager.getPanel(), ConstantsApp.ViewTitles.SHOW_MANAGER_VIEW);
             }
         });
     }

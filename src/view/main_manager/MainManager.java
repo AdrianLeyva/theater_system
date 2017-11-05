@@ -10,6 +10,7 @@ import utils.MessageBack;
 import utils.ViewHandler;
 import view.login.SessionLogger;
 import view.show_manager.RegistrationManager;
+import view.show_manager.ShowManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -122,8 +123,8 @@ public class MainManager implements MainManagerProcesses{
         showManagerButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RegistrationManager mRegistrationManager = new RegistrationManager(currentEmployee, frame);
-                ViewHandler.sendTo(frame,mRegistrationManager.getjPanel(),
+                ShowManager showManager = new ShowManager(currentEmployee, frame);
+                ViewHandler.sendTo(frame,showManager.getPanel(),
                         ConstantsApp.ViewTitles.SHOW_REGISTRATION_VIEW);
             }
         });

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public interface RescheduleProcess {
-    void rescheduleShow(Show show, Date date);
+    void rescheduleShow(Show show);
     void rescheduleAllShows(ArrayList<Show> shows, ArrayList<Date> newDates);
+    boolean isAvailableShowDate(Show show);
 }
