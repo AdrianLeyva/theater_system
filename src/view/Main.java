@@ -2,6 +2,7 @@ package view;
 
 import controller.ConstantsApp;
 import utils.ViewHandler;
+import view.cancellation.Cancellation;
 import view.login.SessionLogger;
 
 import javax.swing.*;
@@ -13,7 +14,8 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame(ConstantsApp.ViewTitles.LOGIN_VIEW);
-        SessionLogger mSession = new SessionLogger(frame);
-        ViewHandler.sendTo(frame, mSession.getjPanel(), ConstantsApp.ViewTitles.LOGIN_VIEW);
+        //SessionLogger mSession = new SessionLogger(frame);
+        Cancellation mCancel = new Cancellation(frame);
+        ViewHandler.sendTo(frame, mCancel.getjPanel(), ConstantsApp.ViewTitles.LOGIN_VIEW);
     }
 }
