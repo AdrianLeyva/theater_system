@@ -3,7 +3,6 @@ package view;
 import controller.ConstantsApp;
 import utils.ViewHandler;
 import view.cancellation.Cancellation;
-import view.login.SessionLogger;
 
 import javax.swing.*;
 
