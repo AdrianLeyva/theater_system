@@ -6,6 +6,10 @@ import model.Ticket;
 import utils.MessageBack;
 
 import java.util.ArrayList;
+/**
+ * This class handles refund processes registering into database every change.
+ * @author Adrián Leyva Sánchez
+ */
 
 public class RefundManager extends BaseController implements RefundManagerContract{
     public static final int FIRST_CONDITION = 1;

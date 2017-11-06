@@ -11,9 +11,9 @@ import controller.show_manager.reschedule.Reschedule;
  * @author Adrián Leyva Sánchez
  */
 public class ShowManager extends BaseController{
-    private Registration registration;
-    private Cancellation cancellation;
-    private Reschedule reschedule;
+    public Registration registration;
+    public Cancellation cancellation;
+    public Reschedule reschedule;
 
     public ShowManager() {
         setupDependencies();

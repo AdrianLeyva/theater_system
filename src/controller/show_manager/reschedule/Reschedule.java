@@ -17,9 +17,7 @@ public class Reschedule extends BaseController implements RescheduleProcess{
     }
 
     @Override
-    public void rescheduleShow(Show show, Date date) {
-        String newDate = DateParser.parseDateTimeFormat(DateParser.DATE_PATTERN, date);
-        show.setDate(newDate);
+    public void rescheduleShow(Show show) {
          /*
             Insert postgresql query
          */
@@ -36,5 +34,14 @@ public class Reschedule extends BaseController implements RescheduleProcess{
         /*
             Insert postgresql query
          */
+    }
+
+    @Override
+    public boolean isAvailableShowDate(Show show) {
+
+        /*
+            Insert postgresql query
+         */
+        return false;
     }
 }

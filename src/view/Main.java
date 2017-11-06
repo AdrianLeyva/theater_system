@@ -12,7 +12,7 @@ import javax.swing.*;
  */
 public class Main {
     public static void main(String[] args) {
-        JFrame frame = new JFrame(ConstantsApp.ViewTitles.LOGIN_VIEW);
+        JFrame frame = new JFrame();
         //SessionLogger mSession = new SessionLogger(frame);
         Cancellation mCancel = new Cancellation(frame);
         ViewHandler.sendTo(frame, mCancel.getjPanel(), ConstantsApp.ViewTitles.LOGIN_VIEW);
