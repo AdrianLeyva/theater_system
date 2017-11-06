@@ -30,11 +30,28 @@ public class Cancellation implements CancellationProcess.Viewer{
 
     private void createUIComponents() {
         this.cancelController = new controller.show_manager.cancellation.Cancellation();
-        String[] columnNames = {"Name", "Date"};
-        Object[][] data = {{"Otelo", "02/12/17)"},{"Edipo Rey", "04/12/17"}};
-        functionsTbl = new JTable(data,columnNames);
-        functionsTbl.setFillsViewportHeight(true);
-        // TODO: place custom component creation code here
+        searchbtn = new JButton();
+        this.table1 = new JTable();
+        table1.setDefaultRenderer(Object.class, new Reader());
+        JButton btn1 = new JButton("Modifi");
+        JButton btn2 = new JButton("Delete");
+        btn1.setName("modifi");
+        btn2.setName("delete");
+        DefaultTableModel t = new DefaultTableModel(new Object[]{"Hour","Days","Modificar","Eliminar"}, 0){
+            public boolean isCellEditable(int row, int column){
+                return false;
+            }
+        };
+        t.addRow(new Object[]{"1","Pedro",btn1,btn2});
+        t.addRow(new Object[]{"2","Pedro",btn1,btn2});
+        t.addRow(new Object[]{"3","Pedro",btn1,btn2});
+        t.addRow(new Object[]{"4","Pedro",btn1,btn2});
+        table1.setModel(t);
+
+        table1.setPreferredScrollableViewportSize(table1.getPreferredSize());
+        setMouseClick(table1,t);
+
+
     }
 
     @Override
