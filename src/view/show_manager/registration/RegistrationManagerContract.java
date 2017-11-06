@@ -1,4 +1,4 @@
-package view.show_manager;
+package view.show_manager.registration;
 
 public interface RegistrationManagerContract {
     boolean validateFields();

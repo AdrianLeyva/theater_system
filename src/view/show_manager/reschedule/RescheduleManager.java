@@ -1,4 +1,4 @@
-package view.show_manager;
+package view.show_manager.reschedule;
 
 import controller.ConstantsApp;
 import controller.show_manager.ShowManager;

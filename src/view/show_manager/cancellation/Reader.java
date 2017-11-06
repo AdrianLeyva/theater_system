@@ -1,4 +1,4 @@
-package view.cancellation;
+package view.show_manager.cancellation;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;

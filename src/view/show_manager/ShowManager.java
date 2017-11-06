@@ -3,7 +3,10 @@ package view.show_manager;
 import controller.ConstantsApp;
 import model.Employee;
 import utils.ViewHandler;
+import view.show_manager.cancellation.Cancellation;
 import view.main_manager.MainManager;
+import view.show_manager.registration.RegistrationManager;
+import view.show_manager.reschedule.RescheduleManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -47,9 +50,9 @@ public class ShowManager {
         cancellationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Insert code
-                 */
+                JFrame frame = new JFrame();
+                Cancellation mCancel = new Cancellation(frame);
+                ViewHandler.sendTo(frame, mCancel.getjPanel(), ConstantsApp.ViewTitles.SHOW_CANCELLATION_VIEW);
             }
         });
 

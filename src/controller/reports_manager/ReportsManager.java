@@ -15,8 +15,8 @@ public class ReportsManager implements ReportsManagerContract {
     }
 
     @Override
-    public void validatePermissions(String id) {
-
+    public boolean validatePermissions(String id) {
+        return true;
     }
 
     @Override

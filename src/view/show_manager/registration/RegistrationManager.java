@@ -1,4 +1,4 @@
-package view.show_manager;
+package view.show_manager.registration;
 
 import controller.ConstantsApp;
 import controller.show_manager.ShowManager;
@@ -7,7 +7,6 @@ import model.Obra;
 import model.ObraManager;
 import model.Show;
 import utils.*;
-import view.main_manager.MainManager;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

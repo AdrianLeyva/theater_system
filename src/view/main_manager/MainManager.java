@@ -9,7 +9,6 @@ import utils.DialogViewer;
 import utils.MessageBack;
 import utils.ViewHandler;
 import view.login.SessionLogger;
-import view.show_manager.RegistrationManager;
 import view.show_manager.ShowManager;
 
 import javax.swing.*;

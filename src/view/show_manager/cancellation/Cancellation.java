@@ -1,9 +1,13 @@
-package view.cancellation;
+package view.show_manager.cancellation;
 
+import controller.ConstantsApp;
 import controller.show_manager.cancellation.CancellationProcess;
+import utils.ViewHandler;
+import view.show_manager.ShowManager;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 
 public class Cancellation implements CancellationProcess.Viewer{
@@ -11,6 +15,7 @@ public class Cancellation implements CancellationProcess.Viewer{
     private JTextField nametxt;
     private JButton searchbtn;
     private JTable table1;
+    private JButton goBackButton;
     private JFrame frame;
     public DefaultTableModel t;
 
@@ -29,6 +34,16 @@ public class Cancellation implements CancellationProcess.Viewer{
 
 
     private void createUIComponents() {
+        goBackButton = new JButton("Go back");
+        goBackButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame();
+                ShowManager mManager = new ShowManager(frame);
+                ViewHandler.sendTo(frame, mManager.getPanel(), ConstantsApp.ViewTitles.SHOW_MANAGER_VIEW);
+            }
+        });
+
         this.cancelController = new controller.show_manager.cancellation.Cancellation();
         searchbtn = new JButton();
         this.table1 = new JTable();
@@ -63,7 +78,7 @@ public class Cancellation implements CancellationProcess.Viewer{
         return panel1;
     }
 
-    private void setMouseClick(JTable tbl, DefaultTableModel model){
+    private void setMouseClick(JTable tbl, final DefaultTableModel model){
         tbl.addMouseListener(new java.awt.event.MouseAdapter() {
 
             @Override

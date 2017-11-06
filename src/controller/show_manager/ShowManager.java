@@ -5,7 +5,7 @@ import controller.show_manager.cancellation.Cancellation;
 import controller.show_manager.registration.Registration;
 import controller.show_manager.reschedule.Reschedule;
 
-/**
+/**ie
  * This class allows to handle the three implicit modules into show manager,
  * Registration, Cancellation, Reschedule.
  * @author Adrián Leyva Sánchez
