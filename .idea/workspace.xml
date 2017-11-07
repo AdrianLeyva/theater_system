@@ -2,48 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345f0aed-3a31-4f60-96c4-87975414c5c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/cancellation/Cancellation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/cancellation/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RegistrationManager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RegistrationManager$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RegistrationManager$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RegistrationManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RegistrationManagerContract.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RescheduleManager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RescheduleManager$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/RescheduleManager.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/cancellation/Cancellation.form" afterPath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/cancellation/Cancellation.java" afterPath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/cancellation/Reader.java" afterPath="$PROJECT_DIR$/src/view/show_manager/cancellation/Reader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/show_manager/RegistrationManager.form" afterPath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/show_manager/RegistrationManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/show_manager/RegistrationManagerContract.java" afterPath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManagerContract.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/show_manager/RescheduleManager.form" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/show_manager/RescheduleManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManagerContract.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManagerContract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/Main.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$7.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/reports_manager/ReportsManager.java" afterPath="$PROJECT_DIR$/src/controller/reports_manager/ReportsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/reports_manager/ReportsManagerContract.java" afterPath="$PROJECT_DIR$/src/controller/reports_manager/ReportsManagerContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/show_manager/ShowManager.java" afterPath="$PROJECT_DIR$/src/controller/show_manager/ShowManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Main.java" afterPath="$PROJECT_DIR$/src/view/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/main_manager/MainManager.java" afterPath="$PROJECT_DIR$/src/view/main_manager/MainManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/ShowManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/ShowManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" afterPath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,28 +18,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReportsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/reports_manager/ReportsManager.java">
+      <file leaf-file-name="RegistrationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="140">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <element signature="e#1900#2041#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
+                <element signature="e#5987#6175#0" expanded="true" />
+                <element signature="e#6174#6175#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/Main.java">
+      <file leaf-file-name="RegistrationManager.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RescheduleManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="92" lean-forward="true" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
-              <folding />
+            <state relative-caret-position="423">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="e#1522#1663#0" expanded="true" />
+                <element signature="e#1662#1663#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cancellation.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form">
+      <file leaf-file-name="RescheduleManager.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
@@ -85,11 +63,12 @@
       <file leaf-file-name="Cancellation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1089">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding>
-                <element signature="e#936#1276#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2472#2660#0" expanded="true" />
+                <element signature="e#2659#2660#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,6 +132,9 @@
         <option value="$PROJECT_DIR$/src/view/show_manager/ShowManager.java" />
         <option value="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form" />
         <option value="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" />
+        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
+        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
+        <option value="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
       </list>
     </option>
   </component>
@@ -183,19 +165,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -257,13 +233,48 @@
               <item name="theather-system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistrationManager" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="RescheduleManager" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="ticket_office" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -495,15 +506,16 @@
       <workItem from="1509926937344" duration="356000" />
       <workItem from="1509948005507" duration="344000" />
       <workItem from="1509995500671" duration="913000" />
+      <workItem from="1509998846749" duration="380000" />
+      <workItem from="1510073716866" duration="3621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36204000" />
+    <option name="totallyTimeSpent" value="40208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="26" width="1270" height="766" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -513,7 +525,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -534,6 +546,36 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2488189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -548,18 +590,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManagerContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,30 +763,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/main_manager/MainManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="127" column="72" lean-forward="false" selection-start-line="125" selection-start-column="16" selection-end-line="127" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,11 +778,6 @@
         <state relative-caret-position="-835">
           <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ticket_office/TheatreRoom.form">
@@ -808,19 +820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="57" column="42" lean-forward="false" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/show_manager/ShowManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,6 +859,27 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/reports_manager/ReportsManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -864,28 +888,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1089">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
           <folding>
-            <element signature="e#936#1276#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2472#2660#0" expanded="true" />
+            <element signature="e#2659#2660#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="92" lean-forward="true" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
-          <folding />
+        <state relative-caret-position="423">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#1522#1663#0" expanded="true" />
+            <element signature="e#1662#1663#0" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#1900#2041#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#5987#6175#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>

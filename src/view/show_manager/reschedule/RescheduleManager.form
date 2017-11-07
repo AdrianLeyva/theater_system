@@ -3,8 +3,6 @@
   <grid id="27dc6" binding="panel" layout-manager="FormLayout">
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:3dlu:noGrow"/>
-    <rowspec value="center:d:noGrow"/>
-    <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
@@ -22,51 +20,9 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="68374" class="javax.swing.JTextField" binding="showIdTextField">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms top="0" left="150" bottom="0" right="150" defaultalign-horz="false" defaultalign-vert="false"/>
-        </constraints>
-        <properties>
-          <horizontalAlignment value="0"/>
-          <text value="Type show's id"/>
-        </properties>
-      </component>
-      <hspacer id="d19b">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false"/>
-        </constraints>
-      </hspacer>
-      <component id="284d1" class="javax.swing.JTextField" binding="dateTextField">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms top="0" left="150" bottom="0" right="150" defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <horizontalAlignment value="0"/>
-          <text value="Type new show's date"/>
-        </properties>
-      </component>
-      <component id="aef43" class="javax.swing.JTextField" binding="timeTextField">
-        <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-          <forms top="0" left="150" bottom="0" right="150" defaultalign-horz="false"/>
-        </constraints>
-        <properties>
-          <horizontalAlignment value="0"/>
-          <text value="Type show's hour"/>
-        </properties>
-      </component>
       <component id="6004d" class="javax.swing.JButton" binding="rescheduleButton" custom-create="true">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms top="0" left="180" bottom="0" right="180"/>
         </constraints>
         <properties>
@@ -75,11 +31,38 @@
       </component>
       <component id="eb26" class="javax.swing.JButton" binding="goBackButton" custom-create="true">
         <constraints>
-          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms top="0" left="180" bottom="0" right="180"/>
         </constraints>
         <properties>
           <text value="Go back"/>
+        </properties>
+      </component>
+      <component id="16ca6" class="javax.swing.JTable" binding="showsTable" custom-create="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="de00b" class="javax.swing.JTextField" binding="showIdTextField">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms top="0" left="100" bottom="0" right="100" defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ade4f" class="javax.swing.JButton" binding="searchButton" custom-create="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms top="0" left="180" bottom="0" right="180"/>
+        </constraints>
+        <properties>
+          <text value="search"/>
         </properties>
       </component>
     </children>

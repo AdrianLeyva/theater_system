@@ -52,6 +52,7 @@ public class Cancellation implements CancellationProcess.Viewer{
         JButton btn2 = new JButton("Delete");
         btn1.setName("modifi");
         btn2.setName("delete");
+
         DefaultTableModel t = new DefaultTableModel(new Object[]{"Hour","Days","Modificar","Eliminar"}, 0){
             public boolean isCellEditable(int row, int column){
                 return false;

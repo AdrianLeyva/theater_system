@@ -7,10 +7,12 @@ import model.Obra;
 import model.ObraManager;
 import model.Show;
 import utils.*;
+import view.show_manager.cancellation.Reader;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class RegistrationManager implements RegistrationManagerContract {
@@ -52,11 +54,18 @@ public class RegistrationManager implements RegistrationManagerContract {
         doRegisterButton = new JButton("Do register");
         this.showsTable = new JTable();
         this.showsList = new ArrayList<>();
-        final String[] columnNames = {"Date", "Time"};
+        final Object[] columnNames = {"Date", "Time", "Delete"};
 
-        DefaultTableModel model = new DefaultTableModel();
+
+        showsTable.setDefaultRenderer(Object.class, new Reader());
+        DefaultTableModel model = new DefaultTableModel(){
+            public boolean isCellEditable(int row, int column){
+                return true;
+            }
+        };
         model.setColumnIdentifiers(columnNames);
         showsTable.setModel(model);
+        setMouseClick(showsTable, model);
 
 
 
@@ -71,8 +80,11 @@ public class RegistrationManager implements RegistrationManagerContract {
                     show.setStatus(Obra.STATUS_AVAILABLE);
                     show.setSeats(SeatsGenerator.generateSeats(show.getId()));
 
+                    JButton btn2 = new JButton("Delete");
+                    btn2.setName("delete");
+
                     showsList.add(show);
-                    String[] row = {show.getDate(), show.getHour()};
+                    Object[] row = {show.getDate(), show.getHour(), btn2};
                     DefaultTableModel model = (DefaultTableModel) showsTable.getModel();
                     model.addRow(row);
                 }
@@ -147,6 +159,59 @@ public class RegistrationManager implements RegistrationManagerContract {
 
 
         return true;
+    }
+
+
+    private void setMouseClick(JTable tbl, final DefaultTableModel model){
+        tbl.addMouseListener(new java.awt.event.MouseAdapter() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                TableFunctionMouseClicked(e, model);
+            }
+        });
+    }
+
+    private void TableFunctionMouseClicked(java.awt.event.MouseEvent evt, DefaultTableModel model) {//GEN-FIRST:event_TableAlarmsMouseClicked
+
+        int column = showsTable.getColumnModel().getColumnIndexAtX(evt.getX());
+        int row = evt.getY()/showsTable.getRowHeight();
+        System.out.println("entre2");
+
+        if(row < showsTable.getRowCount() && row >= 0 && column < showsTable.getColumnCount() && column >= 0){
+            Object value = showsTable.getValueAt(row, column);
+            if(value instanceof JButton){
+                ((JButton)value).doClick();
+                JButton boton = (JButton) value;
+
+                System.out.println("entre1");
+
+                if(boton.getName().equals("modifi")){
+                    System.out.println("Click en el boton modificar");
+                    //EVENTOS MODIFICAR
+                }
+                if(boton.getName().equals("delete")){
+                    JOptionPane.showConfirmDialog(null, "Desea eliminar este registro", "Confirmar", JOptionPane.OK_CANCEL_OPTION);
+                    System.out.println("Click en el boton eliminar" + row);
+                    model.removeRow(row);
+                    //deleteFunction(row);
+                    //t.deleteAlarm(row);
+                    //EVENTOS ELIMINAR
+                }
+            }
+            if(value instanceof JCheckBox){
+                //((JCheckBox)value).doClick();
+                JCheckBox ch = (JCheckBox)value;
+                if(ch.isSelected()==true){
+                    ch.setSelected(false);
+                }
+                if(ch.isSelected()==false){
+                    ch.setSelected(true);
+                }
+
+            }
+        }
+
     }
 
     @Override
