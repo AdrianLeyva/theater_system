@@ -1,5 +1,8 @@
 package utils;
 
+import view.ticket_office.SeatsHandler;
+import view.ticket_office.TheatreRoomController;
+
 import javax.swing.*;
 
 /**
@@ -21,4 +24,11 @@ public class ViewHandler {
         frame.pack();
         frame.setVisible(true);
     }
+
+    public static void showTicketOfficeView(){
+        SeatsHandler test = new SeatsHandler();
+        TheatreRoomController testView = new TheatreRoomController();
+        testView.setSeats(test.getSeats());
+    }
+
 }

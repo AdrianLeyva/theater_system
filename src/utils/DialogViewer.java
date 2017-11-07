@@ -15,4 +15,13 @@ public class DialogViewer {
             JOptionPane.showMessageDialog(frame, content, title, JOptionPane.ERROR_MESSAGE);
         }
     }
+
+    public static void showSimpleMessage(Component frame, String content, String title){
+        JOptionPane.showMessageDialog(frame, content, title, JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public static String showInputDialog(String message){
+        return JOptionPane.showInputDialog(message);
+    }
+
 }

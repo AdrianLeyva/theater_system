@@ -77,18 +77,14 @@ public class MainManager implements MainManagerProcesses{
         buyButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Show buy viewer...
-                 */
+                ViewHandler.showTicketOfficeView();
             }
         });
 
         reservationButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Show reservation viewer...
-                 */
+                ViewHandler.showTicketOfficeView();
             }
         });
 
@@ -104,9 +100,11 @@ public class MainManager implements MainManagerProcesses{
         isOnTimeButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Show isOnTime viewer...
-                 */
+               String folio = DialogViewer.showInputDialog("Type reservation's folio");
+               if(folio != null){
+                   DialogViewer.showSimpleMessage(frame, "TODO: Query to database",
+                           "Validator");
+               } 
             }
         });
 

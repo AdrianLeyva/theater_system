@@ -6,6 +6,9 @@
 package view.ticket_office;
 
 
+import utils.DialogViewer;
+import utils.ViewHandler;
+
 import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
@@ -50,22 +53,37 @@ public class TheatreRoom extends javax.swing.JFrame {
 
         Panel = new javax.swing.JScrollPane();
         Panel1 = new JPanel();
-        Cancelar = new JButton();
-        Aceptar = new JButton();
+        Cancel = new JButton();
+        Buy = new JButton();
+        Reserve = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Panel1.setLayout(new java.awt.GridLayout(8, 20));
         Panel.setViewportView(Panel1);
 
-        Cancelar.setText("Cancelar");
-        Cancelar.addActionListener(new ActionListener() {
+        Cancel.setText("Cancel");
+        Cancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                CancelarActionPerformed(evt);
+                CancelActionPerformed(evt);
             }
         });
 
-        Aceptar.setText("Aceptar");
+        Buy.setText("Buy");
+        Buy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BuyActionPerformed(e);
+            }
+        });
+
+        Reserve.setText("Reserve");
+        Reserve.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ReserveActionPerformed(e);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,9 +91,10 @@ public class TheatreRoom extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Aceptar)
+                .addComponent(Buy)
+                    .addComponent(Reserve)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Cancelar)
+                .addComponent(Cancel)
                 .addContainerGap(1111, Short.MAX_VALUE))
             .addComponent(Panel)
         );
@@ -86,19 +105,26 @@ public class TheatreRoom extends javax.swing.JFrame {
                 .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cancelar)
-                    .addComponent(Aceptar))
+                    .addComponent(Cancel)
+                    .addComponent(Buy))
+                    .addComponent(Reserve)
                 .addContainerGap())
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void CancelarActionPerformed(ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        // TODO add your handling code here:
+    private void CancelActionPerformed(ActionEvent event) {
         this.setVisible(false);
-    }//GEN-LAST:event_CancelarActionPerformed
+    }
 
+    private void BuyActionPerformed(ActionEvent event) {
+        DialogViewer.showInputDialog("Type customer's name");
+    }
+
+    private void ReserveActionPerformed(ActionEvent event){
+        DialogViewer.showInputDialog("Type customer's name");
+    }
    
     
 
@@ -146,8 +172,9 @@ public class TheatreRoom extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JButton Aceptar;
-    private JButton Cancelar;
+    private JButton Buy;
+    private JButton Reserve;
+    private JButton Cancel;
     private javax.swing.JScrollPane Panel;
     private JPanel Panel1;
     // End of variables declaration//GEN-END:variables
