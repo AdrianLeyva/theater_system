@@ -46,7 +46,7 @@ public class MainManager implements MainManagerProcesses{
         reservationButton = new JButton("Reservation");
         cancelationButton = new JButton("Cancel reservation/tickets");
         isOnTimeButton = new JButton("Check if reservation is on time");
-        reportsButton = new JButton("Reports");
+        reportsButton = new JButton("CalendarViewer");
         showManagerButton = new JButton("Manages shows");
         logoutButton = new JButton("Logout");
         activeButtonListeners();
@@ -104,7 +104,7 @@ public class MainManager implements MainManagerProcesses{
                if(folio != null){
                    DialogViewer.showSimpleMessage(frame, "TODO: Query to database",
                            "Validator");
-               } 
+               }
             }
         });
 

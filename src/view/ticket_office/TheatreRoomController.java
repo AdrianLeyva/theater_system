@@ -1,18 +1,23 @@
 package view.ticket_office;
 
-import view.ticket_office.SeatsHandler.*;
+import controller.ConstantsApp;
+import utils.DialogViewer;
+
 import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JButton;
 
 public class TheatreRoomController {
 
     private final TheatreRoom view;
+    private ArrayList<Seat> selectedSeats;
 
     public TheatreRoomController() {
         view = new TheatreRoom();
+        selectedSeats = new ArrayList<>();
     }
 
     public void setSeats(Seat[][] seat) {
@@ -31,21 +36,21 @@ public class TheatreRoomController {
         
 
         switch (seat.getStatus()) {
-            case "Available":
+            case model.Seat.AVAILABLE_STATE:
                 switch (seat.getZone().getZoneType()) {
-                    case "Broad":
+                    case ConstantsApp.Seat.LATA:
                         seatButton.setBackground(seat.getColor());//cambio de color
                         break;
-                    case "Silver":
+                    case ConstantsApp.Seat.SILVER:
                         seatButton.setBackground(seat.getColor());
                         break;
-                    case "Copper":
+                    case ConstantsApp.Seat.BRONZE:
                         seatButton.setBackground(seat.getColor());
                         break;
-                    case "Gold":
+                    case ConstantsApp.Seat.GOLD:
                         seatButton.setBackground(seat.getColor());
                         break;
-                    case "Diamond":
+                    case ConstantsApp.Seat.DIAMOND:
                         seatButton.setBackground(seat.getColor());
                         break;
                     default:
@@ -69,8 +74,10 @@ public class TheatreRoomController {
                 {
                     if(seatButton.getBackground().equals(seat.getColor())){
                         seatButton.setBackground(Color.red);
+                        selectedSeats.add(seat);
                     } else {
                         seatButton.setBackground(seat.getColor());
+                        selectedSeats.remove(seat);
                     }
                 }
             }

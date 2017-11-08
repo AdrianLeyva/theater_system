@@ -1,6 +1,8 @@
 package view.ticket_office;
 
 
+import controller.ConstantsApp;
+
 public class SeatsHandler {
 
     private final Seat[][] seats;
@@ -38,13 +40,15 @@ public class SeatsHandler {
         //first silver zone 
         for (int column = 0; column < 6; column++) {
             for (int row = 5; row < 8; row++) {
-                seats[column][row] = new Seat("Silver", row, column, "Available",java.awt.Color.BLUE);
+                seats[column][row] = new Seat(ConstantsApp.Seat.SILVER, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.BLUE);
             }
         }
         //second silver zone
         for (int column = 14; column < 20; column++) {
             for (int row = 5; row < 8; row++) {
-                seats[column][row] = new Seat("Silver", row, column, "Available",java.awt.Color.BLUE);
+                seats[column][row] = new Seat(ConstantsApp.Seat.SILVER, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.BLUE);
             }
         }
     }
@@ -53,13 +57,15 @@ public class SeatsHandler {
         //first broad zone 
         for (int column = 0; column < 6; column++) {
             for (int row = 0; row < 6; row++) {
-                seats[column][row] = new Seat("Broad", row, column, "Available",java.awt.Color.lightGray);
+                seats[column][row] = new Seat(ConstantsApp.Seat.LATA, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.lightGray);
             }
         }
         //second broad zone
         for (int column = 14; column < 20; column++) {
             for (int row = 0; row < 6; row++) {
-                seats[column][row] = new Seat("Broad", row, column, "Available",java.awt.Color.lightGray);
+                seats[column][row] = new Seat(ConstantsApp.Seat.LATA, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.lightGray);
             }
         }
     }
@@ -67,7 +73,8 @@ public class SeatsHandler {
     private void seatZoneCopper() {
         for (int column = 6; column < 14; column++) {
             for (int row = 0; row < 3; row++) {
-                seats[column][row] = new Seat("Copper", row, column, "Available", java.awt.Color.pink);
+                seats[column][row] = new Seat(ConstantsApp.Seat.BRONZE, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.pink);
             }
         }
     }
@@ -75,7 +82,8 @@ public class SeatsHandler {
     private void seatZoneGold() {
         for (int column = 6; column < 14; column++) {
             for (int row = 6; row < 8; row++) {
-                seats[column][row] = new Seat("Gold", row, column, "Available",java.awt.Color.YELLOW);
+                seats[column][row] = new Seat(ConstantsApp.Seat.GOLD, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.YELLOW);
             }
         }
     }
@@ -83,7 +91,8 @@ public class SeatsHandler {
     private void seatZoneDiamond() {
         for (int column = 6; column < 14; column++) {
             for (int row = 3; row < 6; row++) {
-                seats[column][row] = new Seat("Diamond", row, column, "Available",java.awt.Color.GREEN);
+                seats[column][row] = new Seat(ConstantsApp.Seat.DIAMOND, row, column, model.Seat.AVAILABLE_STATE,
+                        java.awt.Color.GREEN);
             }
         }
     }
