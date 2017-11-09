@@ -1,6 +1,8 @@
 package view.reports;
 
+import model.Employee;
 import model.Show;
+import utils.ViewHandler;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -17,6 +19,14 @@ public class IncomesViewer {
     private JTable incomesTable;
     private DefaultTableModel model;
     private JButton goBackButton;
+
+    private Employee currentEmployee;
+
+
+    public IncomesViewer(Object object, JFrame frame) {
+        this.frame = frame;
+        currentEmployee = (Employee) object;
+    }
 
     private void createUIComponents() {
         final Object[] columnNames = {"ID", "Date", "Time", "Total", "Employee"};
@@ -39,7 +49,8 @@ public class IncomesViewer {
         goBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Reports mReports = new Reports(currentEmployee, frame);
+                ViewHandler.sendTo(frame, mReports.getPanel1(), "Reports");
             }
         });
     }
@@ -47,5 +58,9 @@ public class IncomesViewer {
     private ArrayList<Show> doSearch(String beginDate, String endDate){
         //TODO: Do query in database to get table's results
         return null;
+    }
+
+    public JPanel getPanel1() {
+        return panel1;
     }
 }

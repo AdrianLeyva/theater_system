@@ -1,6 +1,8 @@
 package view.ticket_office;
 
 import controller.ConstantsApp;
+import model.Employee;
+import model.Show;
 import utils.DialogViewer;
 
 import java.awt.Color;
@@ -13,12 +15,19 @@ import javax.swing.JButton;
 public class TheatreRoomController {
 
     private final TheatreRoom view;
-    private ArrayList<Seat> selectedSeats;
+    private Employee currentEmployee;
+    private Show currentShow;
+    private ArrayList<model.Seat> selectedSeats;
 
-    public TheatreRoomController() {
-        view = new TheatreRoom();
+
+    public TheatreRoomController(Object object, Show show) {
         selectedSeats = new ArrayList<>();
+        currentEmployee = (Employee)object;
+        currentShow = show;
+        view = new TheatreRoom(currentEmployee, currentShow, selectedSeats);
+
     }
+
 
     public void setSeats(Seat[][] seat) {
         for (int row = 7; row > -1; row--) {
@@ -74,7 +83,8 @@ public class TheatreRoomController {
                 {
                     if(seatButton.getBackground().equals(seat.getColor())){
                         seatButton.setBackground(Color.red);
-                        selectedSeats.add(seat);
+                        selectedSeats.add(new model.Seat(null, seat.getIdSeat(), seat.getStatus(),
+                                seat.getZone().zoneType, currentShow.getId()));
                     } else {
                         seatButton.setBackground(seat.getColor());
                         selectedSeats.remove(seat);

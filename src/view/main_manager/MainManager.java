@@ -8,7 +8,9 @@ import model.Employee;
 import utils.DialogViewer;
 import utils.MessageBack;
 import utils.ViewHandler;
+import view.ShowFinder;
 import view.login.SessionLogger;
+import view.reports.Reports;
 import view.show_manager.ShowManager;
 
 import javax.swing.*;
@@ -23,7 +25,6 @@ public class MainManager implements MainManagerProcesses{
     private JPanel jPanel;
     private JLabel employeeName;
     private JButton buyButton;
-    private JButton reservationButton;
     private JButton cancelationButton;
     private JButton isOnTimeButton;
     private JButton reportsButton;
@@ -37,13 +38,15 @@ public class MainManager implements MainManagerProcesses{
 
     public MainManager(Object object, JFrame frame) {
         currentEmployee = (Employee) object;
-        this.employeeName.setText("Employee: " + currentEmployee.getEmail());
+
+        if(currentEmployee != null)
+            this.employeeName.setText("Employee: " + currentEmployee.getEmail());
+
         this.frame = frame;
     }
 
     private void createUIComponents() {
-        buyButton = new JButton("Buy");
-        reservationButton = new JButton("Reservation");
+        buyButton = new JButton("Buy / Reservation");
         cancelationButton = new JButton("Cancel reservation/tickets");
         isOnTimeButton = new JButton("Check if reservation is on time");
         reportsButton = new JButton("CalendarViewer");
@@ -77,16 +80,11 @@ public class MainManager implements MainManagerProcesses{
         buyButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ViewHandler.showTicketOfficeView();
+                ShowFinder mShowFinder = new ShowFinder(currentEmployee , frame);
+                ViewHandler.sendTo(frame, mShowFinder.getPanel1(), "Show finder");
             }
         });
 
-        reservationButton.addActionListener(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ViewHandler.showTicketOfficeView();
-            }
-        });
 
         cancelationButton.addActionListener(new AbstractAction() {
             @Override
@@ -111,9 +109,8 @@ public class MainManager implements MainManagerProcesses{
         reportsButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Show reports viewer...
-                 */
+                Reports mReports = new Reports(currentEmployee, frame);
+                ViewHandler.sendTo(frame, mReports.getPanel1(), "Reports");
             }
         });
 

@@ -2,12 +2,17 @@ package view.ticket_office;
 
 
 import controller.ConstantsApp;
+import model.Employee;
+import model.Show;
 
 public class SeatsHandler {
 
     private final Seat[][] seats;
+    private Employee currentEmployee;
+    private Show currentShow;
 
-    public SeatsHandler() {
+
+    public SeatsHandler(Object object, Show show) {
         // 20 columns and 8 rows
         seats = new Seat[20][8];
         this.seatZoneBroad();
@@ -15,22 +20,11 @@ public class SeatsHandler {
         this.seatZoneDiamond();
         this.seatZoneGold();
         this.seatZoneSilver();
+
+        currentEmployee = (Employee)object;
+        currentShow = show;
     }
 
-    //Este main es el de pruebas para las vistas de las sillas perrrroooooos
-    public static void main(String[] args) {
-        SeatsHandler test = new SeatsHandler();
-        
-        for (int i=0;i<8;i++){
-            for(int s=0;s<20;s++){
-//                System.out.print(test.getSeats()[s][i].getIdSeat());
-//                System.out.println(test.getSeats()[s][i].getZone().getZoneType()+" "+test.getSeats()[s][i].getStatus());
-            }
-        }
-        
-        TheatreRoomController testView = new TheatreRoomController();
-        testView.setSeats(test.getSeats());
-    }
 
     public Seat[][] getSeats() {
         return seats;

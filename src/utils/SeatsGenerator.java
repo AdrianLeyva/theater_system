@@ -18,27 +18,27 @@ public class SeatsGenerator {
         int seatNumber = 1;
 
         for(int i=0; i<TOTAL_SEATS_DIAMOND; i++){
-            seats.add(new Seat("0",seatNumber++,Seat.AVAILABLE_STATE,
+            seats.add(new Seat("0",String.valueOf(seatNumber++),Seat.AVAILABLE_STATE,
                     ConstantsApp.Seat.DIAMOND, showId));
         }
 
         for(int i=0; i<TOTAL_SEATS_GOLD; i++){
-            seats.add(new Seat("0",seatNumber++,Seat.AVAILABLE_STATE,
+            seats.add(new Seat("0",String.valueOf(seatNumber++),Seat.AVAILABLE_STATE,
                     ConstantsApp.Seat.GOLD, showId));
         }
 
         for(int i=0; i<TOTAL_SEATS_SILVER; i++){
-            seats.add(new Seat("0",seatNumber++,Seat.AVAILABLE_STATE,
+            seats.add(new Seat("0",String.valueOf(seatNumber++),Seat.AVAILABLE_STATE,
                     ConstantsApp.Seat.SILVER, showId));
         }
 
         for(int i=0; i<TOTAL_SEATS_BRONZE; i++){
-            seats.add(new Seat("0",seatNumber++,Seat.AVAILABLE_STATE,
+            seats.add(new Seat("0",String.valueOf(seatNumber++),Seat.AVAILABLE_STATE,
                     ConstantsApp.Seat.BRONZE, showId));
         }
 
         for(int i=0; i<TOTAL_SEATS_LATA; i++){
-            seats.add(new Seat("0",seatNumber++,Seat.AVAILABLE_STATE,
+            seats.add(new Seat("0",String.valueOf(seatNumber++),Seat.AVAILABLE_STATE,
                     ConstantsApp.Seat.LATA, showId));
         }
 

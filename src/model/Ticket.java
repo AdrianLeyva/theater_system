@@ -3,16 +3,16 @@ package model;
 public class Ticket {
     private String id;
     private String seatNumber;
-    private Obra obra;
+    private String  obraId;
     private String customerName;
 
     public Ticket() {
     }
 
-    public Ticket(String id, String seatNumber, Obra obra, String customerName) {
+    public Ticket(String id, String seatNumber, String obraId, String customerName) {
         this.id = id;
         this.seatNumber = seatNumber;
-        this.obra = obra;
+        this.obraId = obraId;
         this.customerName = customerName;
     }
 
@@ -32,12 +32,12 @@ public class Ticket {
         this.seatNumber = seatNumber;
     }
 
-    public Obra getObra() {
-        return obra;
+    public String getObra() {
+        return obraId;
     }
 
-    public void setObra(Obra obra) {
-        this.obra = obra;
+    public void setObra(String obraId) {
+        this.obraId = obraId;
     }
 
     public String getCustomerName() {

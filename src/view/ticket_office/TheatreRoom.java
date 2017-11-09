@@ -6,6 +6,10 @@
 package view.ticket_office;
 
 
+import controller.ConstantsApp;
+import controller.ticket_office.TicketOfficeManager;
+import model.*;
+import model.Seat;
 import utils.DialogViewer;
 import utils.ViewHandler;
 
@@ -14,6 +18,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -29,7 +34,10 @@ import javax.swing.JPanel;
  */
 public class TheatreRoom extends javax.swing.JFrame {
     private List<JButton> asiento;
-
+    private Employee currentEmployee;
+    private Show currentShow;
+    private ArrayList<model.Seat> selectedSeats;
+    private TicketOfficeManager ticketOfficeManager;
 
     /**
 
@@ -37,8 +45,22 @@ public class TheatreRoom extends javax.swing.JFrame {
     public TheatreRoom() {
         initComponents();
          this.setLocationRelativeTo(null);
-         
-       
+         ticketOfficeManager = new TicketOfficeManager();
+    }
+
+    public TheatreRoom(Object object, Show show, ArrayList<Seat> seats){
+        initComponents();
+        currentEmployee = (Employee)object;
+        currentShow = show;
+        selectedSeats = seats;
+        ticketOfficeManager = new TicketOfficeManager();
+    }
+
+    public TheatreRoom(Object object, ArrayList<Seat> seats){
+        initComponents();
+        currentEmployee = (Employee)object;
+        selectedSeats = seats;
+        ticketOfficeManager = new TicketOfficeManager();
     }
     
    
@@ -119,13 +141,45 @@ public class TheatreRoom extends javax.swing.JFrame {
     }
 
     private void BuyActionPerformed(ActionEvent event) {
-        DialogViewer.showInputDialog("Type customer's name");
+        String customerName;
+        Transaction transaction = new Transaction();
+
+        customerName = DialogViewer.showInputDialog("Type customer's name");
+        transaction.setDate(new Date());
+        transaction.setEmployee(currentEmployee);
+        transaction.setPaymentType(ConstantsApp.Payment.CASH); //TODO: hardcoded
+        transaction.setShow(currentShow);
+        transaction.setTickets(generateTickets());
+
+        ticketOfficeManager.doTransaction(transaction, customerName);
     }
 
     private void ReserveActionPerformed(ActionEvent event){
-        DialogViewer.showInputDialog("Type customer's name");
+        final int NAME = 0;
+        final int PHONE = 1;
+        final int EMAIL = 2;
+        String customerData;
+        String[] arrayCustomerData;
+
+        customerData = DialogViewer.showInputDialog("Type customer's name, phone, email");
+        arrayCustomerData = customerData.split(",");
+
+        ticketOfficeManager.doReservation(selectedSeats, arrayCustomerData[NAME], arrayCustomerData[PHONE],
+                arrayCustomerData[EMAIL], currentShow, currentEmployee);
     }
-   
+
+    private ArrayList<Ticket> generateTickets(){
+        ArrayList<Ticket> tickets = new ArrayList<>();
+
+        for(Seat i: selectedSeats){
+            tickets.add(new Ticket(null, i.getNumber(),currentShow.getObraId(), null));
+        }
+
+        return tickets;
+    }
+
+
+
     
 
     public JPanel getPanel1() {

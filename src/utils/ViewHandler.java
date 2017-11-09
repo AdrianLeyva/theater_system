@@ -1,5 +1,7 @@
 package utils;
 
+import model.Employee;
+import model.Show;
 import view.ticket_office.SeatsHandler;
 import view.ticket_office.TheatreRoomController;
 
@@ -25,10 +27,11 @@ public class ViewHandler {
         frame.setVisible(true);
     }
 
-    public static void showTicketOfficeView(){
-        SeatsHandler test = new SeatsHandler();
-        TheatreRoomController testView = new TheatreRoomController();
+    public static void showTicketOfficeView(Employee employee, Show show){
+        SeatsHandler test = new SeatsHandler(employee, show);
+        TheatreRoomController testView = new TheatreRoomController(employee, show);
         testView.setSeats(test.getSeats());
     }
+
 
 }

@@ -2,7 +2,7 @@ package model;
 
 public class Seat {
     private String id;
-    private int number;
+    private String number;
     private String status;
     private String zone;
     private String showId;
@@ -13,7 +13,7 @@ public class Seat {
     public Seat() {
     }
 
-    public Seat(String id, int number, String status, String zone, String showId) {
+    public Seat(String id, String  number, String status, String zone, String showId) {
         this.id = id;
         this.number = number;
         this.status = status;
@@ -29,11 +29,11 @@ public class Seat {
         this.id = id;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
