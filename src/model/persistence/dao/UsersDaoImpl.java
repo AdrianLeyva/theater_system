@@ -15,7 +15,7 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
     public void register(Users user) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into users (typeUser_ID, email, password) VALUES (?, ?,?)";
+            String query = "INSERT into users (typeuser_id, email, password) VALUES (?, ?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
             values.setInt(1, user.getTypeUser_ID());

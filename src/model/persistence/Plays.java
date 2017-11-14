@@ -4,7 +4,7 @@ public class Plays {
     private Integer play_ID;
     private Integer playManager_ID;
     private String name;
-    private String calssification;
+    private String classification;
     private String status;
     private String description;
 
@@ -33,12 +33,12 @@ public class Plays {
         this.name = name;
     }
 
-    public String getCalssification() {
-        return calssification;
+    public String getClassification() {
+        return classification;
     }
 
-    public void setCalssification(String calssification) {
-        this.calssification = calssification;
+    public void setClassification(String calssification) {
+        this.classification = calssification;
     }
 
     public String getStatus() {

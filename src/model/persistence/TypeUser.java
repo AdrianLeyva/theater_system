@@ -2,7 +2,7 @@ package model.persistence;
 
 public class TypeUser {
     private Integer typeUser_ID;
-    private String nanme;
+    private String name;
 
 
     public Integer getTypeUser_ID() {
@@ -13,11 +13,11 @@ public class TypeUser {
         this.typeUser_ID = typeUser_ID;
     }
 
-    public String getNanme() {
-        return nanme;
+    public String getName() {
+        return name;
     }
 
-    public void setNanme(String nanme) {
-        this.nanme = nanme;
+    public void setName(String nanme) {
+        this.name = name;
     }
 }
