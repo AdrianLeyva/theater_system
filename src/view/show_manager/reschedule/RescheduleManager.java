@@ -3,9 +3,11 @@ package view.show_manager.reschedule;
 import controller.ConstantsApp;
 import controller.show_manager.ShowManager;
 import model.Employee;
-import model.Show;
-import utils.DialogViewer;
-import utils.MessageBack;
+import model.Obra;
+import model.persistence.Shows;
+import model.persistence.dao.ShowDaoImpl;
+import utils.DateParser;
+
 import utils.ViewHandler;
 import view.show_manager.cancellation.Reader;
 
@@ -13,8 +15,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
+
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
 public class RescheduleManager {
     private JFrame frame;
@@ -22,12 +25,13 @@ public class RescheduleManager {
     private JButton rescheduleButton;
     private JButton goBackButton;
     private JTable showsTable;
-    private JTextField showIdTextField;
+    private DefaultTableModel model;
+    private JTextField showNameTextField;
     private JButton searchButton;
 
     private ShowManager showManager;
     private Employee currentEmployee;
-    private ArrayList showsList;
+    private ArrayList<Shows> showsList;
 
     public RescheduleManager(Object object, JFrame frame) {
         currentEmployee = (Employee) object;
@@ -43,30 +47,32 @@ public class RescheduleManager {
 
         this.showsTable = new JTable();
         this.showsList = new ArrayList<>();
-        final Object[] columnNames = {"ID", "Date", "Time"};
+        final Object[] columnNames = {"Name", "Date", "Time"};
 
         showsTable.setDefaultRenderer(Object.class, new Reader());
-        DefaultTableModel model = new DefaultTableModel(){
+        model = new DefaultTableModel(){
             public boolean isCellEditable(int row, int column){
-                return true;
+                if(column == 0)
+                    return false;
+                else
+                    return true;
             }
         };
         model.setColumnIdentifiers(columnNames);
         showsTable.setModel(model);
-        getAllFunctions();
 
 
         searchButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                getAllShows();
             }
         });
 
         rescheduleButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                doReschedule();
             }
         });
 
@@ -86,9 +92,41 @@ public class RescheduleManager {
     }
 
 
-    private void getAllFunctions(){
-        Object[] row = {"01", "Date", "Time"};
-        DefaultTableModel model = (DefaultTableModel) showsTable.getModel();
-        model.addRow(row);
+    private void getAllShows(){
+        String obraName = showNameTextField.getText();
+        ShowDaoImpl dao = new ShowDaoImpl();
+
+        Obra currentObra = dao.findShowByPlayName(obraName);
+        for (Shows shows: currentObra.getShowsList()){
+            model.addRow(new Object[]{
+                    currentObra.getName(),
+                    DateParser.parseDateTimeFormat(DateParser.DATE_PATTERN, shows.getDate()),
+                    shows.getSchedule()
+                    });
+        }
+        showsList = currentObra.getShowsList();
+    }
+
+    private void doReschedule(){
+        ShowDaoImpl dao = new ShowDaoImpl();
+
+        for(int i = 0; i < model.getRowCount(); i++){
+            java.util.Date date = new java.util.Date();
+            String showDate = model.getValueAt(i,1).toString();
+            String[] splitsDate = showDate.split("/");
+
+            System.out.println(showDate);
+            date = new GregorianCalendar(Integer.valueOf(splitsDate[0]), Integer.valueOf(splitsDate[1]),
+                    Integer.valueOf(splitsDate[2])).getTime();
+
+            showsList.get(i).setDate(date);
+            showsList.get(i).setSchedule(model.getValueAt(i,2).toString());
+
+            try {
+                dao.modify(showsList.get(i));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

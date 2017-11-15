@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345f0aed-3a31-4f60-96c4-87975414c5c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Obra.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Obra.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlayManagersDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlayManagersDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/SeatDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/SeatDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TypeTransactionDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TypeTransactionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TypeUSerDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TypeUSerDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/UsersDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/UsersDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlayManagersDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlayManagersDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlaysDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlaysDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/SeatDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/SeatDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/ShowDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/ShowDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TicketDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TicketDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TransactionDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TransactionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TypeTransactionDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TypeTransactionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TypeUserDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/TypeUserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ShowFinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Obra.java" afterPath="$PROJECT_DIR$/src/model/Obra.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/UsersDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/UsersDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/ShowFinder.java" afterPath="$PROJECT_DIR$/src/view/ShowFinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" afterPath="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,48 +27,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShowFinder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RescheduleManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#1602#1834#0" expanded="true" />
+                <element signature="e#1833#1834#0" expanded="true" />
+                <element signature="e#1962#2118#0" expanded="true" />
+                <element signature="e#2117#2118#0" expanded="true" />
+                <element signature="e#2165#2322#0" expanded="true" />
+                <element signature="e#2321#2322#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1195">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+              <folding>
+                <marker date="1510730818922" expanded="true" signature="414:493" ph="INSERT into shows... " />
+                <marker date="1510730818922" expanded="true" signature="1140:1170" ph="UPDATE shows... " />
+                <marker date="1510730818922" expanded="true" signature="1140:1297" ph="UPDATE shows... " />
+                <marker date="1510730818922" expanded="true" signature="1678:1864" ph="UPDATE shows... " />
+                <marker date="1510730818922" expanded="true" signature="2321:2353" ph="DELETE FROM " />
+                <marker date="1510730818922" expanded="true" signature="2862:2896" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="3440:3459" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4597" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4613" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4650" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4653" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4654" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4671" ph="SELECT * FRO... shows" />
+                <marker date="1510730818922" expanded="true" signature="4544:4673" ph="SELECT * FRO... shows" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/DateParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowFinder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ShowFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="75" column="8" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-              <folding>
-                <element signature="e#1447#1589#0" expanded="true" />
-                <element signature="e#1588#1589#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistrationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="78" column="51" lean-forward="false" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
+            <state relative-caret-position="283">
+              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reschedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/show_manager/reschedule/Reschedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/ViewHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="RescheduleManager.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -134,8 +131,6 @@
         <option value="$PROJECT_DIR$/src/view/show_manager/ShowManager.java" />
         <option value="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.form" />
         <option value="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" />
-        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
-        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
         <option value="$PROJECT_DIR$/src/view/ticket_office/Seat.java" />
         <option value="$PROJECT_DIR$/src/utils/DialogViewer.java" />
         <option value="$PROJECT_DIR$/src/view/reports/Reports.form" />
@@ -164,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/model/persistence/dao/UsersDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/model/Obra.java" />
         <option value="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
-        <option value="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/view/ticket_office/TheatreRoom.java" />
         <option value="$PROJECT_DIR$/src/view/ticket_office/TheatreRoomController.java" />
         <option value="$PROJECT_DIR$/src/utils/ViewHandler.java" />
@@ -172,6 +166,9 @@
         <option value="$PROJECT_DIR$/src/controller/show_manager/reschedule/Reschedule.java" />
         <option value="$PROJECT_DIR$/src/model/Show.java" />
         <option value="$PROJECT_DIR$/src/view/ShowFinder.java" />
+        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
+        <option value="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java" />
       </list>
     </option>
   </component>
@@ -242,6 +239,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="RescheduleManager" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="ShowManager" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -532,7 +554,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72714000" />
+    <option name="totallyTimeSpent" value="75570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="36" width="1278" height="766" extended-state="0" />
@@ -632,27 +654,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/ticket_office/Zone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ticket_office/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/reports/Reports.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -883,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/DateParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/reports/CalendarViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -964,24 +957,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Show.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="127" column="54" lean-forward="false" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
-          <folding>
-            <marker date="1510726758489" expanded="true" signature="414:493" ph="INSERT into shows... " />
-            <marker date="1510726758489" expanded="true" signature="1140:1326" ph="UPDATE shows... " />
-            <marker date="1510726758489" expanded="true" signature="1742:1774" ph="DELETE FROM " />
-            <marker date="1510726758489" expanded="true" signature="2283:2317" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="2861:2880" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4018" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4034" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4071" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4074" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4075" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4092" ph="SELECT * FRO... shows" />
-            <marker date="1510726758489" expanded="true" signature="3965:4094" ph="SELECT * FRO... shows" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -989,14 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="78" column="51" lean-forward="false" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1019,13 +991,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/ShowManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ShowFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="75" column="8" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        <state relative-caret-position="283">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DateParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1195">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
-            <element signature="e#1447#1589#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
+            <marker date="1510730818922" expanded="true" signature="414:493" ph="INSERT into shows... " />
+            <marker date="1510730818922" expanded="true" signature="1140:1170" ph="UPDATE shows... " />
+            <marker date="1510730818922" expanded="true" signature="1140:1297" ph="UPDATE shows... " />
+            <marker date="1510730818922" expanded="true" signature="1678:1864" ph="UPDATE shows... " />
+            <marker date="1510730818922" expanded="true" signature="2321:2353" ph="DELETE FROM " />
+            <marker date="1510730818922" expanded="true" signature="2862:2896" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="3440:3459" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4597" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4613" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4650" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4653" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4654" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4671" ph="SELECT * FRO... shows" />
+            <marker date="1510730818922" expanded="true" signature="4544:4673" ph="SELECT * FRO... shows" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#1602#1834#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+            <element signature="e#1962#2118#0" expanded="true" />
+            <element signature="e#2117#2118#0" expanded="true" />
+            <element signature="e#2165#2322#0" expanded="true" />
+            <element signature="e#2321#2322#0" expanded="true" />
           </folding>
         </state>
       </provider>

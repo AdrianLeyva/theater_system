@@ -33,9 +33,10 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void modify(Shows show) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE shows SET splay_id = "+show.getPlay_ID()+", schedule = \'"+show.getSchedule()+
-                    "\', date = "+show.getDate()+", status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
+            String query = "UPDATE shows SET schedule = \'"+show.getSchedule()+
+                    "\', date = \'"+show.getDate()+"\' , status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
             PreparedStatement values = null;
+            System.out.println(query);
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
         }catch (Exception e){
@@ -43,6 +44,19 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
         }finally {
             this.close();
         }
+        /*try {
+            this.connect();
+            String query = "UPDATE shows SET splay_id = "+show.getPlay_ID()+", schedule = \'"+show.getSchedule()+
+                    "\', date = "+show.getDate()+", status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
+            PreparedStatement values = null;
+            System.out.println(query);
+            values = this.connection.prepareStatement(query);
+            values.executeUpdate();
+        }catch (Exception e){
+            throw e;
+        }finally {
+            this.close();
+        }*/
     }
 
     @Override
