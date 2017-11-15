@@ -15,10 +15,11 @@ public class TypeUSerDaoImpl extends ConnectionToPost implements TypeUserDao {
     public void register(TypeUser typeUser) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into typeuser (name) VALUES(?)";
+            String query = "INSERT into typeuser (typeuser_id,name) VALUES(?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setString(1, typeUser.getName());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1, getLastID());
+            values.setString(2, typeUser.getName());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -107,5 +108,10 @@ public class TypeUSerDaoImpl extends ConnectionToPost implements TypeUserDao {
         typeUser.setTypeUser_ID(rs.getInt("typeuser_id"));
         typeUser.setName(rs.getString("name"));
         return typeUser;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<TypeUser> typeUsers = listTypeUsers();
+        return typeUsers.get(typeUsers.size()-1).getTypeUser_ID()+1;
     }
 }

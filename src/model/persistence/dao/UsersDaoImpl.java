@@ -16,10 +16,10 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
     public void register(Users user) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into users (users_id, typeuser_id, email, password) VALUES (?,?,?,?)";
+            String query = "INSERT into users (user_id, typeuser_id, email, password) VALUES (?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
-            values.setInt(1,getLastID()+1);
+            values.setInt(1,getLastID());
             values.setInt(2, user.getTypeUser_ID());
             values.setString(3, user.getEmail());
             values.setString(4, user.getPassword());
@@ -120,19 +120,18 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
 
     private Integer getLastID() throws Exception {
         List<Users> users = listUsers();
-        return users.get(users.size()).getUser_ID();
+        return users.get(users.size()-1).getUser_ID()+1;
     }
 
     public static void main(String[] args) {
         UsersDaoImpl usersDao = new UsersDaoImpl();
         Users user = new Users();
-        user.setUser_ID(1);
+
         user.setTypeUser_ID(1);
         user.setEmail("correotest@gmail.com");
         user.setPassword("mipassword");
         try {
-            Users user2 = usersDao.findById(6);
-            System.out.printf("id: " + user2.getUser_ID() + ", email: " + user2.getEmail());
+            usersDao.register(user);
         } catch (Exception e) {
             e.printStackTrace();
         }

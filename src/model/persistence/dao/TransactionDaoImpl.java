@@ -13,17 +13,18 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
     public void register(Transactions transaction) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into transactions (ticketsqty, funcion_id, total, typetransaction, " +
-                    "user_id, date, clientName) VALUES(?,?,?,?,?,?,?)";
+            String query = "INSERT into transactions (transaction_id,ticketsqty, funcion_id, total, typetransaction, " +
+                    "user_id, date, clientName) VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, transaction.getTicketsQty());
-            values.setInt(2, transaction.getFuncion_ID());
-            values.setInt(3, transaction.getTotal());
-            values.setInt(4, transaction.getTypeTransaction());
-            values.setInt(5, transaction.getUser_ID());
-            values.setDate(6, (Date) transaction.getDate());
-            values.setString(7, transaction.getClientName());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID());
+            values.setInt(2, transaction.getTicketsQty());
+            values.setInt(3, transaction.getFuncion_ID());
+            values.setInt(4, transaction.getTotal());
+            values.setInt(5, transaction.getTypeTransaction());
+            values.setInt(6, transaction.getUser_ID());
+            values.setDate(7, (Date) transaction.getDate());
+            values.setString(8, transaction.getClientName());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -120,5 +121,10 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
         transaction.setDate(rs.getDate("date"));
         transaction.setClientName(rs.getString("clientname"));
         return transaction;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<Transactions> transactions = listTransactions();
+        return transactions.get(transactions.size()-1).getTransaction_ID()+1;
     }
 }

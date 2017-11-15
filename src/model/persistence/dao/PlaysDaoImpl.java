@@ -15,14 +15,15 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
     public void register(Plays play) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into plays (playmanager_id, name, classification, status, description) VALUES(?,?,?,?,?)";
+            String query = "INSERT into plays (play_id, playmanager_id, name, classification, status, description) VALUES(?,?,?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, play.getPlayManager_ID());
-            values.setString(2, play.getName());
-            values.setString(3, play.getClassification());
-            values.setString(4,play.getStatus());
-            values.setString(5,play.getDescription());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID()+1);
+            values.setInt(2, play.getPlayManager_ID());
+            values.setString(3, play.getName());
+            values.setString(4, play.getClassification());
+            values.setString(5,play.getStatus());
+            values.setString(6,play.getDescription());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -117,5 +118,10 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
         play.setStatus(rs.getString("status"));
         play.setDescription(rs.getString("description"));
         return play;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<Plays> play = listPlays();
+        return play.get(play.size()-1).getPlay_ID()+1;
     }
 }

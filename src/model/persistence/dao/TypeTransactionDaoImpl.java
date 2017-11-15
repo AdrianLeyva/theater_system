@@ -15,10 +15,11 @@ public class TypeTransactionDaoImpl extends ConnectionToPost implements TypeTran
     public void register(TypeTransaction typeTrans) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into typetransaction (name) VALUES(?)";
+            String query = "INSERT into typetransaction (typetransaction_id, name) VALUES(?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setString(1, typeTrans.getName());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID());
+            values.setString(2, typeTrans.getName());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -108,6 +109,11 @@ public class TypeTransactionDaoImpl extends ConnectionToPost implements TypeTran
         transaction.setTypeTransaction(rs.getInt("typetrasaction"));
         transaction.setName(rs.getString("name"));
         return transaction;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<TypeTransaction> typeTransactions = listTypeTransactions();
+        return typeTransactions.get(typeTransactions.size()-1).getTypeTransaction()+1;
     }
 
 }

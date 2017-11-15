@@ -12,13 +12,14 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void register(Shows show) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into shows (splay_id, schedule, date, status) VALUES(?,?,?,?)";
+            String query = "INSERT into shows (show_id, splay_id, schedule, date, status) VALUES(?,?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, show.getPlay_ID());
-            values.setString(2, show.getSchedule());
-            values.setDate(3, (Date) show.getDate());
-            values.setString(4, show.getStatus());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1, getLastID());
+            values.setInt(2, show.getPlay_ID());
+            values.setString(3, show.getSchedule());
+            values.setDate(4, (Date) show.getDate());
+            values.setString(5, show.getStatus());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -109,5 +110,10 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
         show.setDate(rs.getDate("date"));
         show.setStatus(rs.getString("status"));
         return show;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<Shows> shows = listShows();
+        return shows.get(shows.size()-1).getShow_ID()+1;
     }
 }

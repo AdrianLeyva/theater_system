@@ -1,6 +1,7 @@
 package model.persistence.dao;
 
 import model.persistence.PlayManagers;
+import model.persistence.Users;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,13 +15,14 @@ public class PlayManagersDaoImpl extends ConnectionToPost implements model.persi
     public void register(PlayManagers playmanager) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into playmanagers (email, telephone, name, alttelephone) VALUES(?,?,?,?)";
+            String query = "INSERT into playmanagers (playmanager_id, email, telephone, name, alttelephone) VALUES(?,?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query, values.RETURN_GENERATED_KEYS);
-            values.setString(1, playmanager.getEmail());
-            values.setInt(2, playmanager.getTelephone());
-            values.setString(3, playmanager.getName());
-            values.setInt(4, playmanager.getAltTelephone());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID());
+            values.setString(2, playmanager.getEmail());
+            values.setInt(3, playmanager.getTelephone());
+            values.setString(4, playmanager.getName());
+            values.setInt(5, playmanager.getAltTelephone());
             values.executeUpdate();
         } catch (Exception e) {
             throw e;
@@ -114,5 +116,10 @@ public class PlayManagersDaoImpl extends ConnectionToPost implements model.persi
         playmanager.setName(rs.getString("name"));
         playmanager.setAltTelephone(rs.getInt("alttelephone"));
         return playmanager;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<PlayManagers> playManagers = listPlayManagers();
+        return playManagers.get(playManagers.size()-1).getPlayManager_ID()+1;
     }
 }

@@ -12,11 +12,12 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
     public void register(Tickets ticket) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into tickets (stranssaction_id, seat_id) VALUES(?,?)";
+            String query = "INSERT into tickets (ticket_id,stranssaction_id, seat_id) VALUES(?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, ticket.getTranssaction_ID());
-            values.setInt(2, ticket.getSeat_ID());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID());
+            values.setInt(2, ticket.getTranssaction_ID());
+            values.setInt(3, ticket.getSeat_ID());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -106,5 +107,10 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
         ticket.setTranssaction_ID(rs.getInt("transsaction_id"));
         ticket.setSeat_ID(rs.getInt("seat:id"));
         return ticket;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<Tickets> tickets = listTickets();
+        return tickets.get(tickets.size()-1).getTicket_ID()+1;
     }
 }

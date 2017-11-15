@@ -15,13 +15,14 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
     public void register(Seats seat) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into seats (seatno, zone, show_id, status) VALUES(?,?,?,?)";
+            String query = "INSERT into seats (seat_id, seatno, zone, show_id, status) VALUES(?,?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, seat.getSeatNo());
-            values.setString(2, seat.getZone());
-            values.setInt(3, seat.getShow_ID());
-            values.setString(4, seat.getStatus());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1, getLastID());
+            values.setInt(2, seat.getSeatNo());
+            values.setString(3, seat.getZone());
+            values.setInt(4, seat.getShow_ID());
+            values.setString(5, seat.getStatus());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
@@ -114,5 +115,10 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
         seat.setShow_ID(rs.getInt("show_id"));
         seat.setStatus(rs.getString("status"));
         return seat;
+    }
+
+    private Integer getLastID() throws Exception {
+        List<Seats> seats = listSeats();
+        return seats.get(seats.size()-1).getSeat_ID()+1;
     }
 }
