@@ -6,8 +6,9 @@ import java.util.List;
 
 public interface ShowDao {
 
-    public void register(Shows show) throws Exception;
-    public void modify(Shows show) throws Exception;
-    public void delete(Shows show) throws Exception;
-    public List<Shows> listCustomer() throws Exception;
+    void register(Shows show) throws Exception;
+    void modify(Shows show) throws Exception;
+    void delete(Shows show) throws Exception;
+    List<Shows> listShows() throws Exception;
+    Shows findById(int id) throws Exception;
 }

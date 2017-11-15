@@ -35,9 +35,9 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
     public void modify(Plays play) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE plays SET playmanager_id="+play.getPlayManager_ID()+", name="+play.getName()+
-                    ", calssification="+play.getClassification()+", status="+play.getStatus()+", description="
-                    +play.getDescription()+"WHERE play_id="+play.getPlay_ID();
+            String query = "UPDATE plays SET playmanager_id = "+play.getPlayManager_ID()+", name = \'"+play.getName()+
+                    "\', calssification = \'"+play.getClassification()+"\', status = \'"+play.getStatus()+"\', description = \'"
+                    +play.getDescription()+"\' WHERE play_id="+play.getPlay_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -85,6 +85,29 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
 
         return null;
     }
+
+    @Override
+    public Plays findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM plays WHERE play_id="+id);
+
+            Plays play = null;
+            while(resultSet.next()){
+                play = extractPersonFromResultSet(resultSet);
+            }
+
+            return play;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     private Plays extractPersonFromResultSet(ResultSet rs) throws SQLException {
         Plays play = new Plays();
         play.setPlay_ID(rs.getInt("play_id"));

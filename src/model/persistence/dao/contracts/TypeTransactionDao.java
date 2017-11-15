@@ -5,8 +5,9 @@ import model.persistence.TypeTransaction;
 import java.util.List;
 
 public interface TypeTransactionDao {
-    public void register(TypeTransaction typeTrans) throws Exception;
-    public void modify(TypeTransaction typeTrans) throws Exception;
-    public void delete(TypeTransaction typeTrans) throws Exception;
-    public List<TypeTransaction> listTypeTransactions() throws Exception;
+    void register(TypeTransaction typeTrans) throws Exception;
+    void modify(TypeTransaction typeTrans) throws Exception;
+    void delete(TypeTransaction typeTrans) throws Exception;
+    List<TypeTransaction> listTypeTransactions() throws Exception;
+    TypeTransaction findById(int id) throws Exception;
 }

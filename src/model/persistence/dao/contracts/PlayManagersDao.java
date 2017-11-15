@@ -6,8 +6,9 @@ import java.util.List;
 
 public interface PlayManagersDao {
 
-    public void register(PlayManagers playmanager) throws Exception;
-    public void modify(PlayManagers playmanager) throws Exception;
-    public void delete(PlayManagers playmanager) throws Exception;
-    public List<PlayManagers> listPlayManagers() throws Exception;
+    void register(PlayManagers playmanager) throws Exception;
+    void modify(PlayManagers playmanager) throws Exception;
+    void delete(PlayManagers playmanager) throws Exception;
+    List<PlayManagers> listPlayManagers() throws Exception;
+    PlayManagers findById(int id) throws Exception;
 }

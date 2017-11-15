@@ -34,9 +34,9 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
     public void modify(Seats seat) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE seats SET seatno="+seat.getSeatNo()+", zone="+seat.getZone()+
-                    ", show_id="+seat.getShow_ID()+", status="+seat.getStatus()+
-                    "WHERE seat_id="+seat.getSeat_ID();
+            String query = "UPDATE seats SET seatno = "+seat.getSeatNo()+", zone = \'"+seat.getZone()+
+                    "\', show_id = "+seat.getShow_ID()+", status = \'"+seat.getStatus()+
+                    "\' WHERE seat_id="+seat.getSeat_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -62,7 +62,29 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
     }
 
     @Override
-    public List<Seats> listCustomer() throws Exception {
+    public Seats findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM seats WHERE seat_id=" +id);
+
+            Seats seat = null;
+            while (resultSet.next()) {
+                seat = extractPersonFromResultSet(resultSet);
+            }
+
+            return seat;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Seats> listSeats() throws Exception {
         this.connect();
         Statement statement = null;
 

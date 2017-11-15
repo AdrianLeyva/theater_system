@@ -7,8 +7,9 @@ import java.util.List;
 
 public interface TicketDao {
 
-    public void register(Tickets ticket) throws Exception;
-    public void modify(Tickets ticket) throws Exception;
-    public void delete(Tickets ticket) throws Exception;
-    public List<Tickets> listCustomer() throws Exception;
+    void register(Tickets ticket) throws Exception;
+    void modify(Tickets ticket) throws Exception;
+    void delete(Tickets ticket) throws Exception;
+    List<Tickets> listTickets() throws Exception;
+    Tickets findById(int id) throws Exception;
 }

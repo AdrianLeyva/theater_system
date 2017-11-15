@@ -7,8 +7,9 @@ import java.util.List;
 
 public interface TransactionDao {
 
-    public void register(Transactions transaction) throws Exception;
-    public void modify(Transactions transaction) throws Exception;
-    public void delete(Transactions transaction) throws Exception;
-    public List<Transactions> listCustomer() throws Exception;
+    void register(Transactions transaction) throws Exception;
+    void modify(Transactions transaction) throws Exception;
+    void delete(Transactions transaction) throws Exception;
+    List<Transactions> listTransactions() throws Exception;
+    Transactions findById(int id) throws Exception;
 }

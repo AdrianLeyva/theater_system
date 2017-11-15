@@ -31,7 +31,7 @@ public class TypeUSerDaoImpl extends ConnectionToPost implements TypeUserDao {
     public void modify(TypeUser typeUser) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE typetransaction SET name="+typeUser.getName()+"WHERE typeuser_id="+typeUser.getTypeUser_ID();
+            String query = "UPDATE typetransaction SET name = \'"+typeUser.getName()+"\' WHERE typeuser_id="+typeUser.getTypeUser_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -79,6 +79,29 @@ public class TypeUSerDaoImpl extends ConnectionToPost implements TypeUserDao {
 
         return null;
     }
+
+    @Override
+    public TypeUser findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM typeuser");
+
+            TypeUser typeUser = null;
+            while(resultSet.next()){
+                typeUser = extractPersonFromResultSet(resultSet);
+            }
+
+            return typeUser;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     private TypeUser extractPersonFromResultSet(ResultSet rs) throws SQLException {
         TypeUser typeUser = new TypeUser();
         typeUser.setTypeUser_ID(rs.getInt("typeuser_id"));

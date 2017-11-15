@@ -33,8 +33,8 @@ public class PlayManagersDaoImpl extends ConnectionToPost implements model.persi
     public void modify(PlayManagers playmanager) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE playmanagers SET email=" + playmanager.getEmail() + ", telephone=" + playmanager.getTelephone() +
-                    ", name=" + playmanager.getName() + ", alttelephone=" + playmanager.getAltTelephone() +
+            String query = "UPDATE playmanagers SET email = \'" + playmanager.getEmail() + "\', telephone = " + playmanager.getTelephone() +
+                    ", name = \'" + playmanager.getName() + "\', alttelephone = " + playmanager.getAltTelephone() +
                     "WHERE playmanager_id=" + playmanager.getPlayManager_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
@@ -76,6 +76,29 @@ public class PlayManagersDaoImpl extends ConnectionToPost implements model.persi
             }
 
             return people;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public PlayManagers findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM playmanagers WHERE playmanager_id=" + id);
+
+            PlayManagers playmanager = null;
+            while (resultSet.next()) {
+                 playmanager = extractPersonFromResultSet(resultSet);
+
+            }
+
+            return playmanager;
         } catch (SQLException e) {
             e.printStackTrace();
         }

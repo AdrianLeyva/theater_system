@@ -36,11 +36,11 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
     public void modify(Transactions transaction) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into transactions ticketsqty="+transaction.getTicketsQty()+
+            String query = "UPDATE transactions SET ticketsqty="+transaction.getTicketsQty()+
                     ", funcion_id="+transaction.getFuncion_ID()+", total="+transaction.getTotal()+
                     ", typetransaction="+transaction.getTypeTransaction()+", user_id="+transaction.getUser_ID()+
-                    ", date="+transaction.getUser_ID()+", clientName="+transaction.getClientName()+
-                    "WHERE transaction_id="+transaction.getTransaction_ID();
+                    ", date="+transaction.getUser_ID()+", clientName = \'"+transaction.getClientName()+
+                    "\' WHERE transaction_id="+transaction.getTransaction_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -66,7 +66,29 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
     }
 
     @Override
-    public List<Transactions> listCustomer() throws Exception {
+    public Transactions findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM transactions WHERE transaction_id="+id);
+
+            Transactions transaction = null;
+            while(resultSet.next()){
+                transaction = extractPersonFromResultSet(resultSet);
+            }
+
+            return transaction;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Transactions> listTransactions() throws Exception {
         this.connect();
         Statement statement = null;
 

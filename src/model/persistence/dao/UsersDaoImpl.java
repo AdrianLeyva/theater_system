@@ -117,6 +117,11 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
         return user;
     }
 
+    private Integer getLastID() throws Exception {
+        List<Users> users = listUsers();
+        return users.get(users.size()).getUser_ID();
+    }
+
     public static void main(String[] args) {
         UsersDaoImpl usersDao = new UsersDaoImpl();
         Users user = new Users();

@@ -29,7 +29,8 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
     public void modify(Tickets ticket) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE tickets SET stranssaction_id="+ticket.getTranssaction_ID()+", seat_id="+ticket.getSeat_ID()+"WHERE ticket_id="+ticket.getTicket_ID();
+            String query = "UPDATE tickets SET stranssaction_id = "+ticket.getTranssaction_ID()+
+                    ", seat_id = "+ticket.getSeat_ID()+" WHERE ticket_id="+ticket.getTicket_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -55,7 +56,29 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
     }
 
     @Override
-    public List<Tickets> listCustomer() throws Exception {
+    public Tickets findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM tickets WHERE ticket_id=" + id);
+
+            Tickets ticket = null;
+            while (resultSet.next()) {
+                ticket = extractPersonFromResultSet(resultSet);
+            }
+
+            return ticket;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Tickets> listTickets() throws Exception {
         this.connect();
         Statement statement = null;
 

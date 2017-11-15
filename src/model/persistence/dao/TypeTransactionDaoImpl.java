@@ -32,7 +32,7 @@ public class TypeTransactionDaoImpl extends ConnectionToPost implements TypeTran
 
             try {
                 this.connect();
-                String query = "UPDATE typetransaction SET name="+typeTrans.getName()+"WHERE typetransaction="+typeTrans.getTypeTransaction();
+                String query = "UPDATE typetransaction SET name = \'"+typeTrans.getName()+"\' WHERE typetransaction="+typeTrans.getTypeTransaction();
                 PreparedStatement values = null;
                 values = this.connection.prepareStatement(query);
                 values.executeUpdate();
@@ -80,6 +80,29 @@ public class TypeTransactionDaoImpl extends ConnectionToPost implements TypeTran
 
         return null;
     }
+
+    @Override
+    public TypeTransaction findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM typetransaction WHERE typetransaction="+id);
+
+            TypeTransaction transaction = null;
+            while(resultSet.next()){
+                transaction = extractPersonFromResultSet(resultSet);
+            }
+
+            return transaction;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     private TypeTransaction extractPersonFromResultSet(ResultSet rs) throws SQLException {
         TypeTransaction transaction = new TypeTransaction();
         transaction.setTypeTransaction(rs.getInt("typetrasaction"));

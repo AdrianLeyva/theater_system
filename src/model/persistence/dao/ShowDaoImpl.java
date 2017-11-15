@@ -31,8 +31,8 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void modify(Shows show) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE shows SET splay_id="+show.getPlay_ID()+", schedule="+show.getSchedule()+
-                    ", date="+show.getDate()+", status="+show.getStatus()+"WHERE show_id="+show.getShow_ID();
+            String query = "UPDATE shows SET splay_id = "+show.getPlay_ID()+", schedule = \'"+show.getSchedule()+
+                    "\', date = "+show.getDate()+", status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.executeUpdate();
@@ -47,7 +47,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void delete(Shows show) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM shows WHERE sshow_id=" + show.getShow_ID();
+            String query = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
             PreparedStatement values = this.connection.prepareStatement(query);
             values.executeUpdate();
         } catch (Exception e) {
@@ -58,7 +58,29 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     }
 
     @Override
-    public List<Shows> listCustomer() throws Exception {
+    public Shows findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows WHERE show_id=" + id);
+
+            Shows show = null;
+            while (resultSet.next()) {
+                show = extractPersonFromResultSet(resultSet);
+            }
+
+            return show;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Shows> listShows() throws Exception {
         this.connect();
         Statement statement = null;
 

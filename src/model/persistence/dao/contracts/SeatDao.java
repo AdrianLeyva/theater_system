@@ -6,8 +6,9 @@ import java.util.List;
 
 public interface SeatDao {
 
-    public void register(Seats seat) throws Exception;
-    public void modify(Seats seat) throws Exception;
-    public void delete(Seats seat) throws Exception;
-    public List<Seats> listCustomer() throws Exception;
+    void register(Seats seat) throws Exception;
+    void modify(Seats seat) throws Exception;
+    void delete(Seats seat) throws Exception;
+    List<Seats> listSeats() throws Exception;
+    Seats findById(int id) throws Exception;
 }
