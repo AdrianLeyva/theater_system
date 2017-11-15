@@ -6,6 +6,7 @@ import model.persistence.dao.contracts.TransactionDao;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TransactionDaoImpl extends ConnectionToPost implements TransactionDao {
@@ -13,7 +14,7 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
     public void register(Transactions transaction) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into transactions (transaction_id,ticketsqty, funcion_id, total, typetransaction, " +
+            String query = "INSERT into transactions  (transaction_id,ticketsqty, show_id, total, typetransaction_id, " +
                     "user_id, date, clientName) VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
@@ -23,7 +24,7 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
             values.setInt(4, transaction.getTotal());
             values.setInt(5, transaction.getTypeTransaction());
             values.setInt(6, transaction.getUser_ID());
-            values.setDate(7, (Date) transaction.getDate());
+            values.setDate(7, new java.sql.Date(transaction.getDate().getTime()));
             values.setString(8, transaction.getClientName());
             values.executeUpdate();
         }catch (Exception e){
@@ -38,8 +39,8 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
         try {
             this.connect();
             String query = "UPDATE transactions SET ticketsqty="+transaction.getTicketsQty()+
-                    ", funcion_id="+transaction.getFuncion_ID()+", total="+transaction.getTotal()+
-                    ", typetransaction="+transaction.getTypeTransaction()+", user_id="+transaction.getUser_ID()+
+                    ", show_id="+transaction.getFuncion_ID()+", total="+transaction.getTotal()+
+                    ", typetransaction_id="+transaction.getTypeTransaction()+", user_id="+transaction.getUser_ID()+
                     ", date="+transaction.getUser_ID()+", clientName = \'"+transaction.getClientName()+
                     "\' WHERE transaction_id="+transaction.getTransaction_ID();
             PreparedStatement values = null;
@@ -125,6 +126,19 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
 
     private Integer getLastID() throws Exception {
         List<Transactions> transactions = listTransactions();
-        return transactions.get(transactions.size()-1).getTransaction_ID()+1;
+
+        if(transactions == null)
+            return 0;
+
+
+        if(transactions.size() > 0)
+            return transactions.get(transactions.size()-1).getTransaction_ID()+1;
+
+        if(transactions.size() == 0){
+            return 1;
+
+        }
+        else
+            return 0;
     }
 }

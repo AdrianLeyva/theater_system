@@ -150,6 +150,8 @@ public class TheatreRoom extends javax.swing.JFrame {
         transaction.setPaymentType(ConstantsApp.Payment.CASH); //TODO: hardcoded
         transaction.setShow(currentShow);
         transaction.setTickets(generateTickets());
+        transaction.setTotalCost(getTotalMountTransaction());
+        transaction.setShow(currentShow);
 
         ticketOfficeManager.doTransaction(transaction, customerName);
     }
@@ -176,6 +178,11 @@ public class TheatreRoom extends javax.swing.JFrame {
         }
 
         return tickets;
+    }
+
+    private int getTotalMountTransaction(){
+        int mount = 0;
+        return mount;
     }
 
 

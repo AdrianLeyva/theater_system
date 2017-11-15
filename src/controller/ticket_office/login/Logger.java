@@ -12,6 +12,8 @@ import java.util.List;
  * @author Adrián Leyva Sánchez
  */
 public class Logger implements SessionManager{
+    private Users currentEmploye;
+
     public static final String LOGIN = "LOGIN";
     public static final String LOGOUT = "LOGOUT";
 
@@ -24,7 +26,7 @@ public class Logger implements SessionManager{
         if(authenticateEmployee(email, password)){
             return new MessageBack("Authorized",
                     "The employee's credentials are valid", MessageBack.AUTHORIZED,
-                    getClass());
+                    getClass(), currentEmploye);
         }
         else {
             /*
@@ -62,6 +64,7 @@ public class Logger implements SessionManager{
             List<Users> users = dao.listUsers();
             for (Users user: users){
                 if(user.getEmail().equals(email) && user.getPassword().equals(password)){
+                    currentEmploye = user;
                     flag = true;
                     break;
                 }

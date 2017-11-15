@@ -10,6 +10,7 @@ public class MessageBack {
     private String content;
     private String typeOfMessage;
     private Class sentBy;
+    private Object extras;
 
     public static final String SUCCESS = "SUCCESS";
     public static final String ERROR = "ERROR";
@@ -28,6 +29,14 @@ public class MessageBack {
         this.content = content;
         this.typeOfMessage = typeOfMessage;
         this.sentBy = sentBy;
+    }
+
+    public MessageBack(String subject, String content, String typeOfMessage, Class sentBy, Object extras) {
+        this.subject = subject;
+        this.content = content;
+        this.typeOfMessage = typeOfMessage;
+        this.sentBy = sentBy;
+        this.extras = extras;
     }
 
     public String getSubject() {
@@ -60,6 +69,14 @@ public class MessageBack {
 
     public void setSentBy(Class sentBy) {
         this.sentBy = sentBy;
+    }
+
+    public Object getExtras() {
+        return extras;
+    }
+
+    public void setExtras(Object extras) {
+        this.extras = extras;
     }
 
     @Override

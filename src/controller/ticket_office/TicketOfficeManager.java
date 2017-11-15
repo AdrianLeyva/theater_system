@@ -61,7 +61,6 @@ public class TicketOfficeManager extends BaseController {
         //Set customer's name and Folio ID in every bought ticket by him.
         for(Ticket i : boughtTickets ){
             i.setCustomerName(customerName);
-            i.setId(FolioGenerator.generateFolio());
         }
 
         //Do transaction in database.

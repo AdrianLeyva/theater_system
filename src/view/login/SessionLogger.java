@@ -5,6 +5,7 @@ import controller.ConstantsApp;
 import controller.ticket_office.login.Logger;
 import controller.ticket_office.login.SessionManager;
 import model.Employee;
+import model.persistence.Users;
 import utils.DialogViewer;
 import utils.MessageBack;
 import utils.ViewHandler;
@@ -58,6 +59,7 @@ public class SessionLogger implements SessionManager.Viewer{
         messageBack = loggerController.loginEmployeeSesion(employee);
 
         if(messageBack.getTypeOfMessage().equals(MessageBack.AUTHORIZED)){
+            employee.setEmployeeId(String.valueOf(((Users)messageBack.getExtras()).getUser_ID()));
             MainManager mManager = new MainManager(employee, frame);
             ViewHandler.sendTo(frame, mManager.getjPanel(), ConstantsApp.ViewTitles.MAIN_VIEW);
         }
