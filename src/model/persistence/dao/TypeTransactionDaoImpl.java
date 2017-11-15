@@ -60,6 +60,7 @@ public class TypeTransactionDaoImpl extends ConnectionToPost implements TypeTran
 
     @Override
     public List<TypeTransaction> listTypeTransactions() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

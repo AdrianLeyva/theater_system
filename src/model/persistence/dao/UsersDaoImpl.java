@@ -2,6 +2,7 @@ package model.persistence.dao;
 
 import model.persistence.Users;
 import model.persistence.dao.contracts.UsersDao;
+import utils.FolioGenerator;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,12 +34,16 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
     public void modify(Users user) throws Exception {
         try {
             this.connect();
-            String query = "UPDATE users set typeUser_ID="+user.getTypeUser_ID()+", email="+user.getEmail()+", password="+user.getPassword()+
-                    " WHERE user_ID="+user.getUser_ID() ;
+            String query = "UPDATE users SET " +
+                    "typeuser_id = " + user.getTypeUser_ID() +
+                    ", email = \'"  + user.getEmail() +
+                    "\' , password = \'"  + user.getPassword() +
+                    "\' WHERE user_id = " + user.getUser_ID();
+            System.out.println(query);
             PreparedStatement values = this.connection.prepareStatement(query);
             values.executeUpdate();
         }catch (Exception e){
-            throw e;
+            System.out.println(e.getMessage());
         }finally {
             this.close();
         }
@@ -48,7 +53,7 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
     public void delete(Users user) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM users WHERE user_ID="+user.getUser_ID();
+            String query = " DELETE FROM users WHERE user_id="+user.getUser_ID();
             PreparedStatement values = this.connection.prepareStatement(query);
             values.executeUpdate();
         }catch (Exception e){
@@ -60,6 +65,7 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
 
     @Override
     public List<Users> listUsers() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {
@@ -79,6 +85,29 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
 
         return null;
     }
+
+    @Override
+    public Users findById(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM users WHERE user_id=" + id);
+
+            Users user = null;
+            while(resultSet.next()){
+                user = extractPersonFromResultSet(resultSet);
+            }
+
+            return user;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     private Users extractPersonFromResultSet(ResultSet rs) throws SQLException {
         Users user = new Users();
         user.setUser_ID(rs.getInt("user_ID"));
@@ -86,5 +115,20 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
         user.setEmail(rs.getString("email"));
         user.setPassword(rs.getString("password"));
         return user;
+    }
+
+    public static void main(String[] args) {
+        UsersDaoImpl usersDao = new UsersDaoImpl();
+        Users user = new Users();
+        user.setUser_ID(1);
+        user.setTypeUser_ID(1);
+        user.setEmail("correotest@gmail.com");
+        user.setPassword("mipassword");
+        try {
+            Users user2 = usersDao.findById(6);
+            System.out.printf("id: " + user2.getUser_ID() + ", email: " + user2.getEmail());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

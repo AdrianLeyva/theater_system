@@ -62,6 +62,7 @@ public class PlayManagersDaoImpl extends ConnectionToPost implements model.persi
 
     @Override
     public List<PlayManagers> listPlayManagers() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

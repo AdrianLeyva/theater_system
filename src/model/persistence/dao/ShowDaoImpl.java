@@ -59,6 +59,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
 
     @Override
     public List<Shows> listCustomer() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

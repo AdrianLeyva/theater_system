@@ -67,6 +67,7 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
 
     @Override
     public List<Transactions> listCustomer() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

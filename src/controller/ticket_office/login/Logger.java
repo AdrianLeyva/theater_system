@@ -1,7 +1,11 @@
 package controller.ticket_office.login;
 
 import model.Employee;
+import model.persistence.Users;
+import model.persistence.dao.UsersDaoImpl;
 import utils.MessageBack;
+
+import java.util.List;
 
 /**
  * This class handles all login requests of ticket office.
@@ -18,10 +22,6 @@ public class Logger implements SessionManager{
 
 
         if(authenticateEmployee(email, password)){
-            /*
-                Query in postgresql...
-             */
-
             return new MessageBack("Authorized",
                     "The employee's credentials are valid", MessageBack.AUTHORIZED,
                     getClass());
@@ -55,8 +55,21 @@ public class Logger implements SessionManager{
 
 
     private boolean authenticateEmployee(String email, String password){
-
-        return true;
+        boolean flag = false;
+        UsersDaoImpl dao = new UsersDaoImpl();
+        System.out.println("P: " + password + ", E: " + email);
+        try {
+            List<Users> users = dao.listUsers();
+            for (Users user: users){
+                if(user.getEmail().equals(email) && user.getPassword().equals(password)){
+                    flag = true;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return flag;
     }
 
     private boolean isLogged(String employeeId){

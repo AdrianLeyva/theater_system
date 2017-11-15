@@ -56,6 +56,7 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
 
     @Override
     public List<Tickets> listCustomer() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

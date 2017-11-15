@@ -63,6 +63,7 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
 
     @Override
     public List<Seats> listCustomer() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

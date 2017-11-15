@@ -59,6 +59,7 @@ public class TypeUSerDaoImpl extends ConnectionToPost implements TypeUserDao {
 
     @Override
     public List<TypeUser> listTypeUsers() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {

@@ -65,6 +65,7 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
 
     @Override
     public List<Plays> listPlays() throws Exception {
+        this.connect();
         Statement statement = null;
 
         try {
