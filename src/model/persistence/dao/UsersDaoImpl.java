@@ -16,12 +16,13 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
     public void register(Users user) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into users (typeuser_id, email, password) VALUES (?, ?,?)";
+            String query = "INSERT into users (users_id, typeuser_id, email, password) VALUES (?,?,?,?)";
             PreparedStatement values = null;
-            values = this.connection.prepareStatement(query,values.RETURN_GENERATED_KEYS);
-            values.setInt(1, user.getTypeUser_ID());
-            values.setString(2, user.getEmail());
-            values.setString(3, user.getPassword());
+            values = this.connection.prepareStatement(query);
+            values.setInt(1,getLastID());
+            values.setInt(2, user.getTypeUser_ID());
+            values.setString(3, user.getEmail());
+            values.setString(4, user.getPassword());
             values.executeUpdate();
         }catch (Exception e){
             throw e;
