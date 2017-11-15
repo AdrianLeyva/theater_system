@@ -2,7 +2,13 @@ package view;
 
 import controller.ConstantsApp;
 import model.Employee;
+import model.Obra;
 import model.Show;
+import model.persistence.Shows;
+import model.persistence.dao.PlayManagersDaoImpl;
+import model.persistence.dao.ShowDaoImpl;
+import model.persistence.dao.contracts.PlayManagersDao;
+import utils.DateParser;
 import utils.ViewHandler;
 import view.main_manager.MainManager;
 import view.show_manager.cancellation.Reader;
@@ -13,6 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShowFinder {
     private JFrame frame;
@@ -24,7 +31,7 @@ public class ShowFinder {
     private JButton goBackButton;
 
     private Employee currentEmployee;
-    private ArrayList<Show> showsList;
+    private Obra obra;
 
     public ShowFinder(Object object, JFrame frame) {
         this.frame = frame;
@@ -32,7 +39,7 @@ public class ShowFinder {
     }
 
     private void createUIComponents() {
-        showsList = new ArrayList<>();
+        obra = new Obra();
         Object[] columns = {"Date", "Time", "Show", "Select"};
         searchButton = new JButton("Search");
         goBackButton = new JButton("Go back");
@@ -66,7 +73,21 @@ public class ShowFinder {
     }
 
     private void doSearch(String obraName){
-        model.addRow(new Object[]{"08-11-2017", "21:03", "Construccion", new JButton("Select")});
+        obra = null;
+        ShowDaoImpl showDao = new ShowDaoImpl();
+        try {
+            obra = showDao.findShowByPlayName(obraName);
+            System.out.println(obra.getShowsList().size());
+            for (Shows shows: obra.getShowsList()){
+                model.addRow(new Object[]{
+                        DateParser.parseDateTimeFormat(DateParser.DATE_PATTERN, shows.getDate()),
+                        shows.getSchedule(),
+                        obra.getName(),
+                        new JButton("Select")});
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void setMouseClick(JTable tbl, final DefaultTableModel model){
@@ -91,9 +112,16 @@ public class ShowFinder {
                 ((JButton)value).doClick();
                 JButton boton = (JButton) value;
 
-                showsList.add(new Show());
-                ViewHandler.showTicketOfficeView(currentEmployee, showsList.get(row));
-                //ViewHandler.showTicketOfficeView(currentEmployee, new Show());
+
+                Show selectedShow = new Show();
+                selectedShow.setId(String.valueOf(obra.getShowsList().get(row).getShow_ID()));
+                selectedShow.setStatus(obra.getShowsList().get(row).getStatus());
+                selectedShow.setObraId(obra.getId());
+                selectedShow.setDate(DateParser.parseDateTimeFormat(DateParser.DATE_PATTERN,
+                        obra.getShowsList().get(row).getDate()));
+                selectedShow.setHour(DateParser.parseDateTimeFormat(DateParser.TIME_PATTERN,
+                        obra.getShowsList().get(row).getDate()));
+                ViewHandler.showTicketOfficeView(currentEmployee, selectedShow);
             }
             if(value instanceof JCheckBox){
                 //((JCheckBox)value).doClick();

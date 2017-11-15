@@ -109,7 +109,7 @@ public class RegistrationManager implements RegistrationManagerContract {
                         obra.setDescription(obraDescription.getText());
                         obra.setStatus(Obra.STATUS_AVAILABLE);
                         obra.setManager(obraManager);
-                        obra.setShowsList(showsList);
+                        //obra.setShowsList(showsList);
                         /*
                         * Register Obra in database
                         */

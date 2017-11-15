@@ -1,5 +1,6 @@
 package model.persistence.dao;
 
+import model.Obra;
 import model.persistence.Shows;
 import model.persistence.dao.contracts.ShowDao;
 
@@ -115,5 +116,39 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     private Integer getLastID() throws Exception {
         List<Shows> shows = listShows();
         return shows.get(shows.size()-1).getShow_ID()+1;
+    }
+
+    public Obra findShowByPlayName(String playName){
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows INNER JOIN plays ON plays.play_id = shows.play_id " +
+                    "WHERE name= \'" + playName + "\'");
+
+            ArrayList<Shows> shows = new ArrayList<>();
+            Obra obra = new Obra();
+
+
+            while (resultSet.next()) {
+                System.out.println(resultSet.getString("name"));
+                if(resultSet.getString("name").equals(playName)){
+                    obra.setId(String.valueOf(resultSet.getInt("play_id")));
+                    obra.setName(resultSet.getString("name"));
+                    obra.setClasification(resultSet.getString("classification"));
+                    Shows show = extractPersonFromResultSet(resultSet);
+                    shows.add(show);
+                }
+            }
+
+            obra.setShowsList(shows);
+
+            return obra;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

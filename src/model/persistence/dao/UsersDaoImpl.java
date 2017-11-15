@@ -128,7 +128,7 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
         Users user = new Users();
 
         user.setTypeUser_ID(1);
-        user.setEmail("correotest@gmail.com");
+        user.setEmail("prueba@gmail.com");
         user.setPassword("mipassword");
         try {
             usersDao.register(user);

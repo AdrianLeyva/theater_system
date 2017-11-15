@@ -1,5 +1,7 @@
 package model;
 
+import model.persistence.Shows;
+
 import java.util.ArrayList;
 
 public class Obra {
@@ -9,7 +11,7 @@ public class Obra {
     private String classification;
     private String status;
     private ObraManager manager;
-    private ArrayList<Show> showsList;
+    private ArrayList<Shows> showsList;
 
     public static final String CLASIFICATION_A = "CLASIFICATION_A";
     public static final String CLASIFICATION_B = "CLASIFICATION_B";
@@ -32,7 +34,7 @@ public class Obra {
     }
 
     public Obra(String id, String name, String description, String classification,
-                String status, ObraManager manager, ArrayList<Show> showsList) {
+                String status, ObraManager manager, ArrayList<Shows> showsList) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -98,11 +100,11 @@ public class Obra {
         this.classification = classification;
     }
 
-    public ArrayList<Show> getShowsList() {
+    public ArrayList<Shows> getShowsList() {
         return showsList;
     }
 
-    public void setShowsList(ArrayList<Show> showsList) {
+    public void setShowsList(ArrayList<Shows> showsList) {
         this.showsList = showsList;
     }
 }
