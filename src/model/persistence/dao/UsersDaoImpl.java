@@ -19,7 +19,7 @@ public class UsersDaoImpl extends ConnectionToPost implements UsersDao {
             String query = "INSERT into users (users_id, typeuser_id, email, password) VALUES (?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
-            values.setInt(1,getLastID());
+            values.setInt(1,getLastID()+1);
             values.setInt(2, user.getTypeUser_ID());
             values.setString(3, user.getEmail());
             values.setString(4, user.getPassword());
