@@ -1,6 +1,7 @@
 package model.persistence.dao;
 
 import model.Obra;
+import model.persistence.Seats;
 import model.persistence.Shows;
 import model.persistence.dao.contracts.ShowDao;
 
@@ -62,17 +63,25 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     @Override
     public void delete(Shows show) throws Exception {
         try {
-
             this.connect();
-            String ticketsQuery = " DELETE w FROM tickets WHERE show_id=" + show.getShow_ID();
-            PreparedStatement values = this.connection.prepareStatement(ticketsQuery);
-            values.executeUpdate();
+
+            String transactionQuery = "DELETE FROM transactions  WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values0 = this.connection.prepareStatement(transactionQuery);
+            values0.executeUpdate();
+
+            List<Seats> seatsList = new SeatDaoImpl().listSeats(show.getShow_ID());
+
+            for(Seats seat : seatsList){
+                String ticketsQuery = " DELETE FROM tickets WHERE seat_id=" + seat.getSeat_ID();
+                PreparedStatement values = this.connection.prepareStatement(ticketsQuery);
+                values.executeUpdate();
+            }
 
             String seatsQuery = "DELETE FROM seats WHERE show_id=" + show.getShow_ID();
             PreparedStatement values2 = this.connection.prepareStatement(seatsQuery);
             values2.executeUpdate();
 
-            String showQuery = " DELETE w FROM shows WHERE show_id=" + show.getShow_ID();
+            String showQuery = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
             PreparedStatement values3 = this.connection.prepareStatement(showQuery);
             values3.executeUpdate();
 

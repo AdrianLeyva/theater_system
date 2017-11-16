@@ -2,118 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4c72a3f-9a97-4ce0-b29f-dda8cc2b0bde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/BaseController$TypeOfCancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/BaseController$TypeOfCancellation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/BaseController.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$Payment.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$Payment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$Seat.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$Seat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$ViewTitles.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp$ViewTitles.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ConstantsApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/price_manager/PriceManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/price_manager/PriceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/price_manager/PriceManagerContract.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/price_manager/PriceManagerContract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManagerContract.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/refund_manager/RefundManagerContract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManagerContract.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/reports_manager/ReportsManagerContract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/ShowManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/ShowManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/Cancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/Cancellation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/CancellationProcess$Viewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/CancellationProcess$Viewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/CancellationProcess.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/cancellation/CancellationProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/registration/Registration.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/registration/Registration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/registration/RegistrationProcess.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/show_manager/registration/RegistrationProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/TicketOfficeViewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/TicketOfficeViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/background_tasks/BackgroundProcesses.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/background_tasks/BackgroundProcesses.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/background_tasks/BackgroundTasks.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/background_tasks/BackgroundTasks.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/login/SessionManager$Viewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/login/SessionManager$Viewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/login/SessionManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/login/SessionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/reservation/Reservation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/reservation/Reservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/reservation/ReservationProcess.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/reservation/ReservationProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/seats_manager/SeatManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/seats_manager/SeatManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/seats_manager/SeatSelector.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/seats_manager/SeatSelector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Customer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Employee.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/ObraManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/ObraManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Person.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Reservation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Reservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Seat.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Seat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Show.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Show.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Ticket.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Ticket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/PlayManagers.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/PlayManagers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Plays.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Plays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Seats.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Seats.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Shows.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Shows.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Tickets.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Tickets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Transactions.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Transactions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/TypeTransaction.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/TypeTransaction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/TypeUser.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/TypeUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Users.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/Users.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ConnectionToPost.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ConnectionToPost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlaysDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/PlaysDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/UsersDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/UsersDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/DateParser.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/DateParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/DialogViewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/DialogViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/FolioGenerator.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/FolioGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/PrinterManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/PrinterManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/SeatsGenerator.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/SeatsGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/ViewHandler.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/ViewHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/Main.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManagerProcesses.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManagerProcesses.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/Reports.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ShowManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Reader.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Reader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManagerContract.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManagerContract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/SeatsHandler.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/SeatsHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoomController$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoomController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoomController.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoomController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/Zone.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/Zone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/TicketDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/TicketDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/TransactionDaoImpl.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/TransactionDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/FolioGenerator.java" afterPath="$PROJECT_DIR$/src/utils/FolioGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/main_manager/MainManager.java" afterPath="$PROJECT_DIR$/src/view/main_manager/MainManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" afterPath="$PROJECT_DIR$/src/view/show_manager/cancellation/Cancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/ticketCancellation.form" afterPath="$PROJECT_DIR$/src/view/show_manager/ticketCancellation.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/show_manager/ticketCancellation.java" afterPath="$PROJECT_DIR$/src/view/show_manager/ticketCancellation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theather-system.iml" afterPath="$PROJECT_DIR$/theather-system.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -158,17 +49,37 @@
       <file leaf-file-name="ShowDaoImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-413">
-              <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="148">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
-                <marker date="1510871945010" expanded="true" signature="414:442" ph="INSERT into shows... " />
-                <marker date="1510871945010" expanded="true" signature="414:492" ph="INSERT into shows... " />
-                <marker date="1510871945010" expanded="true" signature="1139:1296" ph="UPDATE shows... " />
-                <marker date="1510871945010" expanded="true" signature="2544:2576" ph="DELETE FROM " />
-                <marker date="1510871945010" expanded="true" signature="2756:2790" ph="DELETE FROM " />
-                <marker date="1510871945010" expanded="true" signature="3307:3341" ph="SELECT * FRO... shows" />
-                <marker date="1510871945010" expanded="true" signature="3885:3904" ph="SELECT * FRO... shows" />
-                <marker date="1510871945010" expanded="true" signature="5075:5202" ph="SELECT * FRO... shows" />
+                <marker date="1510873144153" expanded="true" signature="446:474" ph="INSERT into shows... " />
+                <marker date="1510873144153" expanded="true" signature="446:524" ph="INSERT into shows... " />
+                <marker date="1510873144153" expanded="true" signature="1171:1328" ph="UPDATE shows... " />
+                <marker date="1510873144153" expanded="true" signature="2363:2403" ph="DELETE FROM " />
+                <marker date="1510873144153" expanded="true" signature="2722:2756" ph="DELETE FROM " />
+                <marker date="1510873144153" expanded="true" signature="2958:2990" ph="DELETE FROM " />
+                <marker date="1510873144153" expanded="true" signature="3170:3202" ph="DELETE FROM " />
+                <marker date="1510873144153" expanded="true" signature="3719:3753" ph="SELECT * FRO... shows" />
+                <marker date="1510873144153" expanded="true" signature="4297:4316" ph="SELECT * FRO... shows" />
+                <marker date="1510873144153" expanded="false" signature="4372:4379" ph="&lt;~&gt;" />
+                <marker date="1510873144153" expanded="true" signature="5487:5614" ph="SELECT * FRO... shows" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeatDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-684">
+              <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+              <folding>
+                <marker date="1510872599394" expanded="true" signature="748:824" ph="INSERT into seats... " />
+                <marker date="1510872599394" expanded="true" signature="1586:1788" ph="UPDATE seats... " />
+                <marker date="1510872599394" expanded="true" signature="2204:2236" ph="DELETE FROM " />
+                <marker date="1510872599394" expanded="true" signature="2745:2779" ph="SELECT * FRO... seats" />
+                <marker date="1510872599394" expanded="true" signature="3322:3341" ph="SELECT * FRO... seats" />
+                <marker date="1510872599394" expanded="true" signature="3944:3980" ph="SELECT * FRO... seats" />
               </folding>
             </state>
           </provider>
@@ -721,12 +632,12 @@
       <workItem from="1510791011033" duration="2429000" />
       <workItem from="1510802572568" duration="10057000" />
       <workItem from="1510841146223" duration="2877000" />
-      <workItem from="1510867504506" duration="3714000" />
+      <workItem from="1510867504506" duration="4318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6335000" />
+    <option name="totallyTimeSpent" value="6939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="34" width="1270" height="766" extended-state="0" />
@@ -1012,13 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/transaction/TransactionProcess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1196,19 +1100,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <marker date="1510872599394" expanded="true" signature="748:824" ph="INSERT into seats... " />
+            <marker date="1510872599394" expanded="true" signature="1586:1788" ph="UPDATE seats... " />
+            <marker date="1510872599394" expanded="true" signature="2204:2236" ph="DELETE FROM " />
+            <marker date="1510872599394" expanded="true" signature="2745:2779" ph="SELECT * FRO... seats" />
+            <marker date="1510872599394" expanded="true" signature="3322:3341" ph="SELECT * FRO... seats" />
+            <marker date="1510872599394" expanded="true" signature="3944:3980" ph="SELECT * FRO... seats" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ShowDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-413">
-          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        <state relative-caret-position="148">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <marker date="1510871945010" expanded="true" signature="414:442" ph="INSERT into shows... " />
-            <marker date="1510871945010" expanded="true" signature="414:492" ph="INSERT into shows... " />
-            <marker date="1510871945010" expanded="true" signature="1139:1296" ph="UPDATE shows... " />
-            <marker date="1510871945010" expanded="true" signature="2544:2576" ph="DELETE FROM " />
-            <marker date="1510871945010" expanded="true" signature="2756:2790" ph="DELETE FROM " />
-            <marker date="1510871945010" expanded="true" signature="3307:3341" ph="SELECT * FRO... shows" />
-            <marker date="1510871945010" expanded="true" signature="3885:3904" ph="SELECT * FRO... shows" />
-            <marker date="1510871945010" expanded="true" signature="5075:5202" ph="SELECT * FRO... shows" />
+            <marker date="1510873144153" expanded="true" signature="446:474" ph="INSERT into shows... " />
+            <marker date="1510873144153" expanded="true" signature="446:524" ph="INSERT into shows... " />
+            <marker date="1510873144153" expanded="true" signature="1171:1328" ph="UPDATE shows... " />
+            <marker date="1510873144153" expanded="true" signature="2363:2403" ph="DELETE FROM " />
+            <marker date="1510873144153" expanded="true" signature="2722:2756" ph="DELETE FROM " />
+            <marker date="1510873144153" expanded="true" signature="2958:2990" ph="DELETE FROM " />
+            <marker date="1510873144153" expanded="true" signature="3170:3202" ph="DELETE FROM " />
+            <marker date="1510873144153" expanded="true" signature="3719:3753" ph="SELECT * FRO... shows" />
+            <marker date="1510873144153" expanded="true" signature="4297:4316" ph="SELECT * FRO... shows" />
+            <marker date="1510873144153" expanded="false" signature="4372:4379" ph="&lt;~&gt;" />
+            <marker date="1510873144153" expanded="true" signature="5487:5614" ph="SELECT * FRO... shows" />
           </folding>
         </state>
       </provider>
