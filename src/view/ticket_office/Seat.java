@@ -10,6 +10,8 @@ public class Seat {
     private final int column;
     private final Color color;
 
+    private static final int TOTAL_COLUMNS = 20;
+
     public Color getColor() {
         return color;
     }
@@ -19,7 +21,8 @@ public class Seat {
         this.row = row;
         this.column = column;
         this.status = status;
-        this.idSeat = (char)(row+65)+""+(column+1);
+        this.idSeat = String.valueOf((TOTAL_COLUMNS * row-1) + column);
+        //this.idSeat = (char)(row+65)+""+(column+1);
         this.color = color;
     }
     

@@ -7,7 +7,9 @@ package view.ticket_office;
 
 
 import controller.ConstantsApp;
+import controller.price_manager.PriceManager;
 import controller.ticket_office.TicketOfficeManager;
+import controller.ticket_office.seats_manager.SeatManager;
 import model.*;
 import model.Seat;
 import utils.DialogViewer;
@@ -152,6 +154,7 @@ public class TheatreRoom extends javax.swing.JFrame {
         transaction.setTickets(generateTickets());
         transaction.setTotalCost(getTotalMountTransaction());
         transaction.setShow(currentShow);
+        transaction.setSelectedSeats(selectedSeats);
 
         ticketOfficeManager.doTransaction(transaction, customerName);
     }
@@ -180,9 +183,9 @@ public class TheatreRoom extends javax.swing.JFrame {
         return tickets;
     }
 
-    private int getTotalMountTransaction(){
-        int mount = 0;
-        return mount;
+    private double getTotalMountTransaction(){
+        String stringMount = String.valueOf(currentShow.getCost());
+        return new PriceManager().calculateSeatsCost(selectedSeats, Double.valueOf(stringMount));
     }
 
 
