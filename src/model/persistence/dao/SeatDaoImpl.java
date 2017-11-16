@@ -122,6 +122,27 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
 
         return null;
     }
+    public List<Seats> listSeats(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM seats WHERE show_id = " +id);
+
+            ArrayList<Seats> people = new ArrayList<Seats>();
+            while (resultSet.next()) {
+                Seats seat = extractPersonFromResultSet(resultSet);
+                people.add(seat);
+            }
+
+            return people;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
     private Seats extractPersonFromResultSet(ResultSet rs) throws SQLException {
         Seats seat = new Seats();

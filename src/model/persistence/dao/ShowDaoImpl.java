@@ -63,7 +63,10 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void delete(Shows show) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
+            String query2 = "DELETE FROM seats WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values2 = this.connection.prepareStatement(query2);
+            values2.executeUpdate();
+            String query = "DELETE FROM shows WHERE show_id=" + show.getShow_ID();
             PreparedStatement values = this.connection.prepareStatement(query);
             values.executeUpdate();
         } catch (Exception e) {
