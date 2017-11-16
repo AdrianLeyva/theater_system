@@ -56,7 +56,6 @@ public class Cancellation implements CancellationProcess.Viewer{
         goBackButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame();
                 ShowManager mManager = new ShowManager(frame);
                 ViewHandler.sendTo(frame, mManager.getPanel(), ConstantsApp.ViewTitles.SHOW_MANAGER_VIEW);
             }

@@ -5,6 +5,7 @@ import model.Ticket;
 import model.Transaction;
 import model.persistence.Transactions;
 import model.persistence.dao.contracts.TransactionDao;
+import utils.FolioGenerator;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,8 +37,8 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
             values.setInt(3, transaction.getFuncion_ID());
             values.setInt(4, transaction.getTotal());
             values.setInt(5, transaction.getTypeTransaction());
-            values.setInt(6, 53);
-            //values.setInt(6, transaction.getUser_ID());
+            values.setInt(6, 81);
+            //values.setInt(6, Integer.valueOf(FolioGenerator.generateFolio()));
             values.setDate(7, new java.sql.Date(transaction.getDate().getTime()));
             values.setString(8, transaction.getClientName());
             values.executeUpdate();

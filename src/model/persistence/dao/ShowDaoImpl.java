@@ -62,10 +62,21 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     @Override
     public void delete(Shows show) throws Exception {
         try {
+
             this.connect();
-            String query = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
-            PreparedStatement values = this.connection.prepareStatement(query);
+            String ticketsQuery = " DELETE w FROM tickets WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values = this.connection.prepareStatement(ticketsQuery);
             values.executeUpdate();
+
+            String seatsQuery = "DELETE FROM seats WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values2 = this.connection.prepareStatement(seatsQuery);
+            values2.executeUpdate();
+
+            String showQuery = " DELETE w FROM shows WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values3 = this.connection.prepareStatement(showQuery);
+            values3.executeUpdate();
+
+
         } catch (Exception e) {
             throw e;
         } finally {

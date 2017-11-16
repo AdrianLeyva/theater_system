@@ -46,7 +46,7 @@ public class TicketDaoImpl extends ConnectionToPost implements TicketDao {
     public void delete(Tickets ticket) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM stickets WHERE ticket_id=" + ticket.getTicket_ID();
+            String query = " DELETE FROM tickets WHERE ticket_id=" + ticket.getTicket_ID();
             PreparedStatement values = this.connection.prepareStatement(query);
             values.executeUpdate();
         } catch (Exception e) {

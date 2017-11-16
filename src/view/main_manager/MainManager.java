@@ -90,7 +90,7 @@ public class MainManager implements MainManagerProcesses{
         cancelationButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ticketCancellation mTicketCancellation = new ticketCancellation(frame);
+                ticketCancellation mTicketCancellation = new ticketCancellation(currentEmployee, frame);
                 ViewHandler.sendTo(frame, mTicketCancellation.getPanel1(), "Cancellation Ticket");
             }
         });
@@ -103,6 +103,7 @@ public class MainManager implements MainManagerProcesses{
                    DialogViewer.showSimpleMessage(frame, "TODO: Query to database",
                            "Validator");
                }
+
             }
         });
 
