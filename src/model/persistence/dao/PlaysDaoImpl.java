@@ -12,19 +12,21 @@ import java.util.List;
 
 public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
     @Override
-    public void register(Plays play) throws Exception {
+    public int register(Plays play) throws Exception {
         try {
             this.connect();
             String query = "INSERT into plays (play_id, playmanager_id, name, classification, status, description) VALUES(?,?,?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
-            values.setInt(1,getLastID()+1);
+            int last = getLastID()+1;
+            values.setInt(1,last);
             values.setInt(2, play.getPlayManager_ID());
             values.setString(3, play.getName());
             values.setString(4, play.getClassification());
             values.setString(5,play.getStatus());
             values.setString(6,play.getDescription());
             values.executeUpdate();
+            return last;
         }catch (Exception e){
             throw e;
         }finally {
@@ -53,9 +55,12 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
     public void delete(Plays play) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM plays WHERE play_id="+play.getPlay_ID();
-            PreparedStatement values = this.connection.prepareStatement(query);
+            String query1 = " DELETE FROM shows WHERE play_id="+play.getPlay_ID();
+            PreparedStatement values = this.connection.prepareStatement(query1);
             values.executeUpdate();
+            String query2 = " DELETE FROM plays WHERE play_id="+play.getPlay_ID();
+            PreparedStatement values2 = this.connection.prepareStatement(query2);
+            values2.executeUpdate();
         }catch (Exception e){
             throw e;
         }finally {
@@ -124,4 +129,5 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
         List<Plays> play = listPlays();
         return play.get(play.size()-1).getPlay_ID()+1;
     }
+
 }

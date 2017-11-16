@@ -13,7 +13,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     public void register(Shows show) throws Exception {
         try {
             this.connect();
-            String query = "INSERT into shows (show_id, splay_id, schedule, date, status) VALUES(?,?,?,?,?)";
+            String query = "INSERT into shows (show_id, play_id, schedule, date, status) VALUES(?,?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
             values.setInt(1, getLastID());
@@ -129,7 +129,11 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
 
     private Integer getLastID() throws Exception {
         List<Shows> shows = listShows();
-        return shows.get(shows.size()-1).getShow_ID()+1;
+        if (shows.size()==0){
+            return 0;
+        }else {
+            return shows.get(shows.size() - 1).getShow_ID() + 1;
+        }
     }
 
     public Obra findShowByPlayName(String playName){
