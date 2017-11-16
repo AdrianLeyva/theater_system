@@ -6,6 +6,10 @@ import model.Employee;
 import model.Obra;
 import model.ObraManager;
 import model.Show;
+import model.persistence.Plays;
+import model.persistence.Shows;
+import model.persistence.dao.PlaysDaoImpl;
+import model.persistence.dao.ShowDaoImpl;
 import utils.*;
 import view.show_manager.cancellation.Reader;
 
@@ -13,11 +17,17 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class RegistrationManager implements RegistrationManagerContract {
     private JFrame frame;
     private JPanel jPanel;
+    private DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
     private JLabel jLabelRegistration;
     private JTextField obraName;
     private JTextArea obraDescription;
@@ -34,9 +44,11 @@ public class RegistrationManager implements RegistrationManagerContract {
     private JButton goBackButton;
 
     private Employee currentEmployee;
-    private ArrayList<Show> showsList;
+    private ArrayList<Shows> showsList;
     private Obra obra;
     private ShowManager showManager;
+    private PlaysDaoImpl playsDao;
+    private ShowDaoImpl showDao;
 
     public RegistrationManager() {
     }
@@ -46,6 +58,8 @@ public class RegistrationManager implements RegistrationManagerContract {
         this.frame = frame;
         this.obra = new Obra();
         this.showManager = new ShowManager();
+        this.playsDao = new PlaysDaoImpl();
+        this.showDao =new ShowDaoImpl();
     }
 
     private void createUIComponents(){
@@ -73,18 +87,20 @@ public class RegistrationManager implements RegistrationManagerContract {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!showDate.getText().isEmpty() && !showTime.getText().isEmpty()){
-                    Show show = new Show();
-                    show.setId(FolioGenerator.generateFolio());
-                    show.setHour(showTime.getText());
-                    show.setDate(showDate.getText());
+                    Shows show = new Shows();
+                    show.setSchedule(showTime.getText());
+                    try {
+                        show.setDate(format.parse(showDate.getText()));
+                    } catch (ParseException e1) {
+                        e1.printStackTrace();
+                    }
                     show.setStatus(Obra.STATUS_AVAILABLE);
-                    show.setSeats(SeatsGenerator.generateSeats(show.getId()));
 
                     JButton btn2 = new JButton("Delete");
                     btn2.setName("delete");
 
                     showsList.add(show);
-                    Object[] row = {show.getDate(), show.getHour(), btn2};
+                    Object[] row = {show.getDate(), show.getSchedule(), btn2};
                     DefaultTableModel model = (DefaultTableModel) showsTable.getModel();
                     model.addRow(row);
                 }
@@ -99,7 +115,7 @@ public class RegistrationManager implements RegistrationManagerContract {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(validateFields()){
-                    if(showManager.registration.isAvailableShowDate(showsList)){
+
                         ObraManager obraManager = new ObraManager();
                         obraManager.setPhone(managerPhone.getText());
                         obraManager.setBackupPhone(managerAltPhone.getText());
@@ -109,6 +125,28 @@ public class RegistrationManager implements RegistrationManagerContract {
                         obra.setDescription(obraDescription.getText());
                         obra.setStatus(Obra.STATUS_AVAILABLE);
                         obra.setManager(obraManager);
+                        Plays play = new Plays();
+                        play.setName(obra.getName());
+                        play.setDescription(obra.getDescription());
+                        play.setStatus(obra.getStatus());
+                        play.setPlayManager_ID(1);
+                        play.setClassification("E");
+                        int idPlay = 0;
+                        try {
+                          idPlay = playsDao.register(play);
+                        } catch (Exception e1) {
+                            e1.printStackTrace();
+                        }
+                        for (Shows show: showsList){
+                            try {
+                                show.setPlay_ID(idPlay);
+                                showDao.register(show);
+                            } catch (Exception e1) {
+                                e1.printStackTrace();
+                            }
+
+                        }
+
                         //obra.setShowsList(showsList);
                         /*
                         * Register Obra in database
@@ -116,11 +154,7 @@ public class RegistrationManager implements RegistrationManagerContract {
 
                         DialogViewer.showMessageDialog(getjPanel(), "Obra saved successfully",
                                 "Saved", MessageBack.SUCCESS);
-                    }
-                    else{
-                        DialogViewer.showMessageDialog(getjPanel(), "Some date and time is already occupied",
-                                "Alert", MessageBack.ERROR);
-                    }
+
                 }else{
                     DialogViewer.showMessageDialog(getjPanel(), "Some fields are empties!",
                             "Alert", MessageBack.ERROR);

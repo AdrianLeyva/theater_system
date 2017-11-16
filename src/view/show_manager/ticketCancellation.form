@@ -2,11 +2,11 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.show_manager.ticketCancellation">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
     <rowspec value="center:max(d;4px):noGrow"/>
-    <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:d:grow"/>
     <colspec value="fill:d:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:d:grow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:d:grow"/>
     <constraints>
@@ -24,15 +24,6 @@
           <text value="Nomber of Ticket:"/>
         </properties>
       </component>
-      <component id="3aa3c" class="javax.swing.JButton" binding="searchButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Search"/>
-        </properties>
-      </component>
       <component id="69738" class="javax.swing.JTextField" binding="textField1" default-binding="true">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -42,14 +33,24 @@
         </constraints>
         <properties/>
       </component>
-      <component id="67093" class="javax.swing.JTable" binding="table1" custom-create="true" default-binding="true">
+      <component id="3aa3c" class="javax.swing.JButton" binding="deleteButton" custom-create="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
         </constraints>
-        <properties/>
+        <properties>
+          <hideActionText value="false"/>
+          <text value="Delete"/>
+        </properties>
+      </component>
+      <component id="f9de7" class="javax.swing.JButton" binding="goBackButton" custom-create="true" default-binding="true">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="go Back"/>
+        </properties>
       </component>
     </children>
   </grid>

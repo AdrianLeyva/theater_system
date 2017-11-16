@@ -12,6 +12,7 @@ import view.ShowFinder;
 import view.login.SessionLogger;
 import view.reports.Reports;
 import view.show_manager.ShowManager;
+import view.show_manager.ticketCancellation;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -89,9 +90,8 @@ public class MainManager implements MainManagerProcesses{
         cancelationButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * Show cancellation viewer...
-                 */
+                ticketCancellation mTicketCancellation = new ticketCancellation(frame);
+                ViewHandler.sendTo(frame, mTicketCancellation.getPanel1(), "Cancellation Ticket");
             }
         });
 

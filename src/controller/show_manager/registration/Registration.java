@@ -4,6 +4,7 @@ import controller.BaseController;
 import model.Obra;
 import model.ObraManager;
 import model.Show;
+import model.persistence.Shows;
 import utils.FolioGenerator;
 
 import java.util.ArrayList;
