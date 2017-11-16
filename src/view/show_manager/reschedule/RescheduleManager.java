@@ -2,7 +2,6 @@ package view.show_manager.reschedule;
 
 import controller.ConstantsApp;
 import controller.show_manager.ShowManager;
-import controller.ticket_office.TicketOfficeManager;
 import model.Employee;
 import model.Obra;
 import model.persistence.Shows;
@@ -110,7 +109,7 @@ public class RescheduleManager {
 
     private void doReschedule(){
         ShowManager showManager = new ShowManager();
-        
+
         for(int i = 0; i < model.getRowCount(); i++){
             java.util.Date date = new java.util.Date();
             String showDate = model.getValueAt(i,1).toString();

@@ -1,5 +1,7 @@
 package model.persistence.dao;
 
+import controller.ticket_office.TicketOfficeManager;
+import model.Ticket;
 import model.Transaction;
 import model.persistence.Transactions;
 import model.persistence.dao.contracts.TransactionDao;
@@ -10,23 +12,39 @@ import java.util.Date;
 import java.util.List;
 
 public class TransactionDaoImpl extends ConnectionToPost implements TransactionDao {
+    private TicketOfficeManager mView;
+
+    public TransactionDaoImpl() {
+    }
+
+    public TransactionDaoImpl(TicketOfficeManager mView) {
+        this.mView = mView;
+    }
+
     @Override
     public void register(Transactions transaction) throws Exception {
         try {
+            int lastId = getLastID();
+
             this.connect();
             String query = "INSERT into transactions  (transaction_id,ticketsqty, show_id, total, typetransaction_id, " +
                     "user_id, date, clientName) VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
-            values.setInt(1,getLastID());
+            values.setInt(1, lastId);
             values.setInt(2, transaction.getTicketsQty());
             values.setInt(3, transaction.getFuncion_ID());
             values.setInt(4, transaction.getTotal());
             values.setInt(5, transaction.getTypeTransaction());
-            values.setInt(6, transaction.getUser_ID());
+            values.setInt(6, 53);
+            //values.setInt(6, transaction.getUser_ID());
             values.setDate(7, new java.sql.Date(transaction.getDate().getTime()));
             values.setString(8, transaction.getClientName());
             values.executeUpdate();
+
+            TicketOfficeManager.currentTransaction.setId(String.valueOf(lastId));
+            mView.generateSeats();
+            //mView.generateTickets(String.valueOf(lastId));
         }catch (Exception e){
             throw e;
         }finally {
@@ -115,9 +133,9 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
         Transactions transaction = new Transactions();
         transaction.setTransaction_ID(rs.getInt("transaction_id"));
         transaction.setTicketsQty(rs.getInt("ticketsqty"));
-        transaction.setFuncion_ID(rs.getInt("funcion_id"));
+        transaction.setFuncion_ID(rs.getInt("show_id"));
         transaction.setTotal(rs.getInt("total"));
-        transaction.setTypeTransaction(rs.getInt("typetransaction"));
+        transaction.setTypeTransaction(rs.getInt("typetransaction_id"));
         transaction.setUser_ID(rs.getInt("user_id"));
         transaction.setDate(rs.getDate("date"));
         transaction.setClientName(rs.getString("clientname"));

@@ -4,6 +4,7 @@ import controller.BaseController;
 import controller.price_manager.PriceManager;
 import controller.ticket_office.login.Logger;
 import controller.ticket_office.reservation.Reservation;
+import controller.ticket_office.seats_manager.SeatManager;
 import controller.ticket_office.transaction.Transaction;
 import model.*;
 import utils.FolioGenerator;
@@ -23,6 +24,9 @@ public class TicketOfficeManager extends BaseController {
     private Transaction transaction;
     private Reservation reservation;
     private PriceManager priceManager;
+    private SeatManager seatManager;
+
+    public static model.Transaction currentTransaction;
 
     public TicketOfficeManager() {
         setupDependencies();
@@ -56,6 +60,8 @@ public class TicketOfficeManager extends BaseController {
      * @return MessageBack object that contents the result of executed method.
      */
     public MessageBack doTransaction(model.Transaction currentTransaction, String customerName){
+        this.currentTransaction = currentTransaction;
+
         ArrayList<Ticket> boughtTickets = currentTransaction.getTickets();
 
         //Set customer's name and Folio ID in every bought ticket by him.
@@ -64,7 +70,12 @@ public class TicketOfficeManager extends BaseController {
         }
 
         //Do transaction in database.
-        MessageBack messageBackTransaction = transaction.registerTransaction(currentTransaction);
+        MessageBack messageBackTransaction = transaction.registerTransaction(currentTransaction, this);
+       // ArrayList<Ticket> generatedTickets = generateTickets(currentTransaction.getTickets(),);
+
+        //messageBackTransaction.setExtras(generatedTickets);
+
+
         if(messageBackTransaction.getTypeOfMessage().equals(MessageBack.SUCCESS)){
             //Send tickets to printer.
             PrinterManager.printTickets(boughtTickets);
@@ -207,6 +218,15 @@ public class TicketOfficeManager extends BaseController {
         }
     }
 
+    public ArrayList<Ticket> generateTickets (String folio){
+        return transaction.generateTickets(currentTransaction, folio);
+    }
+
+    public void generateSeats(){
+        transaction.generateSeats(currentTransaction.getSelectedSeats(), this);
+
+    }
+
     @Override
     protected void setupDependencies() {
         //Initialize all TicketOffice dependencies here.
@@ -215,5 +235,6 @@ public class TicketOfficeManager extends BaseController {
         transaction = new Transaction();
         reservation = new Reservation();
         priceManager = new PriceManager();
+        seatManager = new SeatManager();
     }
 }

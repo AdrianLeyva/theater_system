@@ -1,5 +1,6 @@
 package model.persistence.dao;
 
+import controller.ticket_office.TicketOfficeManager;
 import model.persistence.Seats;
 import model.persistence.dao.contracts.SeatDao;
 
@@ -11,19 +12,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
+    private TicketOfficeManager mView;
+
+
+    public SeatDaoImpl() {
+    }
+
+    public SeatDaoImpl(TicketOfficeManager mView) {
+        this.mView = mView;
+    }
+
     @Override
     public void register(Seats seat) throws Exception {
+        int lastSeatId = getLastID();
         try {
             this.connect();
             String query = "INSERT into seats (seat_id, seatno, zone, show_id, status) VALUES(?,?,?,?,?)";
             PreparedStatement values = null;
             values = this.connection.prepareStatement(query);
-            values.setInt(1, getLastID());
+            values.setInt(1, lastSeatId);
             values.setInt(2, seat.getSeatNo());
             values.setString(3, seat.getZone());
             values.setInt(4, seat.getShow_ID());
             values.setString(5, seat.getStatus());
             values.executeUpdate();
+
+            System.out.println("LastSeatId: " + lastSeatId);
+            mView.generateTickets(String.valueOf(lastSeatId));
+
         }catch (Exception e){
             throw e;
         }finally {
@@ -119,6 +135,10 @@ public class SeatDaoImpl extends ConnectionToPost implements SeatDao {
 
     private Integer getLastID() throws Exception {
         List<Seats> seats = listSeats();
-        return seats.get(seats.size()-1).getSeat_ID()+1;
+
+        if(seats == null || seats.size() == 0)
+            return 0;
+        else
+            return seats.get(seats.size()-1).getSeat_ID()+1;
     }
 }
