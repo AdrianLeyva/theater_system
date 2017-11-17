@@ -149,28 +149,34 @@ public class TheatreRoom extends javax.swing.JFrame {
         customerName = DialogViewer.showInputDialog("Type customer's name");
         transaction.setDate(new Date());
         transaction.setEmployee(currentEmployee);
-        transaction.setPaymentType(ConstantsApp.Payment.CASH); //TODO: hardcoded
+        transaction.setPaymentType(ConstantsApp.Payment.CASH);
         transaction.setShow(currentShow);
         transaction.setTickets(generateTickets());
         transaction.setTotalCost(getTotalMountTransaction());
         transaction.setShow(currentShow);
         transaction.setSelectedSeats(selectedSeats);
 
-        ticketOfficeManager.doTransaction(transaction, customerName);
+        ticketOfficeManager.doTransaction(transaction, customerName, Transaction.PAYMENT_TYPE);
+        DialogViewer.showSimpleMessage(getPanel1(), "Purchase made", "Success");
     }
 
     private void ReserveActionPerformed(ActionEvent event){
-        final int NAME = 0;
-        final int PHONE = 1;
-        final int EMAIL = 2;
-        String customerData;
-        String[] arrayCustomerData;
+        String customerName;
+        Transaction transaction = new Transaction();
 
-        customerData = DialogViewer.showInputDialog("Type customer's name, phone, email");
-        arrayCustomerData = customerData.split(",");
+        customerName = DialogViewer.showInputDialog("Type customer's name");
+        transaction.setDate(new Date());
+        transaction.setEmployee(currentEmployee);
+        transaction.setPaymentType(ConstantsApp.Payment.CASH);
+        transaction.setShow(currentShow);
+        transaction.setTickets(generateTickets());
+        transaction.setTotalCost(getTotalMountTransaction());
+        transaction.setShow(currentShow);
+        transaction.setSelectedSeats(selectedSeats);
 
-        ticketOfficeManager.doReservation(selectedSeats, arrayCustomerData[NAME], arrayCustomerData[PHONE],
-                arrayCustomerData[EMAIL], currentShow, currentEmployee);
+        ticketOfficeManager.doTransaction(transaction, customerName, Transaction.RESERVATION_TYPE);
+        DialogViewer.showSimpleMessage(getPanel1(), "Successful reservation", "Success");
+
     }
 
     private ArrayList<Ticket> generateTickets(){

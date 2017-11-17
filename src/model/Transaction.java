@@ -14,13 +14,20 @@ public class Transaction {
     private String paymentType;
     private Employee employee;
     private ArrayList<model.Seat> selectedSeats;
+    private int transactionType;
+    private String customerName;
+
+    public static final int PAYMENT_TYPE = 1;
+    public static final int RESERVATION_TYPE = 2;
+    public static final int CANCELLATION_TYPE = 3;
+
 
     public Transaction() {
     }
 
-    public Transaction(String id, Date date, ArrayList<Ticket> tickets, Show show,
-                       double totalCost, String paymentType, Employee employee,
-                       ArrayList<model.Seat> selectedSeats) {
+    public Transaction(String id, Date date, ArrayList<Ticket> tickets, Show show, double totalCost,
+                       String paymentType, Employee employee, ArrayList<model.Seat> selectedSeats,
+                       int transactionType, String customerName) {
         this.id = id;
         this.date = date;
         this.tickets = tickets;
@@ -29,6 +36,8 @@ public class Transaction {
         this.paymentType = paymentType;
         this.employee = employee;
         this.selectedSeats = selectedSeats;
+        this.transactionType = transactionType;
+        this.customerName = customerName;
     }
 
     public String getId() {
@@ -93,5 +102,21 @@ public class Transaction {
 
     public void setSelectedSeats(ArrayList<model.Seat> selectedSeats) {
         this.selectedSeats = selectedSeats;
+    }
+
+    public int getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(int transactionType) {
+        this.transactionType = transactionType;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 }
