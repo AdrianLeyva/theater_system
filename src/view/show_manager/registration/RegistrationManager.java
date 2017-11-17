@@ -22,6 +22,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Locale;
 
 public class RegistrationManager implements RegistrationManagerContract {
@@ -89,11 +90,14 @@ public class RegistrationManager implements RegistrationManagerContract {
                 if(!showDate.getText().isEmpty() && !showTime.getText().isEmpty()){
                     Shows show = new Shows();
                     show.setSchedule(showTime.getText());
-                    try {
-                        show.setDate(format.parse(showDate.getText()));
-                    } catch (ParseException e1) {
-                        e1.printStackTrace();
-                    }
+                    java.util.Date date = new java.util.Date();
+                    String showDateFormat = showDate.getText();
+                    String[] splitsDate = showDateFormat.split("/");
+
+                    System.out.println(showDateFormat);
+                    date = new GregorianCalendar(Integer.valueOf(splitsDate[0]), Integer.valueOf(splitsDate[1]),
+                            Integer.valueOf(splitsDate[2])).getTime();
+                    show.setDate(date);
                     show.setStatus(Obra.STATUS_AVAILABLE);
 
                     JButton btn2 = new JButton("Delete");

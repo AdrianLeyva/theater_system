@@ -1,6 +1,7 @@
 package model.persistence.dao;
 
 import model.persistence.Plays;
+import model.persistence.Shows;
 import model.persistence.dao.contracts.PlaysDao;
 
 import java.sql.PreparedStatement;
@@ -55,9 +56,11 @@ public class PlaysDaoImpl extends  ConnectionToPost implements PlaysDao {
     public void delete(Plays play) throws Exception {
         try {
             this.connect();
-            String query1 = " DELETE FROM shows WHERE play_id="+play.getPlay_ID();
-            PreparedStatement values = this.connection.prepareStatement(query1);
-            values.executeUpdate();
+            ShowDaoImpl showDao = new ShowDaoImpl();
+            List<Shows> shows = showDao.findById(play.getPlay_ID());
+            for (Shows show : shows){
+                showDao.delete(show);
+            }
             String query2 = " DELETE FROM plays WHERE play_id="+play.getPlay_ID();
             PreparedStatement values2 = this.connection.prepareStatement(query2);
             values2.executeUpdate();

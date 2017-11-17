@@ -10,5 +10,5 @@ public interface ShowDao {
     void modify(Shows show) throws Exception;
     void delete(Shows show) throws Exception;
     List<Shows> listShows() throws Exception;
-    Shows findById(int id) throws Exception;
+    List<Shows> findById(int id) throws Exception;
 }

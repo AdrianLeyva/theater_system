@@ -45,19 +45,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
         }finally {
             this.close();
         }
-        /*try {
-            this.connect();
-            String query = "UPDATE shows SET splay_id = "+show.getPlay_ID()+", schedule = \'"+show.getSchedule()+
-                    "\', date = "+show.getDate()+", status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
-            PreparedStatement values = null;
-            System.out.println(query);
-            values = this.connection.prepareStatement(query);
-            values.executeUpdate();
-        }catch (Exception e){
-            throw e;
-        }finally {
-            this.close();
-        }*/
+
     }
 
     @Override
@@ -94,7 +82,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     }
 
     @Override
-    public Shows findById(int id) throws Exception {
+    public List<Shows> findById(int id) throws Exception {
         this.connect();
         Statement statement = null;
 
@@ -102,12 +90,35 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM shows WHERE show_id=" + id);
 
-            Shows show = null;
+            ArrayList<Shows> people = new ArrayList<Shows>();
             while (resultSet.next()) {
-                show = extractPersonFromResultSet(resultSet);
+                Shows show = extractPersonFromResultSet(resultSet);
+                people.add(show);
             }
 
-            return show;
+            return people;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public List<Shows> findByIdPlay(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows WHERE play_id=" + id);
+
+            ArrayList<Shows> people = new ArrayList<Shows>();
+            while (resultSet.next()) {
+                Shows show = extractPersonFromResultSet(resultSet);
+                people.add(show);
+            }
+
+            return people;
         } catch (SQLException e) {
             e.printStackTrace();
         }
