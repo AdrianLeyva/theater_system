@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4c72a3f-9a97-4ce0-b29f-dda8cc2b0bde" name="Default" comment="">
+    <list default="true" id="b4c72a3f-9a97-4ce0-b29f-dda8cc2b0bde" name="Default" comment="-Commit bueno de Reportes">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/IncomesViewer.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/TicketOfficeManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/TicketOfficeManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/transaction/Transaction.class" afterPath="$PROJECT_DIR$/out/production/theather-system/controller/ticket_office/transaction/Transaction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/Transaction.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/Transaction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ConnectionToPost.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ConnectionToPost.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/PlaysDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/SeatDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/SeatDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/ShowDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TicketDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/TransactionDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/ShowDao.class" afterPath="$PROJECT_DIR$/out/production/theather-system/model/persistence/dao/contracts/ShowDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/utils/FolioGenerator.class" afterPath="$PROJECT_DIR$/out/production/theather-system/utils/FolioGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/main_manager/MainManager$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/reports/CalendarViewer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/cancellation/Cancellation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$5.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/registration/RegistrationManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$1.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$2.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/show_manager/ticketCancellation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoom$4.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoom$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoom.class" afterPath="$PROJECT_DIR$/out/production/theather-system/view/ticket_office/TheatreRoom.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" afterPath="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/reports/CalendarViewer.java" afterPath="$PROJECT_DIR$/src/view/reports/CalendarViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/reports/IncomesViewer.form" afterPath="$PROJECT_DIR$/src/view/reports/IncomesViewer.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/reports/IncomesViewer.java" afterPath="$PROJECT_DIR$/src/view/reports/IncomesViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theather-system.iml" afterPath="$PROJECT_DIR$/theather-system.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,96 +58,70 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="postgres@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="postgres@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="Teatro" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="postgres@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="Teatro" type="e3449647:DbNodeDescriptor" />
+        <item name="public" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TheatreRoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/ticket_office/TheatreRoom.java">
+      <file leaf-file-name="IncomesViewer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/reports/IncomesViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
-              <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Transaction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="350">
+              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1303#1304#0" expanded="true" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1396#1397#0" expanded="true" />
-                <element signature="e#1423#1424#0" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
-                <element signature="e#1493#1494#0" expanded="true" />
-                <element signature="e#1538#1539#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1625#1626#0" expanded="true" />
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#1692#1693#0" expanded="true" />
-                <element signature="e#1719#1720#0" expanded="true" />
-                <element signature="e#1757#1758#0" expanded="true" />
-                <element signature="e#1789#1790#0" expanded="true" />
-                <element signature="e#1825#1826#0" expanded="true" />
-                <element signature="e#1857#1858#0" expanded="true" />
-                <element signature="e#1907#1908#0" expanded="true" />
-                <element signature="e#1949#1950#0" expanded="true" />
-                <element signature="e#1987#1988#0" expanded="true" />
-                <element signature="e#2021#2022#0" expanded="true" />
-                <element signature="e#2075#2076#0" expanded="true" />
-                <element signature="e#2121#2122#0" expanded="true" />
-                <element signature="e#2158#2159#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
-                <element signature="e#2239#2240#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
-                <element signature="e#2334#2335#0" expanded="true" />
-                <element signature="e#2370#2371#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-                <element signature="e#2493#2494#0" expanded="true" />
-                <element signature="e#2532#2533#0" expanded="true" />
-                <element signature="e#2570#2571#0" expanded="true" />
-                <element signature="e#2629#2630#0" expanded="true" />
-                <element signature="e#2683#2684#0" expanded="true" />
-                <element signature="e#2722#2723#0" expanded="true" />
-                <element signature="e#2757#2758#0" expanded="true" />
-                <element signature="e#2813#2814#0" expanded="true" />
-                <element signature="e#2861#2862#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketOfficeManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/TicketOfficeManager.java">
+      <file leaf-file-name="CalendarViewer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/reports/CalendarViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="87" column="67" lean-forward="false" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionToPost.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="95" column="17" lean-forward="false" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
               <folding>
-                <marker date="1510842044665" expanded="true" signature="1138:1214" ph="INSERT into users... " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/transaction/Transaction.java">
+      <file leaf-file-name="RegistrationManagerContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManagerContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="32">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -110,42 +130,9 @@
       <file leaf-file-name="RegistrationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-              <folding>
-                <marker date="1510896324644" expanded="true" signature="3550:6818" ph="{...}" />
-                <marker date="1510896324644" expanded="false" signature="4184:4199" ph="}" />
-                <marker date="1510896324644" expanded="false" signature="4246:4347" ph="actionPerformed(e) → {" />
-                <marker date="1510896324644" expanded="false" signature="6398:6413" ph="}" />
-                <marker date="1510896324644" expanded="false" signature="6456:6557" ph="actionPerformed(e) → {" />
-                <marker date="1510896324644" expanded="false" signature="6795:6810" ph="}" />
-                <marker date="1510896324644" expanded="false" signature="6849:6860" ph=" { " />
-                <marker date="1510896324644" expanded="false" signature="6874:6880" ph=" }" />
-                <marker date="1510896324644" expanded="true" signature="6932:7377" ph="{...}" />
-                <marker date="1510896324644" expanded="true" signature="7453:7680" ph="{...}" />
-                <marker date="1510896324644" expanded="false" signature="7484:7612" ph="mouseClicked(e) → { " />
-                <marker date="1510896324644" expanded="false" signature="7648:7672" ph=" }" />
-                <marker date="1510896324644" expanded="true" signature="7781:9380" ph="{...}" />
-                <marker date="1510896324644" expanded="true" signature="8864:8967" ph="//..." />
-                <marker date="1510896324644" expanded="false" signature="9434:9445" ph=" { " />
-                <marker date="1510896324644" expanded="false" signature="9457:9463" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/TransactionDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <marker date="1510872147207" expanded="true" signature="803:968" ph="INSERT into transactions... " />
-                <marker date="1510872147207" expanded="true" signature="2092:2519" ph="UPDATE trans... " />
-                <marker date="1510872147207" expanded="true" signature="2963:3009" ph="DELETE FROM " />
-                <marker date="1510872147207" expanded="true" signature="3534:3582" ph="SELECT * FRO... transactions" />
-                <marker date="1510872147207" expanded="true" signature="4164:4190" ph="SELECT * FRO... transactions" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,6 +151,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ConnectionToPost</find>
+      <find>showslis</find>
+      <find>dosea</find>
+      <find>sear</find>
+      <find>show</find>
+      <find>showsLis</find>
+      <find>model</find>
+      <find>reader</find>
+      <find>default</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/.idea</dir>
@@ -186,9 +181,6 @@
         <option value="$PROJECT_DIR$/src/view/reports/Reports.form" />
         <option value="$PROJECT_DIR$/src/view/reports/Reports.java" />
         <option value="$PROJECT_DIR$/src/view/reports/CalendarViewer.form" />
-        <option value="$PROJECT_DIR$/src/view/reports/CalendarViewer.java" />
-        <option value="$PROJECT_DIR$/src/view/reports/IncomesViewer.form" />
-        <option value="$PROJECT_DIR$/src/view/reports/IncomesViewer.java" />
         <option value="$PROJECT_DIR$/src/view/main_manager/MainManager.form" />
         <option value="$PROJECT_DIR$/src/model/Ticket.java" />
         <option value="$PROJECT_DIR$/src/model/Seat.java" />
@@ -206,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/model/Show.java" />
         <option value="$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form" />
         <option value="$PROJECT_DIR$/src/utils/MessageBack.java" />
-        <option value="$PROJECT_DIR$/src/controller/ticket_office/login/Logger.java" />
         <option value="$PROJECT_DIR$/src/view/login/SessionLogger.java" />
         <option value="$PROJECT_DIR$/src/controller/show_manager/reschedule/RescheduleProcess.java" />
         <option value="$PROJECT_DIR$/src/controller/show_manager/reschedule/Reschedule.java" />
@@ -217,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/controller/ticket_office/transaction/TransactionProcess.java" />
         <option value="$PROJECT_DIR$/src/model/persistence/dao/SeatDaoImpl.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" />
         <option value="$PROJECT_DIR$/src/model/persistence/dao/TicketDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java" />
         <option value="$PROJECT_DIR$/src/utils/FolioGenerator.java" />
@@ -231,6 +221,11 @@
         <option value="$PROJECT_DIR$/src/controller/ticket_office/transaction/Transaction.java" />
         <option value="$PROJECT_DIR$/src/view/ticket_office/TheatreRoom.java" />
         <option value="$PROJECT_DIR$/src/controller/ticket_office/TicketOfficeManager.java" />
+        <option value="$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java" />
+        <option value="$PROJECT_DIR$/src/controller/ticket_office/login/Logger.java" />
+        <option value="$PROJECT_DIR$/src/view/reports/IncomesViewer.form" />
+        <option value="$PROJECT_DIR$/src/view/reports/IncomesViewer.java" />
+        <option value="$PROJECT_DIR$/src/view/reports/CalendarViewer.java" />
       </list>
     </option>
   </component>
@@ -240,11 +235,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2" />
-    <option name="y" value="34" />
-    <option name="width" value="1270" />
-    <option name="height" value="766" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="826" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -261,117 +255,71 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="SessionLogger" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="show_manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="show_manager" type="462c0819:PsiDirectoryNode" />
               <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="main_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
+              <item name="theater_system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="show_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="cancellation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheaterSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theather-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="show_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="reschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistrationManager" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -640,81 +588,131 @@
       <workItem from="1510886190907" duration="127000" />
       <workItem from="1510888767091" duration="860000" />
       <workItem from="1510896296003" duration="41000" />
+      <workItem from="1511292225814" duration="6867000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge">
+      <created>1511292367090</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511292367090</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9904000" />
+    <option name="totallyTimeSpent" value="16771000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1440" height="826" extended-state="0" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77259886" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.247851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879657" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39913544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879657" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39913544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77259886" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2488189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.247851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge" />
+    <MESSAGE value="-Commit bueno de Reportes" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Commit bueno de Reportes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -722,67 +720,11 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/TypeTransactionDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="62" column="23" lean-forward="false" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/TypeUSerDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="61" column="23" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/contracts/UsersDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/reports/CalendarViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Obra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/ShowManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/DateParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -793,20 +735,6 @@
     <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/login/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/login/SessionLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="61" column="95" lean-forward="false" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/MessageBack.java">
@@ -870,13 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ticket_office/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -945,13 +866,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2383">
-          <caret line="351" column="16" lean-forward="false" selection-start-line="351" selection-start-column="16" selection-end-line="351" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/text/DateFormat.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/show_manager/ShowManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -964,7 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-209">
           <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,32 +952,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding>
-            <marker date="1510872599394" expanded="true" signature="748:824" ph="INSERT into seats... " />
-            <marker date="1510872599394" expanded="true" signature="1586:1788" ph="UPDATE seats... " />
-            <marker date="1510872599394" expanded="true" signature="2204:2236" ph="DELETE FROM " />
-            <marker date="1510872599394" expanded="true" signature="2745:2779" ph="SELECT * FRO... seats" />
-            <marker date="1510872599394" expanded="true" signature="3322:3341" ph="SELECT * FRO... seats" />
-            <marker date="1510872599394" expanded="true" signature="3944:3980" ph="SELECT * FRO... seats" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="115" column="54" lean-forward="false" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1602#1834#0" expanded="false" />
-            <element signature="e#1833#1834#0" expanded="false" />
-            <element signature="e#1962#2118#0" expanded="false" />
-            <element signature="e#2117#2118#0" expanded="false" />
-            <element signature="e#2165#2322#0" expanded="false" />
-            <element signature="e#2321#2322#0" expanded="false" />
-            <element signature="e#2365#2743#0" expanded="false" />
-            <element signature="e#2742#2743#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,65 +960,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
           <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-          <folding>
-            <marker date="1510896324642" expanded="true" signature="446:474" ph="INSERT into shows... " />
-            <marker date="1510896324642" expanded="true" signature="446:524" ph="INSERT into shows... " />
-            <marker date="1510896324642" expanded="true" signature="1171:1328" ph="UPDATE shows... " />
-            <marker date="1510896324642" expanded="true" signature="2363:2403" ph="DELETE FROM " />
-            <marker date="1510896324642" expanded="true" signature="2722:2756" ph="DELETE FROM " />
-            <marker date="1510896324642" expanded="true" signature="2958:2990" ph="DELETE FROM " />
-            <marker date="1510896324642" expanded="true" signature="3170:3202" ph="DELETE FROM " />
-            <marker date="1510896324642" expanded="true" signature="3719:3753" ph="SELECT * FRO... shows" />
-            <marker date="1510896324642" expanded="true" signature="4454:4473" ph="SELECT * FRO... shows" />
-            <marker date="1510896324642" expanded="false" signature="4529:4536" ph="&lt;~&gt;" />
-            <marker date="1510896324642" expanded="true" signature="5644:5771" ph="SELECT * FRO... shows" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/TransactionDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="128">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <marker date="1510872147207" expanded="true" signature="803:968" ph="INSERT into transactions... " />
-            <marker date="1510872147207" expanded="true" signature="2092:2519" ph="UPDATE trans... " />
-            <marker date="1510872147207" expanded="true" signature="2963:3009" ph="DELETE FROM " />
-            <marker date="1510872147207" expanded="true" signature="3534:3582" ph="SELECT * FRO... transactions" />
-            <marker date="1510872147207" expanded="true" signature="4164:4190" ph="SELECT * FRO... transactions" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-          <folding>
-            <marker date="1510896324644" expanded="true" signature="3550:6818" ph="{...}" />
-            <marker date="1510896324644" expanded="false" signature="4184:4199" ph="}" />
-            <marker date="1510896324644" expanded="false" signature="4246:4347" ph="actionPerformed(e) → {" />
-            <marker date="1510896324644" expanded="false" signature="6398:6413" ph="}" />
-            <marker date="1510896324644" expanded="false" signature="6456:6557" ph="actionPerformed(e) → {" />
-            <marker date="1510896324644" expanded="false" signature="6795:6810" ph="}" />
-            <marker date="1510896324644" expanded="false" signature="6849:6860" ph=" { " />
-            <marker date="1510896324644" expanded="false" signature="6874:6880" ph=" }" />
-            <marker date="1510896324644" expanded="true" signature="6932:7377" ph="{...}" />
-            <marker date="1510896324644" expanded="true" signature="7453:7680" ph="{...}" />
-            <marker date="1510896324644" expanded="false" signature="7484:7612" ph="mouseClicked(e) → { " />
-            <marker date="1510896324644" expanded="false" signature="7648:7672" ph=" }" />
-            <marker date="1510896324644" expanded="true" signature="7781:9380" ph="{...}" />
-            <marker date="1510896324644" expanded="true" signature="8864:8967" ph="//..." />
-            <marker date="1510896324644" expanded="false" signature="9434:9445" ph=" { " />
-            <marker date="1510896324644" expanded="false" signature="9457:9463" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/transaction/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="128">
           <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1511297381830" expanded="true" signature="1126:1202" ph="INSERT into users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/TicketOfficeManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="87" column="67" lean-forward="false" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1139,73 +1002,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1625#1626#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-            <element signature="e#1719#1720#0" expanded="true" />
-            <element signature="e#1757#1758#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1857#1858#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
-            <element signature="e#1949#1950#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2121#2122#0" expanded="true" />
-            <element signature="e#2158#2159#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2239#2240#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2493#2494#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
-            <element signature="e#2570#2571#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
-            <element signature="e#2722#2723#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2861#2862#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ticket_office/TheatreRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
+        <state relative-caret-position="0">
           <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/TicketOfficeManager.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="87" column="67" lean-forward="false" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
+        <state relative-caret-position="61">
+          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/persistence/dao/ConnectionToPost.java">
+    <entry file="das://table:/2bd56b06/73b7af2f-35fa-48bd-89d0-0eb9154f8a42/Teatro.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/2bd56b06/73b7af2f-35fa-48bd-89d0-0eb9154f8a42/Teatro.public.shows">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/reports/IncomesViewer.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="das://table:/2bd56b06/73b7af2f-35fa-48bd-89d0-0eb9154f8a42/Teatro.public.transactions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/reschedule/RescheduleManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="176">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
-            <marker date="1510842044665" expanded="true" signature="1138:1214" ph="INSERT into users... " />
+            <element signature="e#1602#1834#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ticket_office/login/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/login/SessionLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="61" column="95" lean-forward="false" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ticket_office/Seat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/reports/IncomesViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManagerContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/show_manager/registration/RegistrationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/reports/CalendarViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="95" column="17" lean-forward="false" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
