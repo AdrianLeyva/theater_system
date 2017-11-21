@@ -3,9 +3,6 @@ package view.reports;
 import model.Employee;
 import model.Show;
 import model.Seat;
-import model.persistence.Shows;
-import model.persistence.dao.ShowDaoImpl;
-import model.persistence.dao.contracts.ShowDao;
 import utils.DateParser;
 import utils.ViewHandler;
 import java.text.DateFormat;
@@ -19,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.List;
 
 
 public class CalendarViewer {
@@ -35,12 +31,11 @@ public class CalendarViewer {
     private Employee currentEmployee;
 
 
-    private ArrayList<Shows> showsList;
+    private ArrayList<Show> showsList;
 
     public CalendarViewer(Object object, JFrame frame) {
         this.frame = frame;
         currentEmployee = (Employee) object;
-
     }
 
     private void createUIComponents() {
@@ -73,26 +68,22 @@ public class CalendarViewer {
 
     private ArrayList<Show> doSearch(String  beginDate, String endDate){
         //TODO: Do query in database to get table's results
-        ShowDaoImpl dao = new ShowDaoImpl();
         try{
-            List<Shows> shows = dao.listShows();
-            ArrayList<Shows> allShows = new ArrayList<>(shows);
+
 
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
             Date formatedBeginDate = dateFormat.parse(beginDate);
             Date formatedEndDate = dateFormat.parse(endDate);
-            for(int i=0; i < allShows.size(); i++) {
-                Date result = allShows.get(i).getDate();
+
+            for(int i=0; i<showsList.size(); i++) {
+                Date result = dateFormat.parse(showsList.get(i).getDate());
                 if( result.after(formatedBeginDate)
                         && result.before(formatedEndDate) ) {
-                    /* Pruebas en terminal
-                    System.out.println(allShows.get(i).getShow_ID());
-                    System.out.println(allShows.get(i).getDate());
-                    System.out.println(allShows.get(i).getSchedule());
-                    System.out.println(allShows.get(i).getStatus());
+                    System.out.println(showsList.get(i).getId());
+                    System.out.println(showsList.get(i).getDate());
+                    System.out.println(showsList.get(i).getHour());
+                    System.out.println(showsList.get(i).getStatus());
                     System.out.printf("\n---------------------\n");
-                    */
-                    showsList.add(allShows.get(i));
                 }
             }
 
