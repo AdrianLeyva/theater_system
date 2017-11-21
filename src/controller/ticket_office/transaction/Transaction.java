@@ -30,7 +30,7 @@ public class Transaction implements TransactionProcess {
         daoModel.setDate(transaction.getDate());
         daoModel.setTicketsQty(transaction.getTickets().size());
         daoModel.setUser_ID(Integer.valueOf(transaction.getEmployee().getEmployeeId()));
-        daoModel.setTypeTransaction(1);
+        daoModel.setTypeTransaction(transaction.getTransactionType());
         daoModel.setTotal((int)transaction.getTotalCost());
         daoModel.setFuncion_ID(Integer.valueOf(transaction.getShow().getId()));
 

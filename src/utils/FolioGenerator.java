@@ -1,7 +1,5 @@
 package utils;
 
-import java.util.UUID;
-
 /**
  * This class handles the generation of folio identifiers
  * @author Adrián Leyva Sánchez
@@ -9,6 +7,6 @@ import java.util.UUID;
 public class FolioGenerator {
 
     public static String generateFolio(){
-        return UUID.randomUUID().toString();
+        return String.valueOf(System.currentTimeMillis());
     }
 }

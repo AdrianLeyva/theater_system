@@ -59,31 +59,54 @@ public class TicketOfficeManager extends BaseController {
      * @param currentTransaction It contents all data of current transaction.
      * @return MessageBack object that contents the result of executed method.
      */
-    public MessageBack doTransaction(model.Transaction currentTransaction, String customerName){
-        this.currentTransaction = currentTransaction;
+    public MessageBack doTransaction(model.Transaction currentTransaction, String customerName, int transactionType){
+        if(transactionType == model.Transaction.PAYMENT_TYPE){
+            this.currentTransaction = currentTransaction;
+            currentTransaction.setTransactionType(transactionType);
 
-        ArrayList<Ticket> boughtTickets = currentTransaction.getTickets();
+            ArrayList<Ticket> boughtTickets = currentTransaction.getTickets();
 
-        //Set customer's name and Folio ID in every bought ticket by him.
-        for(Ticket i : boughtTickets ){
-            i.setCustomerName(customerName);
-        }
+            //Set customer's name and Folio ID in every bought ticket by him.
+            for(Ticket i : boughtTickets ){
+                i.setCustomerName(customerName);
+            }
 
-        //Do transaction in database.
-        MessageBack messageBackTransaction = transaction.registerTransaction(currentTransaction, this);
-       // ArrayList<Ticket> generatedTickets = generateTickets(currentTransaction.getTickets(),);
+            //Do transaction in database.
+            MessageBack messageBackTransaction = transaction.registerTransaction(currentTransaction, this);
 
-        //messageBackTransaction.setExtras(generatedTickets);
-
-
-        if(messageBackTransaction.getTypeOfMessage().equals(MessageBack.SUCCESS)){
-            //Send tickets to printer.
-            PrinterManager.printTickets(boughtTickets);
-            return messageBackTransaction;
+            if(messageBackTransaction.getTypeOfMessage().equals(MessageBack.SUCCESS)){
+                //Send tickets to printer.
+                PrinterManager.printTickets(boughtTickets);
+                return messageBackTransaction;
+            }
+            else{
+                return messageBackTransaction;
+            }
         }
         else{
-            return messageBackTransaction;
+            this.currentTransaction = currentTransaction;
+            currentTransaction.setTransactionType(transactionType);
+            currentTransaction.setCustomerName(customerName);
+            ArrayList<Ticket> boughtTickets = currentTransaction.getTickets();
+
+            //Set customer's name and Folio ID in every bought ticket by him.
+            for(Ticket i : boughtTickets ){
+                i.setCustomerName(customerName);
+            }
+
+            //Do transaction in database.
+            MessageBack messageBackTransaction = transaction.registerTransaction(currentTransaction, this);
+
+            if(messageBackTransaction.getTypeOfMessage().equals(MessageBack.SUCCESS)){
+                //Send tickets to printer.
+                PrinterManager.printTickets(boughtTickets);
+                return messageBackTransaction;
+            }
+            else{
+                return messageBackTransaction;
+            }
         }
+
     }
 
 

@@ -1,6 +1,7 @@
 package model.persistence.dao;
 
 import model.Obra;
+import model.persistence.Seats;
 import model.persistence.Shows;
 import model.persistence.dao.contracts.ShowDao;
 
@@ -44,28 +45,35 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
         }finally {
             this.close();
         }
-        /*try {
-            this.connect();
-            String query = "UPDATE shows SET splay_id = "+show.getPlay_ID()+", schedule = \'"+show.getSchedule()+
-                    "\', date = "+show.getDate()+", status = \'"+show.getStatus()+"\' WHERE show_id="+show.getShow_ID();
-            PreparedStatement values = null;
-            System.out.println(query);
-            values = this.connection.prepareStatement(query);
-            values.executeUpdate();
-        }catch (Exception e){
-            throw e;
-        }finally {
-            this.close();
-        }*/
+
     }
 
     @Override
     public void delete(Shows show) throws Exception {
         try {
             this.connect();
-            String query = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
-            PreparedStatement values = this.connection.prepareStatement(query);
-            values.executeUpdate();
+
+            String transactionQuery = "DELETE FROM transactions  WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values0 = this.connection.prepareStatement(transactionQuery);
+            values0.executeUpdate();
+
+            List<Seats> seatsList = new SeatDaoImpl().listSeats(show.getShow_ID());
+
+            for(Seats seat : seatsList){
+                String ticketsQuery = " DELETE FROM tickets WHERE seat_id=" + seat.getSeat_ID();
+                PreparedStatement values = this.connection.prepareStatement(ticketsQuery);
+                values.executeUpdate();
+            }
+
+            String seatsQuery = "DELETE FROM seats WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values2 = this.connection.prepareStatement(seatsQuery);
+            values2.executeUpdate();
+
+            String showQuery = " DELETE FROM shows WHERE show_id=" + show.getShow_ID();
+            PreparedStatement values3 = this.connection.prepareStatement(showQuery);
+            values3.executeUpdate();
+
+
         } catch (Exception e) {
             throw e;
         } finally {
@@ -74,7 +82,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
     }
 
     @Override
-    public Shows findById(int id) throws Exception {
+    public List<Shows> findById(int id) throws Exception {
         this.connect();
         Statement statement = null;
 
@@ -82,12 +90,35 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM shows WHERE show_id=" + id);
 
-            Shows show = null;
+            ArrayList<Shows> people = new ArrayList<Shows>();
             while (resultSet.next()) {
-                show = extractPersonFromResultSet(resultSet);
+                Shows show = extractPersonFromResultSet(resultSet);
+                people.add(show);
             }
 
-            return show;
+            return people;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public List<Shows> findByIdPlay(int id) throws Exception {
+        this.connect();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows WHERE play_id=" + id);
+
+            ArrayList<Shows> people = new ArrayList<Shows>();
+            while (resultSet.next()) {
+                Shows show = extractPersonFromResultSet(resultSet);
+                people.add(show);
+            }
+
+            return people;
         } catch (SQLException e) {
             e.printStackTrace();
         }

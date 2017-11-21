@@ -1,9 +1,11 @@
 package view.show_manager;
 
 import controller.ConstantsApp;
+import model.Employee;
 import model.persistence.Tickets;
 import model.persistence.dao.TicketDaoImpl;
 import utils.ViewHandler;
+import view.main_manager.MainManager;
 import view.show_manager.cancellation.Reader;
 
 import javax.swing.*;
@@ -18,12 +20,14 @@ public class ticketCancellation {
     private JButton deleteButton;
 
     private JButton goBackButton;
-    private Frame frame;
+    private JFrame frame;
     private TicketDaoImpl ticketDao;
+    private Employee currentEmployee;
 
-    public ticketCancellation(JFrame frame) {
+    public ticketCancellation(Employee employee, JFrame frame) {
         this.frame = frame;
         this.ticketDao = new TicketDaoImpl();
+        this.currentEmployee = employee;
     }
 
     private void createUIComponents() {
@@ -31,9 +35,8 @@ public class ticketCancellation {
         goBackButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame();
-                ShowManager mManager = new ShowManager(frame);
-                ViewHandler.sendTo(frame, mManager.getPanel(), ConstantsApp.ViewTitles.SHOW_MANAGER_VIEW);
+                MainManager mManager = new MainManager(currentEmployee, frame);
+                ViewHandler.sendTo(frame, mManager.getjPanel(), ConstantsApp.ViewTitles.SHOW_MANAGER_VIEW);
             }
         });
 
