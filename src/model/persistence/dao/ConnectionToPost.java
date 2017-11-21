@@ -10,7 +10,7 @@ public class ConnectionToPost {
     protected Connection connection;
 
     private final String JDBC_DRIVER = "org.postgresql.Driver";
-    private final String DB_URL = "jdbc:postgresql://localhost:5432/Theater";
+    private final String DB_URL = "jdbc:postgresql://localhost:5432/Teatro";
 
     private final String USER = "postgres";
     private final String PASS = "root";

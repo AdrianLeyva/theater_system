@@ -2,13 +2,21 @@ package view.reports;
 
 import model.Employee;
 import model.Show;
+import model.Seat;
+import utils.DateParser;
 import utils.ViewHandler;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 
 public class CalendarViewer {
     private JFrame frame;
@@ -58,8 +66,31 @@ public class CalendarViewer {
         });
     }
 
-    private ArrayList<Show> doSearch(String beginDate, String endDate){
+    private ArrayList<Show> doSearch(String  beginDate, String endDate){
         //TODO: Do query in database to get table's results
+        try{
+
+
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
+            Date formatedBeginDate = dateFormat.parse(beginDate);
+            Date formatedEndDate = dateFormat.parse(endDate);
+
+            for(int i=0; i<showsList.size(); i++) {
+                Date result = dateFormat.parse(showsList.get(i).getDate());
+                if( result.after(formatedBeginDate)
+                        && result.before(formatedEndDate) ) {
+                    System.out.println(showsList.get(i).getId());
+                    System.out.println(showsList.get(i).getDate());
+                    System.out.println(showsList.get(i).getHour());
+                    System.out.println(showsList.get(i).getStatus());
+                    System.out.printf("\n---------------------\n");
+                }
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 

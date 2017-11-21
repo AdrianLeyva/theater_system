@@ -159,4 +159,5 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
         else
             return 0;
     }
+
 }

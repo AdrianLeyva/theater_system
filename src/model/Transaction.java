@@ -94,4 +94,5 @@ public class Transaction {
     public void setSelectedSeats(ArrayList<model.Seat> selectedSeats) {
         this.selectedSeats = selectedSeats;
     }
+
 }

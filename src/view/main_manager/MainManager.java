@@ -5,6 +5,7 @@ package view.main_manager;
 import controller.ConstantsApp;
 import controller.ticket_office.login.Logger;
 import model.Employee;
+import model.persistence.dao.TransactionDaoImpl;
 import utils.DialogViewer;
 import utils.MessageBack;
 import utils.ViewHandler;
@@ -16,10 +17,13 @@ import view.show_manager.ticketCancellation;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * This class handles the Menu view.
- * @author Adrián Leyva Sánchez
+ * @author Rolando E. Valencia
  */
 public class MainManager implements MainManagerProcesses{
     private JFrame frame;
@@ -98,11 +102,41 @@ public class MainManager implements MainManagerProcesses{
         isOnTimeButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               String folio = DialogViewer.showInputDialog("Type reservation's folio");
-               if(folio != null){
-                   DialogViewer.showSimpleMessage(frame, "TODO: Query to database",
-                           "Validator");
-               }
+                TransactionDaoImpl transactions = new TransactionDaoImpl();
+                try {
+                    int transactionsQty = transactions.listTransactions().size();
+                    String folio = DialogViewer.showInputDialog("Type reservation's folio");
+                    int numFolio = Integer.parseInt(folio);
+                    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                    Date today = new Date();
+                    System.out.println(dateFormat.format(today));
+                    if(folio != null){
+                        for(int i = 0; i < transactionsQty; i++){
+                            System.out.println(i);
+                            System.out.println(transactions.findById(i).getTypeTransaction());
+                           if(transactions.findById(i).getTypeTransaction() == 2){ // 2 = Reserva
+                               if(transactions.findById(i).getTransaction_ID() == numFolio){
+                                   if(transactions.findById(i).getDate().before(today)){
+                                       String response;
+                                       response = "Su reserva con el número: "+ folio + " aun se encuentra a tiempo";
+                                       DialogViewer.showSimpleMessage(frame, response,
+                                               "Validator");
+                                   }
+                               }
+                           }
+                        }
+
+                    } else if (folio == null) {
+                        DialogViewer.showSimpleMessage(frame, "Folio incorrecto.", "Validator");
+                    }
+                    else {
+                        DialogViewer.showSimpleMessage(frame, "Folio incorrecto.", "Validator");
+                    }
+
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+
             }
         });
 

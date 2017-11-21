@@ -29,7 +29,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="Type begin date"/>
+          <text value="Type begin date with yyyy/MM/dd"/>
         </properties>
       </component>
       <component id="78149" class="javax.swing.JTextField" binding="endDateTextField">
@@ -41,7 +41,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="Type end date"/>
+          <text value="Type end date with yyyy/MM/dd"/>
         </properties>
       </component>
       <component id="5feff" class="javax.swing.JButton" binding="searchButton" custom-create="true">
