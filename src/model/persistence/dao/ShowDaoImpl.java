@@ -7,6 +7,7 @@ import model.persistence.dao.contracts.ShowDao;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
@@ -20,7 +21,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
             values.setInt(1, getLastID());
             values.setInt(2, show.getPlay_ID());
             values.setString(3, show.getSchedule());
-            values.setDate(4, (Date) show.getDate());
+            values.setDate(4, new Date(show.getDate().getTime()));
             values.setString(5, show.getStatus());
             values.executeUpdate();
         }catch (Exception e){
@@ -133,7 +134,7 @@ public class ShowDaoImpl extends ConnectionToPost implements ShowDao {
 
         try {
             statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM shows ORDER BY show_id ASC");
 
             ArrayList<Shows> people = new ArrayList<Shows>();
             while (resultSet.next()) {
