@@ -78,17 +78,23 @@ public class CalendarViewer {
             Date formatedEndDate = dateFormat.parse(endDate);
             for(int i=0; i < allShows.size(); i++) {
                 Date result = allShows.get(i).getDate();
-                if( result.after(formatedBeginDate)
-                        && result.before(formatedEndDate) ) {
-                    // Pruebas en terminal
-                    System.out.println(allShows.get(i).getShow_ID());
-                    System.out.println(allShows.get(i).getDate());
-                    System.out.println(allShows.get(i).getSchedule());
-                    System.out.println(allShows.get(i).getStatus());
-                    System.out.printf("\n---------------------\n");
+                if(result.after(formatedBeginDate) || result.compareTo(formatedBeginDate) == 0
+                        && result.before(formatedEndDate) || result.compareTo(formatedEndDate) == 0){
 
-                    showsList.add(allShows.get(i));
+                    model.addRow(new Object[]{
+                            allShows.get(i).getDate(),
+                            allShows.get(i).getSchedule(),
+                            allShows.get(i).getShow_ID(),
+                    });
                 }
+                // Pruebas en terminal
+                System.out.println(allShows.get(i).getShow_ID());
+                System.out.println(allShows.get(i).getDate());
+                System.out.println(allShows.get(i).getSchedule());
+                System.out.println(allShows.get(i).getStatus());
+                System.out.printf("\n---------------------\n");
+
+                showsList.add(allShows.get(i));
             }
 
 

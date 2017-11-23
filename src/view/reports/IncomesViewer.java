@@ -36,7 +36,7 @@ public class IncomesViewer {
     }
 
     private void createUIComponents() {
-        final Object[] columnNames = {"ID", "Date", "Time", "Total", "Employee"};
+        final Object[] columnNames = {"ID", "Date", "Function_id", "Total", "Employee"};
         transactionsList = new ArrayList<>();
         incomesTable = new JTable();
         model = new DefaultTableModel();
@@ -74,9 +74,15 @@ public class IncomesViewer {
             Date formatedEndDate = dateFormat.parse(endDate);
             for(int i = 0; i < allTransactions.size(); i++) {
                 Date result = allTransactions.get(i).getDate();
-                if( result.after(formatedBeginDate)
-                        && result.before(formatedEndDate) ) {
-                    transactionsList.add(allTransactions.get(i));
+                if( result.after(formatedBeginDate) || result.compareTo(formatedBeginDate) == 0
+                        && result.before(formatedEndDate) || result.compareTo(formatedEndDate) == 0 ) {
+                    model.addRow(new Object[]{
+                            allTransactions.get(i).getTransaction_ID(),
+                            allTransactions.get(i).getDate(),
+                            allTransactions.get(i).getFuncion_ID(),
+                            allTransactions.get(i).getTotal(),
+                            allTransactions.get(i).getUser_ID(),
+                    });
                 }
             }
 

@@ -38,7 +38,6 @@ public class TransactionDaoImpl extends ConnectionToPost implements TransactionD
             values.setInt(4, transaction.getTotal());
             values.setInt(5, transaction.getTypeTransaction());
             values.setInt(6, 81);
-            //values.setInt(6, Integer.valueOf(FolioGenerator.generateFolio()));
             values.setDate(7, new java.sql.Date(transaction.getDate().getTime()));
             values.setString(8, transaction.getClientName());
             values.executeUpdate();
