@@ -2,21 +2,16 @@ package view.reports;
 
 import model.Employee;
 import model.Show;
-import model.Seat;
 import model.persistence.Shows;
 import model.persistence.dao.ShowDaoImpl;
-import model.persistence.dao.contracts.ShowDao;
-import utils.DateParser;
 import utils.ViewHandler;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.List;
@@ -85,13 +80,13 @@ public class CalendarViewer {
                 Date result = allShows.get(i).getDate();
                 if( result.after(formatedBeginDate)
                         && result.before(formatedEndDate) ) {
-                    /* Pruebas en terminal
+                    // Pruebas en terminal
                     System.out.println(allShows.get(i).getShow_ID());
                     System.out.println(allShows.get(i).getDate());
                     System.out.println(allShows.get(i).getSchedule());
                     System.out.println(allShows.get(i).getStatus());
                     System.out.printf("\n---------------------\n");
-                    */
+
                     showsList.add(allShows.get(i));
                 }
             }

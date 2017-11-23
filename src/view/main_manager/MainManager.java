@@ -14,7 +14,6 @@ import view.login.SessionLogger;
 import view.reports.Reports;
 import view.show_manager.ShowManager;
 import view.show_manager.ticketCancellation;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.Date;

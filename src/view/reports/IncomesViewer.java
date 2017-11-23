@@ -26,9 +26,7 @@ public class IncomesViewer {
     private JTable incomesTable;
     private DefaultTableModel model;
     private JButton goBackButton;
-
     private Employee currentEmployee;
-
     private ArrayList<Transactions> transactionsList;
 
 
