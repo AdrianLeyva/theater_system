@@ -1,6 +1,5 @@
 package model;
 
-import view.ticket_office.Seat;
 
 import java.util.ArrayList;
 import java.util.Date;
